@@ -488,8 +488,9 @@ function viewAbout() {
   const counted = dec.reduce((a, b) => a + (b.votes.counted || 0), 0);
   const unclear = dec.reduce((a, b) => a + (b.votes.unclear || 0), 0);
   const methods = [...new Set(dec.map((b) => b.votes.method))];
-  const node = (title, sub, tone = '') => `<div class="flow-node ${tone}"><div class="flow-t">${title}</div><div class="flow-s">${sub}</div></div>`;
-  const arrow = (label = '') => `<div class="flow-arrow"><span>${label}</span></div>`;
+  // Snake layout on wide screens (row 1 left→right, down, row 2 right→left); a single column on phones.
+  const node = (title, sub, tone, area) => `<div class="flow-node ${tone}" style="grid-area:${area}"><div class="flow-t">${title}</div><div class="flow-s">${sub}</div></div>`;
+  const arrow = (label, dir, area) => `<div class="flow-edge ${dir}" style="grid-area:${area}"><i aria-hidden="true"></i><span>${label}</span></div>`;
   return `<div class="about fade-in">
     <p class="eyebrow">Technical readout</p>
     <h1 style="margin:8px 0 6px">How this console works</h1>
@@ -504,22 +505,23 @@ function viewAbout() {
 
     <div class="section-title"><h2>The pipeline</h2></div>
     <div class="flow">
-      ${node('𝕏 · @BaronDestructo', 'A new beat daily at 12:01 PM ET. Fans vote by <em>replying</em>, not with a poll.')}
-      ${arrow('public mirrors')}
-      ${node('FxTwitter + Nitter', 'FxTwitter supplies posts, media and stats. Nitter pages through the replies. No X API needed.')}
-      ${arrow('every 30 min')}
-      ${node('GitHub Actions', '<code>scripts/update.mjs</code> finds new beats by following the quote-tweet chain, then fetches replies and mirrors the videos.', 'amber')}
-      ${arrow('one request per 25 replies')}
-      ${node('Jev · TypeSafe', 'A Choice question per reply for the vote, a Score for fleet morale, and a Choice to work out which branch the story took.', 'cyan')}
-      ${arrow('story.json')}
-      ${node('GitHub Pages', 'Plain HTML, CSS and JavaScript. No build step, no framework.', 'amber')}
-      ${arrow('live polling')}
-      ${node('Your browser', 'Also asks FxTwitter directly for live counts and new beats between pipeline runs.')}
+      ${node('𝕏 · @BaronDestructo', 'A new beat daily at 12:01 PM ET. Fans vote by <em>replying</em>, not with a poll.', '', 'a')}
+      ${arrow('public mirrors', 'right', 'e1')}
+      ${node('FxTwitter + Nitter', 'FxTwitter supplies posts, media and stats. Nitter pages through the replies. No X API needed.', '', 'b')}
+      ${arrow('every 30 min', 'right', 'e2')}
+      ${node('GitHub Actions', '<code>scripts/update.mjs</code> finds new beats by following the quote-tweet chain, then fetches replies and mirrors the videos.', 'amber', 'c')}
+      ${arrow('one request per 25 replies', 'down', 'e3')}
+      ${node('Jev · TypeSafe', 'A Choice question per reply for the vote, a Score for fleet morale, and a Choice to work out which branch the story took.', 'cyan', 'd')}
+      ${arrow('story.json', 'left', 'e4')}
+      ${node('GitHub Pages', 'Plain HTML, CSS and JavaScript. No build step, no framework.', 'amber', 'f')}
+      ${arrow('live polling', 'left', 'e5')}
+      ${node('Your browser', 'Also asks FxTwitter directly for live counts and new beats between pipeline runs.', '', 'g')}
     </div>
+    <p class="eyebrow" style="margin:26px 0 12px;color:var(--violet)">◈ Writer loop</p>
     <div class="flow side">
-      ${node('Claude · cloud routine', 'Runs 4 times a day on Anthropic\'s cloud. It rewrites rule-based catalogue entries properly and writes the fleet-sentiment readouts.', 'violet')}
-      ${arrow('git push data/')}
-      ${node('Triggers a redeploy', 'The Actions workflow runs again, and the new text goes live.')}
+      ${node('Claude · cloud routine', 'Runs 4 times a day on Anthropic\'s cloud. It picks up an encrypted work packet from the <code>agent-packets</code> branch, rewrites rule-based catalogue entries and writes the fleet-sentiment readouts.', 'violet', 'a')}
+      ${arrow('git push data/', 'right', 'e1')}
+      ${node('Triggers a redeploy', 'The Actions workflow runs again, and the new text goes live.', '', 'b')}
     </div>
 
     <div class="about-grid">
@@ -540,7 +542,7 @@ function viewAbout() {
           <li><strong>Cataloguing a new beat:</strong> a chapter title, the question, and each option's label and summary. GitHub Actions makes a rule-based first pass by spotting "Rommie <em>suggests</em>…", "CONTACT ONE", "pick a row A–D" and "Yes/No". Claude then rewrites it and keeps the option keys stable, so Jev's labels still apply.</li>
           <li><strong>The fleet-sentiment readout:</strong> Claude reads a sample of replies against Jev's official tally and explains <em>why</em> each option drew support. It never quotes or names anyone.</li>
         </ul>
-        <p class="dim">Claude runs as a scheduled cloud routine following <a href="https://github.com/codeshrew/amalgaverse/blob/main/AGENT_TASKS.md" target="_blank" rel="noopener">AGENT_TASKS.md</a>. It needs no secrets and doesn't depend on anyone's laptop.</p>
+        <p class="dim">Claude runs as a scheduled cloud routine following <a href="https://github.com/codeshrew/amalgaverse/blob/main/AGENT_TASKS.md" target="_blank" rel="noopener">AGENT_TASKS.md</a>. It needs no API keys and doesn't depend on anyone's laptop.</p>
       </section>
     </div>
 
