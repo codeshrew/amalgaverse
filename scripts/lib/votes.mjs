@@ -234,7 +234,11 @@ export async function tallyVotes(beat, replies, { author, cache = {} } = {}) {
   }
   // Summaries are also kept in data/summaries.json, so runs without an LLM (e.g. CI
   // with no Anthropic key) still show the last written readout.
-  if (cache.summary) Object.assign(result, { headline: cache.summary.headline, reasons: cache.summary.reasons, wildcards: cache.summary.wildcards });
+  if (cache.summary) {
+    // A readout written when a different option led would now be wrong; keep only the per-option reasons.
+    const current = !cache.summary.leader || cache.summary.leader === result.leader;
+    Object.assign(result, { headline: current ? cache.summary.headline : undefined, reasons: cache.summary.reasons, wildcards: current ? cache.summary.wildcards : undefined });
+  }
   if (method === 'ai') cache.votes = votes;
   return result;
 }
