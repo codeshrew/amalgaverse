@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Zero-dependency static server for the site/ folder.
 //   node scripts/serve.mjs [port]
-// Pass --watch to re-run the updater every 15 minutes while serving.
+// Pass --watch to re-run the updater every 30 minutes while serving.
 import { createServer } from 'node:http';
 import { readFile, stat } from 'node:fs/promises';
 import { spawn } from 'node:child_process';
@@ -27,7 +27,12 @@ createServer(async (req, res) => {
 }).listen(port, () => console.log(`Amalgaverse console online → http://localhost:${port}`));
 
 if (process.argv.includes('--watch')) {
-  const run = () => spawn(process.execPath, [new URL('./update.mjs', import.meta.url).pathname], { stdio: 'inherit' });
+  let busy = false;
+  const run = () => {
+    if (busy) return;
+    busy = true;
+    spawn(process.execPath, [new URL('./update.mjs', import.meta.url).pathname], { stdio: 'inherit' }).on('close', () => (busy = false));
+  };
   run();
-  setInterval(run, 15 * 60_000);
+  setInterval(run, 30 * 60_000);
 }

@@ -127,7 +127,7 @@ function renderOptions(b, { reasons = true } = {}) {
     return `<div class="${cls}">
       <div class="opt-bar" data-w="${sh == null ? 0 : sh * 100}" style="${b.status === 'closed' ? '' : ''}"></div>
       <div class="opt-head">
-        <div class="opt-label"><span class="opt-key">${esc(o.letter || String.fromCharCode(65 + i))}</span>${esc(o.label)}</div>
+        <div class="opt-label">${o.letter ? '' : `<span class="opt-key">${String.fromCharCode(65 + i)}</span>`}${esc(o.label)}</div>
         <div class="opt-pct">${pctTxt(sh)}</div>
       </div>
       <div class="opt-summary">${esc(o.summary || '')}</div>
@@ -423,7 +423,6 @@ function viewCrew() {
     return `<div class="crew-card ${isAway ? 'away' : ''} ${c.status === 'lost' ? 'lost' : ''}">
       ${portrait(i)}
       <div class="crew-info">
-        <div class="crew-role">${esc(c.role || '')}</div>
         <div class="crew-name">${esc(c.name)}</div>
         <div class="crew-origin">${esc(c.origin)}</div>
         <div class="opt-tags">${isAway ? '<span class="badge away">Away team</span>' : ''}${c.status === 'lost' ? '<span class="badge lost">Lost</span>' : ''}${c.isYou ? '<span class="badge canon">You</span>' : ''}</div>

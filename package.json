@@ -5,10 +5,13 @@
   "description": "A sci-fi console for following Joseph Mallozzi's #Amalgaverse choose-your-own-adventure on X.",
   "type": "module",
   "scripts": {
+    "start": "node scripts/serve.mjs --watch",
     "update": "node scripts/update.mjs",
     "update:fast": "node scripts/update.mjs --no-llm",
     "serve": "node scripts/serve.mjs",
-    "dev": "node scripts/update.mjs && node scripts/serve.mjs"
+    "replies": "node scripts/lib/replies.mjs"
   },
-  "engines": { "node": ">=20" }
+  "engines": {
+    "node": ">=20"
+  }
 }

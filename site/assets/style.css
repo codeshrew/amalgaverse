@@ -138,13 +138,13 @@ h3 { font-size: 16px; font-weight: 700; letter-spacing: 0.1em; text-transform: u
 
 /* ------------------------------------------------------------- bridge */
 .bridge-grid { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); gap: 22px; }
-@media (max-width: 960px) { .bridge-grid { grid-template-columns: 1fr; } }
+@media (max-width: 960px) { .bridge-grid { grid-template-columns: minmax(0, 1fr); } }
 .hero h1 { margin: 10px 0 6px; }
 .hero .question { font-family: var(--prose); font-size: clamp(18px, 2vw, 21px); color: var(--ink-2); font-style: italic; margin: 0 0 18px; }
 .hero-media { border-radius: 12px; overflow: hidden; border: 1px solid var(--line); background: #000; }
 .hero-media video, .hero-media img { display: block; width: 100%; max-height: 520px; object-fit: contain; background: #000; }
 .hero-top { display: grid; grid-template-columns: minmax(0, 1fr) 190px; gap: 20px; align-items: start; }
-@media (max-width: 640px) { .hero-top { grid-template-columns: 1fr; } .hero-top .hero-media { max-width: 260px; } }
+@media (max-width: 640px) { .hero-top { grid-template-columns: minmax(0, 1fr); } .hero-top .hero-media { max-width: 260px; } }
 
 .vote-clock { display: flex; gap: 14px; align-items: center; margin: 4px 0 18px; flex-wrap: wrap; }
 .vote-clock .mono { color: var(--cyan); font-size: 15px; }
@@ -186,7 +186,7 @@ h3 { font-size: 16px; font-weight: 700; letter-spacing: 0.1em; text-transform: u
 .chip.pending { border-style: dashed; color: var(--cyan); }
 .chip-arrow { color: var(--ink-3); font-family: var(--mono); font-size: 12px; }
 
-.stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 14px; }
+.stat-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 14px; }
 .stat { padding: 10px 12px; border-radius: 10px; border: 1px solid var(--line); background: rgba(0, 0, 0, 0.25); }
 .stat-v { font-family: var(--display); font-size: 22px; font-weight: 700; color: var(--amber); }
 .stat-k { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-3); }
@@ -223,7 +223,7 @@ h3 { font-size: 16px; font-weight: 700; letter-spacing: 0.1em; text-transform: u
 
 /* ------------------------------------------------------------- beat detail */
 .detail { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 24px; align-items: start; }
-@media (max-width: 960px) { .detail { grid-template-columns: 1fr; } }
+@media (max-width: 960px) { .detail { grid-template-columns: minmax(0, 1fr); } }
 .crumbs { font-family: var(--mono); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 12px; }
 .crumbs a { color: var(--ink-2); }
 .prose { font-family: var(--prose); font-size: 19px; line-height: 1.72; color: #e7e3d8; }
@@ -312,7 +312,7 @@ h3 { font-size: 16px; font-weight: 700; letter-spacing: 0.1em; text-transform: u
 .comm { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 16px; }
 .comm .prose { font-size: 17px; }
 .comm img, .comm video { max-width: 200px; border-radius: 10px; border: 1px solid var(--line); }
-@media (max-width: 640px) { .comm { grid-template-columns: 1fr; } }
+@media (max-width: 640px) { .comm { grid-template-columns: minmax(0, 1fr); } }
 
 .foot { max-width: 1280px; margin: 0 auto; padding: 20px clamp(16px, 4vw, 40px) 40px; color: var(--ink-3); font-size: 14px; border-top: 1px solid var(--line); }
 
@@ -320,3 +320,9 @@ h3 { font-size: 16px; font-weight: 700; letter-spacing: 0.1em; text-transform: u
 @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } }
 @media (max-width: 720px) { .hide-sm { display: none; } .topbar { flex-direction: column; align-items: flex-start; } .telemetry { justify-content: flex-start; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+@media (max-width: 480px) {
+  .stat-v { font-size: 18px; }
+  .stat-k { letter-spacing: 0.08em; }
+  .opt-label { font-size: 16px; }
+  .eyebrow { letter-spacing: 0.14em; }
+}

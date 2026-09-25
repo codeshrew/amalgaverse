@@ -43,6 +43,7 @@ try {
 } catch (e) {
   console.warn('  ! timeline unavailable:', e.message);
 }
+log(`  ${timeline.length} recent posts`);
 for (const t of timeline) tweetCache[t.id] = { ...t, fetchedAt: Date.now() };
 
 const beatIds = new Set(Object.keys(curation.beats));
@@ -169,7 +170,8 @@ for (const t of ordered) {
     log('Cataloguing new beat', t.id, '…');
     const { base, previousCanon } = await autoCurate(t, prevCur);
     cur = curation.beats[t.id] = base;
-    if (prevCur && previousCanon && (prevCur.auto || !prevCur.canon)) prevCur.canon = previousCanon;
+    const match = prevCur?.options?.find((o) => String(o.key).toLowerCase() === String(previousCanon).toLowerCase());
+    if (match && (prevCur.auto || !prevCur.canon)) prevCur.canon = match.key;
   }
   prevCur = cur;
 }

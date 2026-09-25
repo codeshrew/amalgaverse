@@ -68,8 +68,13 @@ export async function fetchTimeline(screenName = AUTHOR, pages = 2) {
     const url = `${FX}/2/profile/${screenName}/statuses${cursor ? `?cursor=${encodeURIComponent(cursor)}` : ''}`;
     let body;
     try {
-      body = await getJson(url, { retries: 1 });
-    } catch {
+      body = await getJson(url, { retries: 2 });
+    } catch (e) {
+      console.warn(`  ! timeline page ${p + 1}: ${e.message}`);
+      break;
+    }
+    if (body.code && body.code !== 200) {
+      console.warn(`  ! timeline page ${p + 1}: code ${body.code}`);
       break;
     }
     for (const t of body.results || []) out.push(normalizeTweet(t));
