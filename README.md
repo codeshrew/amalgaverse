@@ -1,5 +1,9 @@
 # Amalgaverse Console
 
+**▶ Live site: https://codeshrew.github.io/amalgaverse/**
+
+[![Amalgaverse Console: the Bridge view](docs/screenshot.png)](https://codeshrew.github.io/amalgaverse/)
+
 A sci-fi mission console for following [Joseph Mallozzi](https://x.com/BaronDestructo)'s **#Amalgaverse**, a choose-your-own-adventure told in daily posts on X. Fans vote by replying, and the most popular reply decides what happens next.
 
 ```
@@ -59,16 +63,24 @@ The published page also updates on its own between runs. FxTwitter allows direct
 
 ### Who does what
 
-| Job | GitHub Actions (every 30 min) | Your Mac (`scripts/local-sync.sh`, launchd) |
+| Job | GitHub Actions (every 30 min) | Claude routine (cloud, 4× a day) |
 |---|---|---|
-| Fetch posts, replies and videos | ✓ | ✓ |
-| Read votes and morale with Jev | ✓ | ✓ |
-| Work out which branch the story took (Jev reads the next post's opening) | ✓ | ✓ |
-| Catalogue a new beat's options | rule-based (advocate names, contacts, rows, yes/no) | upgraded by Claude |
-| Write the sentiment readout text | only with `ANTHROPIC_API_KEY` | Claude through your login |
+| Fetch posts, replies and videos | ✓ | fetches reply samples only |
+| Read votes and morale with Jev | ✓ | — |
+| Work out which branch the story took (Jev reads the next post's opening) | ✓ | — |
+| Catalogue a new beat's options | rule-based first pass (advocate names, contacts, rows, yes/no) | rewrites it properly |
+| Write the sentiment readout text | — | ✓ |
 | Publish | deploys Pages | pushes `data/`, which triggers a deploy |
 
-Install the Mac job with `scripts/install-local-sync.sh`. It runs at 10:20, 12:00, 16:00 and 20:00 Mountain time (the drop is 10:01 MT) and logs to `.cache/local-sync.log`.
+The routine is a scheduled Claude Code cloud agent that runs on Anthropic's infrastructure, so nothing depends on your machine. It follows [`AGENT_TASKS.md`](AGENT_TASKS.md):
+1. `node scripts/agent-tasks.mjs prepare` compares the published data with `data/` and lists what needs a writer.
+2. Claude writes the JSON answers.
+3. `node scripts/agent-tasks.mjs apply` validates them and merges them into `data/`.
+4. Claude commits and pushes.
+
+The routine needs no secrets. Manage it at https://claude.ai/code/routines.
+
+As a fallback, `scripts/local-sync.sh` does the same job from a Mac using your local `claude` login. `scripts/install-local-sync.sh` installs it as a launchd job. It's not installed by default.
 
 ## Curation
 
