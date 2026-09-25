@@ -273,12 +273,14 @@ for (const t of ordered) {
     }
     if (stored.replies.length) {
       const vcache = readJson(voteFile, {});
-      if (!vcache.summary && summaries[t.id]) vcache.summary = summaries[t.id];
+      // data/summaries.json is authoritative (the Claude routine writes it); the local
+      // cache only wins where this machine can write fresher readouts itself.
+      if (summaries[t.id] && (!vcache.summary || !llmAvailable())) vcache.summary = summaries[t.id];
       beat.votes = await tallyVotes({ ...cur, id: t.id, text: t.text, closed: status === 'closed', canon: cur.canon }, stored.replies, { author: AUTHOR, cache: vcache });
       beat.votes.reported = t.stats.replies;
       beat.votes.asOf = new Date(stored.fetchedAt).toISOString();
       writeJson(voteFile, vcache);
-      if (vcache.summary) summaries[t.id] = vcache.summary;
+      if (vcache.summary && llmAvailable()) summaries[t.id] = vcache.summary;
     } else {
       beat.votes = prevStory.beats?.find((b) => b.id === t.id)?.votes || null;
     }

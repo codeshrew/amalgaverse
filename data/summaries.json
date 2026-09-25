@@ -53,17 +53,18 @@
     "method": "jev"
   },
   "2102427955456815176": {
-    "headline": "Fracture led the count, but the captain set course for the Ghost Ship",
+    "headline": "The Ghost Ship narrowly outpaced The Fracture; Delivery and Heist trailed behind.",
     "reasons": {
-      "ghost": "Crew argued a mayday can't be ignored and the ship's dead silence demanded an immediate rescue look.",
-      "heist": "Fans wanted the illegal weapon and Ferengi off the board before it fell into worse hands.",
-      "delivery": "Many held that a Starfleet priority order addressed straight to the captain overrides curiosity.",
-      "fracture": "The largest bloc pointed to twenty-three missing researchers and no distress beacon as the clearest sign of lives at risk."
+      "ghost": "Crews called it the nearest mayday and lowest-risk stop, worth checking before moving on.",
+      "fracture": "Many argued Gamma-3's twenty-three silent crew and missing debris meant the most lives were at stake.",
+      "delivery": "Backers pointed to the captain's priority order and Zax's ticking deadline as reason duty came first.",
+      "heist": "A smaller group wanted the artifact secured before rival factions could claim it."
     },
-    "wildcards": "Recurring riffs included Ghostbusters jokes, a Futurama nod to the Ferengi contact, and several crews trying to split the away teams to chase more than one lead at once.",
-    "counted": 370,
+    "wildcards": "Jokes ran toward Ghostbusters callbacks and Romulan ale rumors, and several crews proposed splitting away teams across two or more contacts at once.",
+    "counted": 353,
     "final": true,
-    "leader": "fracture",
-    "method": "jev"
+    "leader": "ghost",
+    "method": "jev",
+    "by": "claude-routine"
   }
 }
