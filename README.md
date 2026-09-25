@@ -57,6 +57,19 @@ Mallozzi weighs people's reasoning, not just the numbers. So the "path taken" is
 
 The published page also updates on its own between runs. FxTwitter allows direct requests from the browser, so the page checks it every few minutes for live reply, like and view counts. It also shows an **Incoming transmission** banner as soon as a new beat posts, before the next Action has run.
 
+### Who does what
+
+| Job | GitHub Actions (every 30 min) | Your Mac (`scripts/local-sync.sh`, launchd) |
+|---|---|---|
+| Fetch posts, replies and videos | ✓ | ✓ |
+| Read votes and morale with Jev | ✓ | ✓ |
+| Work out which branch the story took (Jev reads the next post's opening) | ✓ | ✓ |
+| Catalogue a new beat's options | rule-based (advocate names, contacts, rows, yes/no) | upgraded by Claude |
+| Write the sentiment readout text | only with `ANTHROPIC_API_KEY` | Claude through your login |
+| Publish | deploys Pages | pushes `data/`, which triggers a deploy |
+
+Install the Mac job with `scripts/install-local-sync.sh`. It runs at 12:20, 14:00, 18:00 and 22:00 and logs to `.cache/local-sync.log`.
+
 ## Curation
 
 `data/curation.json` holds each beat's title, question and options. When a new beat appears, the updater catalogues it automatically using Claude. It extracts the options, keywords and away team, and works out which option the previous beat actually followed. Those entries are marked `"auto": true` and you can edit them freely. `data/crew.json` holds the crew manifest and ship assets. Set `"status": "lost"` on anyone the fleet gets killed.
