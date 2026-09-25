@@ -8,7 +8,9 @@
 //
 //   node scripts/agent-tasks.mjs prepare   # → .cache/agent/tasks.json (+ reply samples)
 //   node scripts/agent-tasks.mjs apply     # validates .cache/agent/out/*.json → data/*.json
-import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync, rmSync } from 'node:fs';
+import { randomBytes, createCipheriv, createDecipheriv } from 'node:crypto';
+import { execFileSync } from 'node:child_process';
 import { fetchReplies } from './lib/replies.mjs';
 import { dedupeVoters, cleanText } from './lib/votes.mjs';
 
@@ -20,11 +22,26 @@ const AUTHOR = 'BaronDestructo';
 const readJson = (f, d) => (existsSync(f) ? JSON.parse(readFileSync(f, 'utf8')) : d);
 const writeJson = (f, v) => writeFileSync(f, JSON.stringify(v, null, 2) + '\n');
 
-async function prepare() {
-  mkdirSync(OUT, { recursive: true });
+const LOCAL = process.argv.includes('--local');
+
+async function loadStory() {
+  if (LOCAL) return readJson(root + 'site/data/story.json', null);
   const res = await fetch(`${PAGES}data/story.json?t=${Date.now()}`, { cache: 'no-store' });
   if (!res.ok) throw new Error(`published story.json: HTTP ${res.status}`);
-  const story = await res.json();
+  return res.json();
+}
+
+// --local (CI, right after update.mjs): use the replies already cached on disk.
+async function loadReplies(id) {
+  if (LOCAL) return readJson(root + `.cache/replies/${id}.json`, { replies: [] }).replies;
+  return fetchReplies(id);
+}
+
+async function prepare() {
+  rmSync(DIR, { recursive: true, force: true });
+  mkdirSync(OUT, { recursive: true });
+  const story = await loadStory();
+  if (!story) throw new Error('no story data');
   const curation = readJson(root + 'data/curation.json', { beats: {} });
   const summaries = readJson(root + 'data/summaries.json', {});
   const byId = Object.fromEntries(story.beats.map((b) => [b.id, b]));
@@ -54,7 +71,7 @@ async function prepare() {
     if (!stale) continue;
     let replies = [];
     try {
-      replies = dedupeVoters(await fetchReplies(b.id), AUTHOR, b.id);
+      replies = dedupeVoters(await loadReplies(b.id), AUTHOR, b.id);
     } catch (e) {
       console.warn(`  ! replies for ${b.id}: ${e.message}`);
     }
@@ -127,10 +144,44 @@ function apply() {
   console.log(`applied ${changed} result(s)`);
 }
 
+// The cloud routine's sandbox can only reach github.com, so CI ships the work packet
+// on the `agent-packets` branch. It's encrypted (AES-256-GCM, key in the
+// AGENT_PACKET_KEY secret and the routine prompt) because it holds reply text,
+// which this public repo never publishes.
+function key() {
+  const k = process.env.AGENT_PACKET_KEY;
+  if (!k || !/^[0-9a-f]{64}$/i.test(k)) throw new Error('AGENT_PACKET_KEY (64 hex chars) is required');
+  return Buffer.from(k, 'hex');
+}
+
+function pack(outFile) {
+  const files = {};
+  for (const name of readdirSync(DIR)) if (/^(tasks\.json|replies-\d+\.txt)$/.test(name)) files[name] = readFileSync(DIR + name, 'utf8');
+  const iv = randomBytes(12);
+  const c = createCipheriv('aes-256-gcm', key(), iv);
+  const data = Buffer.concat([c.update(JSON.stringify(files)), c.final()]);
+  writeJson(outFile, { v: 1, createdAt: new Date().toISOString(), iv: iv.toString('base64'), tag: c.getAuthTag().toString('base64'), data: data.toString('base64') });
+  console.log(`packed ${Object.keys(files).length} file(s) → ${outFile}`);
+}
+
+function unpack() {
+  const raw = execFileSync('git', ['show', 'FETCH_HEAD:packet.json'], { cwd: root, encoding: 'utf8' });
+  const p = JSON.parse(raw);
+  const d = createDecipheriv('aes-256-gcm', key(), Buffer.from(p.iv, 'base64'));
+  d.setAuthTag(Buffer.from(p.tag, 'base64'));
+  const files = JSON.parse(Buffer.concat([d.update(Buffer.from(p.data, 'base64')), d.final()]).toString('utf8'));
+  mkdirSync(OUT, { recursive: true });
+  for (const [name, body] of Object.entries(files)) writeFileSync(DIR + name, body);
+  const tasks = JSON.parse(files['tasks.json'] || '{"tasks":[]}').tasks;
+  console.log(`packet from ${p.createdAt}: ${tasks.length} task(s): ${tasks.map((t) => `${t.type}:${t.id}`).join(', ') || 'nothing to do'}`);
+}
+
 const cmd = process.argv[2];
 if (cmd === 'prepare') await prepare();
 else if (cmd === 'apply') apply();
+else if (cmd === 'pack') pack(process.argv[3] || DIR + 'packet.json');
+else if (cmd === 'unpack') unpack();
 else {
-  console.error('usage: node scripts/agent-tasks.mjs prepare|apply');
+  console.error('usage: node scripts/agent-tasks.mjs prepare [--local] | apply | pack [file] | unpack   (unpack expects: git fetch origin agent-packets)');
   process.exit(1);
 }

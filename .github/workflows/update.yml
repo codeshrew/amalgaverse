@@ -50,6 +50,21 @@ jobs:
           TWITTERAPI_IO_KEY: ${{ secrets.TWITTERAPI_IO_KEY }}
         run: node scripts/update.mjs
 
+      # The Claude cloud routine can only reach github.com, so its work packet
+      # (tasks + reply samples, encrypted) is force-pushed to the agent-packets branch.
+      - name: Ship work packet for the Claude routine
+        env:
+          AGENT_PACKET_KEY: ${{ secrets.AGENT_PACKET_KEY }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          [ -n "$AGENT_PACKET_KEY" ] || { echo "no AGENT_PACKET_KEY; skipping"; exit 0; }
+          node scripts/agent-tasks.mjs prepare --local
+          node scripts/agent-tasks.mjs pack "$RUNNER_TEMP/packet.json"
+          rm -rf "$RUNNER_TEMP/pk" && mkdir "$RUNNER_TEMP/pk" && cd "$RUNNER_TEMP/pk"
+          git init -q && cp ../packet.json . && git add packet.json
+          git -c user.name=amalgaverse-bot -c user.email=41898282+github-actions[bot]@users.noreply.github.com commit -qm "Work packet $(date -u +%FT%TZ)"
+          git push -f -q "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:agent-packets
+
       # Only curation changes are committed (new beats catalogued, canon resolved).
       - name: Commit data changes
         run: |

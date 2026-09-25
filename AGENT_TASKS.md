@@ -2,12 +2,16 @@
 
 You are the story editor for the Amalgaverse Console, a fan site that follows Joseph Mallozzi's #Amalgaverse choose-your-own-adventure on X. Fans vote by replying to each post.
 
-GitHub Actions handles the mechanical work: fetching posts and replies, counting votes with TypeSafe Jev, and deploying the site. Your job is the part that needs judgement and writing. Everything you need is in this repo, and you don't need any secrets.
+GitHub Actions handles the mechanical work: fetching posts and replies, counting votes with TypeSafe Jev, and deploying the site. Your job is the part that needs judgement and writing. Everything you need is in this repo. The only secret is the packet key given in your prompt.
 
 ## Steps
 
 1. `git pull --rebase` to get the latest `main`.
-2. `node scripts/agent-tasks.mjs prepare`. This writes `.cache/agent/tasks.json`. If it prints `nothing to do`, stop and report "no work".
+2. Get the work packet. GitHub Actions publishes it, encrypted, on the `agent-packets` branch. Your sandbox can't reach the live site, so don't try to.
+   - `git fetch origin agent-packets`
+   - `AGENT_PACKET_KEY=<key from your prompt> node scripts/agent-tasks.mjs unpack`
+
+   This writes `.cache/agent/tasks.json` and the reply samples. If it prints `nothing to do`, stop and report "no work". Never print, commit or store the key.
 3. For each task in `tasks.json`, write the JSON file named in the task's `output` field. Output only valid JSON.
 4. `node scripts/agent-tasks.mjs apply`. If it errors, fix your output files and run it again.
 5. If `git status --porcelain data/` shows changes:
