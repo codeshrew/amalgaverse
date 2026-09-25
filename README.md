@@ -68,7 +68,7 @@ The published page also updates on its own between runs. FxTwitter allows direct
 | Write the sentiment readout text | only with `ANTHROPIC_API_KEY` | Claude through your login |
 | Publish | deploys Pages | pushes `data/`, which triggers a deploy |
 
-Install the Mac job with `scripts/install-local-sync.sh`. It runs at 12:20, 14:00, 18:00 and 22:00 and logs to `.cache/local-sync.log`.
+Install the Mac job with `scripts/install-local-sync.sh`. It runs at 10:20, 12:00, 16:00 and 20:00 Mountain time (the drop is 10:01 MT) and logs to `.cache/local-sync.log`.
 
 ## Curation
 
