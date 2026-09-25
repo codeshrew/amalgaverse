@@ -11,6 +11,8 @@ import { AUTHOR, fetchTweet, fetchTimeline, sleep } from './lib/x.mjs';
 import { fetchReplies } from './lib/replies.mjs';
 import { tallyVotes } from './lib/votes.mjs';
 import { askJson, llmAvailable } from './lib/llm.mjs';
+import { jevAvailable, jevCanon } from './lib/jev.mjs';
+import { heuristicCatalog } from './lib/catalog.mjs';
 
 const root = new URL('../', import.meta.url).pathname;
 
@@ -42,6 +44,7 @@ const curation = readJson(P.curation, { beats: {} });
 const crew = readJson(P.crew, { crew: [] });
 const prevStory = readJson(P.story, { beats: [], dispatches: [] });
 const tweetCache = readJson(P.cache + 'tweets.json', {});
+const summaries = readJson(root + 'data/summaries.json', {});
 
 // ---------------------------------------------------------------- discovery
 log('Scanning @' + AUTHOR + ' timeline…');
@@ -140,7 +143,10 @@ function parseHeader(text) {
 async function autoCurate(t, prevBeat) {
   const h = parseHeader(t.text);
   const base = { auto: true, kind: 'decision', mission: h.mission || prevBeat?.mission || 'Unknown', missionNumber: h.missionNumber ?? prevBeat?.missionNumber ?? null, part: h.part ?? prevBeat?.part ?? null, title: h.headline, question: null, options: [], canon: null };
-  if (!llmAvailable()) return { base, previousCanon: null };
+  if (!llmAvailable()) {
+    const h2 = heuristicCatalog(t.text);
+    return { base: { ...base, heuristic: true, question: h2.question, options: h2.options }, previousCanon: null };
+  }
   const prevBlock = prevBeat?.options?.length
     ? `The PREVIOUS post asked: "${prevBeat.question}" with options:\n${prevBeat.options.map((o) => `- ${o.key}: ${o.label} — ${o.summary}`).join('\n')}\nFrom the NEW post's opening, determine which previous option the story actually followed.`
     : 'There is no previous decision to resolve; set previousCanon to null.';
@@ -174,14 +180,33 @@ Return ONLY JSON:
 let prevCur = null;
 for (const t of ordered) {
   let cur = curation.beats[t.id];
-  if (!cur || (cur.auto && !cur.options?.length && llmAvailable())) {
-    log('Cataloguing new beat', t.id, '…');
+  if (!cur || (cur.auto && (cur.heuristic || !cur.options?.length) && llmAvailable())) {
+    log('Cataloguing new beat', t.id, cur?.heuristic ? '(upgrading rule-based entry)' : '', '…');
     const { base, previousCanon } = await autoCurate(t, prevCur);
+    if (cur?.canon && !base.canon) base.canon = cur.canon;
     cur = curation.beats[t.id] = base;
     const match = prevCur?.options?.find((o) => String(o.key).toLowerCase() === String(previousCanon).toLowerCase());
     if (match && (prevCur.auto || !prevCur.canon)) prevCur.canon = match.key;
   }
   prevCur = cur;
+}
+// Resolve "which branch did the story take?" for any decided beat still missing it.
+// Jev reads the next post's opening ("You've decided to…") as a calibrated Choice.
+if (jevAvailable()) {
+  for (const t of ordered) {
+    const cur = curation.beats[t.id];
+    const next = successor[t.id];
+    if (!cur || cur.canon || !cur.options?.length || !next) continue;
+    try {
+      const r = await jevCanon(cur, beatsRaw[next].text);
+      if (r && r.confidence >= 0.6) {
+        cur.canon = r.key;
+        log(`Canon for "${cur.title}": ${r.key} (Jev confidence ${r.confidence.toFixed(2)})`);
+      }
+    } catch (e) {
+      console.warn('  ! Jev canon check failed:', e.message);
+    }
+  }
 }
 curation.head = newest?.id ?? curation.head;
 writeJson(P.curation, curation);
@@ -248,10 +273,12 @@ for (const t of ordered) {
     }
     if (stored.replies.length) {
       const vcache = readJson(voteFile, {});
+      if (!vcache.summary && summaries[t.id]) vcache.summary = summaries[t.id];
       beat.votes = await tallyVotes({ ...cur, id: t.id, text: t.text, closed: status === 'closed', canon: cur.canon }, stored.replies, { author: AUTHOR, cache: vcache });
       beat.votes.reported = t.stats.replies;
       beat.votes.asOf = new Date(stored.fetchedAt).toISOString();
       writeJson(voteFile, vcache);
+      if (vcache.summary) summaries[t.id] = vcache.summary;
     } else {
       beat.votes = prevStory.beats?.find((b) => b.id === t.id)?.votes || null;
     }
@@ -312,4 +339,5 @@ const story = {
 writeJson(P.story, story);
 writeFileSync(P.storyJs, `window.AMALGAVERSE = ${JSON.stringify(story)};\n`);
 writeJson(P.cache + 'tweets.json', tweetCache);
+writeJson(root + 'data/summaries.json', summaries);
 log(`Wrote ${beats.length} beats across ${missions.length} missions → site/data/story.json`);

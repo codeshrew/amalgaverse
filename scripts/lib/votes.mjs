@@ -110,7 +110,7 @@ async function llmSummarize(beat, voters, votes, tally) {
   const ranked = beat.options.map((o) => [o.key, tally[o.key] || 0]).sort((a, b) => b[1] - a[1]);
   const canon = beat.canon && beat.options.find((o) => o.key === beat.canon);
   const status = beat.closed
-    ? `Voting is CLOSED.${canon ? ` The story went with: ${canon.key} (${canon.label}).` : ''} Write in the past tense.`
+    ? `Voting is CLOSED.${canon ? ` The story went with: ${canon.key} (${canon.label}).` : ''}${canon && ranked[0] && ranked[0][0] !== canon.key ? ` NOTE: ${ranked[0][0]} had the most counted replies, yet the showrunner followed ${canon.key} (he weighs reasoning, not just numbers). The headline must make this clear and must not say ${ranked[0][0]} won.` : ''} Write in the past tense.`
     : 'Voting is STILL OPEN (the tally is live). Write in the present tense.';
   const prompt = `Fans voted by reply on this choose-your-own-adventure decision: "${beat.question}"
 
@@ -136,6 +136,14 @@ Respond with ONLY JSON:
  */
 export async function tallyVotes(beat, replies, { author, cache = {} } = {}) {
   const voters = dedupeVoters(replies, author, beat.id);
+  // Per-reply labels are only valid for the option set they were made against.
+  const sig = beat.options.map((o) => o.key).join('|');
+  if (cache.optionsSig && cache.optionsSig !== sig) {
+    delete cache.jev;
+    delete cache.votes;
+    delete cache.summary;
+  }
+  cache.optionsSig = sig;
   let votes = {};
   let method = 'keywords';
   let mood = null;
@@ -214,17 +222,19 @@ export async function tallyVotes(beat, replies, { author, cache = {} } = {}) {
 
   if (llmAvailable() && method !== 'keywords' && counted >= 5) {
     const prev = cache.summary;
-    const stale = !prev || !prev.counted || counted >= prev.counted * 1.08 || (beat.closed && !prev.final);
+    const stale = !prev || !prev.counted || counted >= prev.counted * 1.08 || (beat.closed && !prev.final) || prev.leader !== result.leader || prev.method !== method;
     if (stale) {
       try {
         const s = await llmSummarize(beat, voters, votes, tally);
-        cache.summary = { ...s, counted, final: !!beat.closed };
+        cache.summary = { ...s, counted, final: !!beat.closed, leader: result.leader, method };
       } catch (err) {
         console.warn(`  ! summary failed: ${err.message}`);
       }
     }
-    if (cache.summary) Object.assign(result, { headline: cache.summary.headline, reasons: cache.summary.reasons, wildcards: cache.summary.wildcards });
   }
+  // Summaries are also kept in data/summaries.json, so runs without an LLM (e.g. CI
+  // with no Anthropic key) still show the last written readout.
+  if (cache.summary) Object.assign(result, { headline: cache.summary.headline, reasons: cache.summary.reasons, wildcards: cache.summary.wildcards });
   if (method === 'ai') cache.votes = votes;
   return result;
 }

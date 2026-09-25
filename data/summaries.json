@@ -1,0 +1,69 @@
+{
+  "2102065567318638730": {
+    "headline": "Crew overwhelmingly votes yes, boarding the Alt. Enterprise-D",
+    "reasons": {
+      "yes": "Most saw joining a legendary crew on a maiden voyage as an easy, obvious call not worth debating.",
+      "no": "The few dissenters worried about being an expendable background character on a ship full of leads."
+    },
+    "wildcards": "Recurring jokes about red-shirt mortality odds, and a persistent minority campaign to smuggle a beloved cookie along for the ride.",
+    "counted": 341,
+    "final": true,
+    "leader": "yes",
+    "method": "jev"
+  },
+  "2102790343305626057": {
+    "headline": "Fleet overwhelmingly chose Sheppard's jumper run into the bay",
+    "reasons": {
+      "sheppard": "Crew favored the jumper as a reliable fallback with a built-in exit, letting them scout the hangar and bridge while keeping a ship on hand for a fast getaway.",
+      "scotty": "Backers trusted Scotty's transporter as the simplest, fastest way aboard and preferred his track record over a risky trek through the ship.",
+      "garak": "Supporters liked the hull-breach route for its surprise value and the chance to immediately learn what crippled the freighter.",
+      "mckay": "A small contingent argued the mission wasn't worth the risk and preferred scanning, remote access, or flagging it for another ship entirely."
+    },
+    "wildcards": "Several officers floated hybrid plans pairing the jumper with Scotty on standby for emergency extraction, and more than one voice cited McKay's caution just to overrule it for the sake of a good story.",
+    "counted": 339,
+    "final": true,
+    "leader": "sheppard",
+    "method": "jev"
+  },
+  "2103152730714063183": {
+    "headline": "Fleet backs Row D, O'Neill-Jackson-McKay-Rommie squad wins narrow plurality",
+    "reasons": {
+      "D": "Voters liked a no-medic-needed lineup with strong translation, tech repair, and vacuum survival covered without redundant piloting.",
+      "A": "Voters wanted Data's vacuum tolerance and analytical strength paired with medical coverage from Frasier for maximum self-sufficiency.",
+      "C": "Voters favored O'Neill and Carter's chemistry plus Odo and Garak for infiltration, shapeshifting access, and reading potential traps.",
+      "B": "Voters prioritized heavy security and McCoy's medical expertise in case the mission turned into a rescue or firefight."
+    },
+    "wildcards": "Recurring gags included wanting a hybrid team that didn't exist as an option, jokes about defaulting to 'C' on multiple-choice instinct, and speculation about odd-couple pairings like Bones and Teal'c.",
+    "counted": 419,
+    "final": true,
+    "leader": "D",
+    "method": "jev"
+  },
+  "2103515118818697677": {
+    "headline": "O'Neill's suit-up plan holds a commanding lead as voting continues",
+    "reasons": {
+      "oneill": "Crew favors keeping mobility and a guaranteed exit over risking a door that might not reopen if power or Rommie fail.",
+      "mckay": "Backers trust a controlled power drain from the jumper to solve the door for good, banking on nearby backup if reserves run low.",
+      "rommie": "Supporters like solving the jam without touching jumper power, provided a lifeline keeps their android friend recoverable if she drops."
+    },
+    "wildcards": "Recurring notes flag the missing Carter as sorely missed counsel, alongside cross-franchise cameo appreciation for the crew's real-life pairing.",
+    "counted": 275,
+    "final": false,
+    "leader": "oneill",
+    "method": "jev"
+  },
+  "2102427955456815176": {
+    "headline": "Fracture led the count, but the captain set course for the Ghost Ship",
+    "reasons": {
+      "ghost": "Crew argued a mayday can't be ignored and the ship's dead silence demanded an immediate rescue look.",
+      "heist": "Fans wanted the illegal weapon and Ferengi off the board before it fell into worse hands.",
+      "delivery": "Many held that a Starfleet priority order addressed straight to the captain overrides curiosity.",
+      "fracture": "The largest bloc pointed to twenty-three missing researchers and no distress beacon as the clearest sign of lives at risk."
+    },
+    "wildcards": "Recurring riffs included Ghostbusters jokes, a Futurama nod to the Ferengi contact, and several crews trying to split the away teams to chase more than one lead at once.",
+    "counted": 370,
+    "final": true,
+    "leader": "fracture",
+    "method": "jev"
+  }
+}

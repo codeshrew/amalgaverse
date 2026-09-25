@@ -91,3 +91,27 @@ export async function jevClassify(beat, replies, { log = () => {} } = {}) {
   }
   return out;
 }
+
+/**
+ * Which option of the previous decision did the story follow? Asked of the new
+ * post's opening, which always restates the outcome ("You've decided to…").
+ * @returns {Promise<{key: string, confidence: number} | null>}
+ */
+export async function jevCanon(prevBeat, newText) {
+  const opening = newText.split(/\n\s*\n/).slice(0, 4).join('\n\n').slice(0, 2500);
+  const criteria = {};
+  for (const o of prevBeat.options) criteria[o.key] = `${o.label}${o.summary ? ` (${o.summary})` : ''}`;
+  const res = await call({
+    model: MODEL,
+    state: { previous_decision: prevBeat.question, new_post_opening: opening },
+    questions: {
+      canon: {
+        type: 'choice',
+        instructions: 'This is the next installment of a choose-your-own-adventure story. Based on `new_post_opening`, which option of `previous_decision` did the story go with?',
+        criteria,
+      },
+    },
+  });
+  const a = res.answers.canon;
+  return a ? { key: a.choice, confidence: a.confidence } : null;
+}
