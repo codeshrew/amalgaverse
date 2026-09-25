@@ -1,0 +1,169 @@
+{
+  "_readme": "Crew of the Alt. Enterprise-D, from the official crew manifest (posted with each PREVIOUSLY ON recap). status: active | lost | missing. Edit freely; the site reads this file.",
+  "ship": {
+    "name": "Alt. Enterprise-D",
+    "assets": [
+      {
+        "name": "Puddle Jumper",
+        "origin": "Stargate Atlantis",
+        "status": "deployed",
+        "note": "Docked in the ghost ship's open hangar bay."
+      },
+      {
+        "name": "F-302",
+        "origin": "Stargate SG-1",
+        "status": "aboard"
+      }
+    ]
+  },
+  "crew": [
+    {
+      "name": "James T. Kirk",
+      "short": "Kirk",
+      "role": "Captain",
+      "origin": "Star Trek",
+      "status": "active"
+    },
+    {
+      "name": "Colonel Samantha Carter",
+      "short": "Carter",
+      "role": "First Officer",
+      "origin": "Stargate SG-1",
+      "status": "active"
+    },
+    {
+      "name": "Data",
+      "short": "Data",
+      "role": "Science Officer",
+      "origin": "Star Trek: The Next Generation",
+      "status": "active"
+    },
+    {
+      "name": "Leonard ‘Bones’ McCoy",
+      "short": "McCoy",
+      "role": "Chief Medical Officer",
+      "origin": "Star Trek",
+      "status": "active"
+    },
+    {
+      "name": "Montgomery Scott",
+      "short": "Scotty",
+      "role": "Chief Engineer",
+      "origin": "Star Trek",
+      "status": "active",
+      "note": "Standing by at the transporter"
+    },
+    {
+      "name": "Dr. Daniel Jackson",
+      "short": "Daniel",
+      "role": "Diplomat",
+      "origin": "Stargate SG-1",
+      "status": "active",
+      "awayTeam": true
+    },
+    {
+      "name": "Colonel Jack O’Neill",
+      "short": "O’Neill",
+      "role": "Away Team Leader",
+      "origin": "Stargate SG-1",
+      "status": "active",
+      "awayTeam": true
+    },
+    {
+      "name": "Colonel John Sheppard",
+      "short": "Sheppard",
+      "role": "Ace Pilot",
+      "origin": "Stargate Atlantis",
+      "status": "active"
+    },
+    {
+      "name": "Dr. Rodney McKay",
+      "short": "McKay",
+      "role": "Ship’s Techie",
+      "origin": "Stargate Atlantis",
+      "status": "active",
+      "awayTeam": true
+    },
+    {
+      "name": "Teal’c",
+      "short": "Teal’c",
+      "role": "Ship’s Enforcer",
+      "origin": "Stargate SG-1",
+      "status": "active"
+    },
+    {
+      "name": "Pilot",
+      "short": "Pilot",
+      "role": "Helmsman",
+      "origin": "Farscape",
+      "status": "active"
+    },
+    {
+      "name": "Constable Odo",
+      "short": "Odo",
+      "role": "Chief Security Officer",
+      "origin": "Star Trek: Deep Space Nine",
+      "status": "active"
+    },
+    {
+      "name": "Elim Garak",
+      "short": "Garak",
+      "role": "Resident Alien",
+      "origin": "Star Trek: Deep Space Nine",
+      "status": "active"
+    },
+    {
+      "name": "Colonel Harry Maybourne",
+      "short": "Maybourne",
+      "role": "Unlikely Ally",
+      "origin": "Stargate SG-1",
+      "status": "active"
+    },
+    {
+      "name": "Rommie",
+      "short": "Rommie",
+      "role": "Ship’s A.I.",
+      "origin": "Andromeda",
+      "status": "active",
+      "awayTeam": true
+    },
+    {
+      "name": "Aeryn Sun",
+      "short": "Aeryn",
+      "role": "2nd Ace Pilot",
+      "origin": "Farscape",
+      "status": "active"
+    },
+    {
+      "name": "Ambassador G’Kar",
+      "short": "G’Kar",
+      "role": "1st Wildcard",
+      "origin": "Babylon 5",
+      "status": "active"
+    },
+    {
+      "name": "Thor",
+      "short": "Thor",
+      "role": "2nd Wildcard",
+      "origin": "Stargate SG-1",
+      "status": "active"
+    },
+    {
+      "name": "Dr. Janet Fraiser",
+      "short": "Fraiser",
+      "role": "3rd Wildcard",
+      "origin": "Stargate SG-1",
+      "status": "active"
+    },
+    {
+      "name": "You",
+      "short": "You",
+      "role": "4th Wildcard",
+      "origin": "Earth (our reality)",
+      "status": "active",
+      "isYou": true,
+      "note": "The 20th crew member — encyclopedic knowledge of every reality"
+    }
+  ],
+  "manifestImage": "https://pbs.twimg.com/media/HS6MVzLWMAAc_W4.jpg?name=orig"
+}
