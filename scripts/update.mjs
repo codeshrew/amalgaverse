@@ -224,6 +224,7 @@ for (const t of ordered) {
       log(`Fetching replies for "${beat.title}" (${t.stats.replies} reported)…`);
       try {
         const fresh = await fetchReplies(t.id);
+        if (fresh.meta?.nitterErrors?.length && !fresh.meta.nitterInstance) console.warn("  ! nitter unavailable:", fresh.meta.nitterErrors.slice(0, 2).join("; "));
         const merged = new Map(stored.replies.map((r) => [r.id, r]));
         for (const r of fresh) merged.set(r.id, r);
         stored.replies = [...merged.values()];
@@ -237,7 +238,7 @@ for (const t of ordered) {
     }
     if (stored.replies.length) {
       const vcache = readJson(voteFile, {});
-      beat.votes = await tallyVotes({ ...cur, text: t.text, closed: status === 'closed' }, stored.replies, { author: AUTHOR, cache: vcache });
+      beat.votes = await tallyVotes({ ...cur, id: t.id, text: t.text, closed: status === 'closed', canon: cur.canon }, stored.replies, { author: AUTHOR, cache: vcache });
       beat.votes.reported = t.stats.replies;
       beat.votes.asOf = new Date(stored.fetchedAt).toISOString();
       writeJson(voteFile, vcache);

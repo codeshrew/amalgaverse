@@ -49,11 +49,12 @@ export function heuristicVote(rawText, options) {
 }
 
 /** One vote per account: keep each voter's most recent reply that expresses a choice. */
-export function dedupeVoters(replies, author) {
+export function dedupeVoters(replies, author, postId) {
   const byUser = new Map();
   const sorted = [...replies].sort((a, b) => new Date(a.created_at) - new Date(b.created_at));
   for (const r of sorted) {
     if (!r.author_screen_name || r.author_screen_name.toLowerCase() === author.toLowerCase()) continue;
+    if (postId && r.in_reply_to_id && r.in_reply_to_id !== postId) continue; // only direct replies are votes
     const prev = byUser.get(r.author_screen_name);
     byUser.set(r.author_screen_name, prev ? { ...r, earlier: [...(prev.earlier || []), prev] } : r);
   }
@@ -105,7 +106,15 @@ async function llmSummarize(beat, voters, votes, tally) {
   const blocks = beat.options
     .map((o) => `### ${o.key} (${tally[o.key] || 0} votes) — ${o.label}\n${(sample[o.key] || []).slice(0, 40).map((t) => `- ${t}`).join('\n') || '(no votes)'}`)
     .join('\n\n');
+  const ranked = beat.options.map((o) => [o.key, tally[o.key] || 0]).sort((a, b) => b[1] - a[1]);
+  const canon = beat.canon && beat.options.find((o) => o.key === beat.canon);
+  const status = beat.closed
+    ? `Voting is CLOSED.${canon ? ` The story went with: ${canon.key} (${canon.label}).` : ''} Write in the past tense.`
+    : 'Voting is STILL OPEN (the tally is live). Write in the present tense.';
   const prompt = `Fans voted by reply on this choose-your-own-adventure decision: "${beat.question}"
+
+${status}
+Ranking by counted votes (highest first): ${ranked.map(([k, n]) => `${k}=${n}`).join(', ')}. Your headline MUST be consistent with this ranking.
 
 Here are the vote counts and a sample of the replies, grouped by the option they chose:
 
@@ -125,7 +134,7 @@ Respond with ONLY JSON:
  *   headline?:string, reasons?:Record<string,string>, wildcards?:string}}
  */
 export async function tallyVotes(beat, replies, { author, cache = {} } = {}) {
-  const voters = dedupeVoters(replies, author);
+  const voters = dedupeVoters(replies, author, beat.id);
   let votes = {};
   let method = 'keywords';
 

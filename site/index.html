@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Amalgaverse Console</title>
+  <meta name="description" content="A fan-made mission console for following Joseph Mallozzi's #Amalgaverse choose-your-own-adventure." />
+  <meta name="theme-color" content="#04060c" />
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&family=Spectral:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <canvas id="stars" aria-hidden="true"></canvas>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#/bridge" aria-label="Amalgaverse Console home">
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke-width="2.4"><circle cx="25" cy="27" r="13" stroke="var(--amber)"/><circle cx="39" cy="27" r="13" stroke="var(--cyan)"/><circle cx="32" cy="39" r="13" stroke="var(--rose)"/></g><path d="M32 18 L39 40 L32 35 L25 40 Z" fill="var(--ink)"/></svg>
+      <span class="brand-text">
+        <span class="brand-title">AMALGAVERSE</span>
+        <span class="brand-sub" id="shipline">ALT. ENTERPRISE-D · MISSION CONSOLE</span>
+      </span>
+    </a>
+    <div class="telemetry">
+      <div class="tele"><span class="tele-k">Stardate</span><span class="tele-v mono" id="stardate">—</span></div>
+      <div class="tele"><span class="tele-k">Next transmission</span><span class="tele-v mono" id="countdown">—</span></div>
+      <div class="tele hide-sm"><span class="tele-k">Last sync</span><span class="tele-v mono" id="lastsync">—</span></div>
+    </div>
+  </header>
+
+  <nav class="tabs" aria-label="Sections">
+    <a href="#/bridge" data-tab="bridge"><span class="tab-n">01</span>Bridge</a>
+    <a href="#/log" data-tab="log"><span class="tab-n">02</span>Mission Log</a>
+    <a href="#/map" data-tab="map"><span class="tab-n">03</span>Timeline Map</a>
+    <a href="#/chronicle" data-tab="chronicle"><span class="tab-n">04</span>Chronicle</a>
+    <a href="#/crew" data-tab="crew"><span class="tab-n">05</span>Crew</a>
+    <a href="#/comms" data-tab="comms"><span class="tab-n">06</span>Comms</a>
+  </nav>
+
+  <main id="view" tabindex="-1">
+    <div class="boot mono">
+      <p>INITIALISING CONSOLE…</p>
+      <p class="dim">If this persists, run <code>npm run update</code> to generate <code>site/data/story.json</code>.</p>
+    </div>
+  </main>
+
+  <footer class="foot">
+    <p>Fan-made tracker for <a href="https://x.com/BaronDestructo" target="_blank" rel="noopener">Joseph Mallozzi</a>'s #Amalgaverse. Story, images and characters belong to their creators. Votes are counted from public replies and summarised — go <strong>vote on X</strong>, that's what counts.</p>
+  </footer>
+
+  <script src="data/story.js"></script>
+  <script src="assets/app.js" type="module"></script>
+</body>
+</html>
