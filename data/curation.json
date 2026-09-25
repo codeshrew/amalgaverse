@@ -15,8 +15,46 @@
       "title": "The Amalgaverse Begins",
       "question": "Do you join the Alt. Enterprise-D and its crew on their maiden voyage?",
       "options": [
-        { "key": "yes", "label": "Yes — sign aboard", "summary": "Set phasers, zats, force lances and pulse pistols to fun. Become the 20th crew member.", "keywords": ["yes", "yep", "yeah", "aye", "absolutely", "engage", "make it so", "count me in", "sign me up", "hell yes", "of course", "let's go", "lets go", "i'm in", "im in", "obviously", "duh", "yas", "yup", "affirmative"] },
-        { "key": "no", "label": "No — stay home", "summary": "Finish the cookie. Stay on your Earth.", "keywords": ["no", "nope", "nah", "negative", "pass", "cookie"] }
+        {
+          "key": "yes",
+          "label": "Yes — sign aboard",
+          "summary": "Set phasers, zats, force lances and pulse pistols to fun. Become the 20th crew member.",
+          "keywords": [
+            "yes",
+            "yep",
+            "yeah",
+            "aye",
+            "absolutely",
+            "engage",
+            "make it so",
+            "count me in",
+            "sign me up",
+            "hell yes",
+            "of course",
+            "let's go",
+            "lets go",
+            "i'm in",
+            "im in",
+            "obviously",
+            "duh",
+            "yas",
+            "yup",
+            "affirmative"
+          ]
+        },
+        {
+          "key": "no",
+          "label": "No — stay home",
+          "summary": "Finish the cookie. Stay on your Earth.",
+          "keywords": [
+            "no",
+            "nope",
+            "nah",
+            "negative",
+            "pass",
+            "cookie"
+          ]
+        }
       ],
       "canon": "yes"
     },
@@ -26,10 +64,70 @@
       "title": "Four Contacts, One Ship",
       "question": "Four crises. One ship. No back-up. Where do we set course first?",
       "options": [
-        { "key": "ghost", "label": "Contact One — The Ghost Ship", "summary": "A derelict vessel cycling a fragmented Federation distress call. No lights, no drive, no life signs.", "keywords": ["ghost", "contact one", "contact 1", "one", "1", "derelict", "distress", "ghost ship"] },
-        { "key": "heist", "label": "Contact Two — The Heist", "summary": "A Ferengi shadow auction for Artifact Omicron-8 — possibly an outlawed subspace weapon.", "keywords": ["heist", "contact two", "contact 2", "two", "2", "auction", "omicron", "artifact", "ferengi"] },
-        { "key": "delivery", "label": "Contact Three — The Delivery", "summary": "Extract intelligence broker Harven Zax, wanted by Romulans, the Orion Syndicate and a Klingon Great House.", "keywords": ["delivery", "contact three", "contact 3", "three", "3", "zax", "harven", "broker", "extract"] },
-        { "key": "fracture", "label": "Contact Four — The Fracture", "summary": "Kirin Station Outpost Gamma-3 has gone silent. 23 crew. No beacon. No debris.", "keywords": ["fracture", "contact four", "contact 4", "four", "4", "gamma", "kirin", "outpost", "station", "silence"] }
+        {
+          "key": "ghost",
+          "label": "Contact One — The Ghost Ship",
+          "summary": "A derelict vessel cycling a fragmented Federation distress call. No lights, no drive, no life signs.",
+          "keywords": [
+            "ghost",
+            "contact one",
+            "contact 1",
+            "one",
+            "1",
+            "derelict",
+            "distress",
+            "ghost ship"
+          ]
+        },
+        {
+          "key": "heist",
+          "label": "Contact Two — The Heist",
+          "summary": "A Ferengi shadow auction for Artifact Omicron-8 — possibly an outlawed subspace weapon.",
+          "keywords": [
+            "heist",
+            "contact two",
+            "contact 2",
+            "two",
+            "2",
+            "auction",
+            "omicron",
+            "artifact",
+            "ferengi"
+          ]
+        },
+        {
+          "key": "delivery",
+          "label": "Contact Three — The Delivery",
+          "summary": "Extract intelligence broker Harven Zax, wanted by Romulans, the Orion Syndicate and a Klingon Great House.",
+          "keywords": [
+            "delivery",
+            "contact three",
+            "contact 3",
+            "three",
+            "3",
+            "zax",
+            "harven",
+            "broker",
+            "extract"
+          ]
+        },
+        {
+          "key": "fracture",
+          "label": "Contact Four — The Fracture",
+          "summary": "Kirin Station Outpost Gamma-3 has gone silent. 23 crew. No beacon. No debris.",
+          "keywords": [
+            "fracture",
+            "contact four",
+            "contact 4",
+            "four",
+            "4",
+            "gamma",
+            "kirin",
+            "outpost",
+            "station",
+            "silence"
+          ]
+        }
       ],
       "canon": "ghost"
     },
@@ -41,10 +139,62 @@
       "title": "How Do We Get Aboard?",
       "question": "A derelict freighter sits inside a pulsing spatial anomaly. Whose advice do you follow?",
       "options": [
-        { "key": "scotty", "label": "Scotty — beam aboard", "summary": "Transport straight to the bridge in a lull between pulses. Fast — but extraction may not be instant.", "keywords": ["scotty", "scottie", "beam", "transport", "transporter", "beam aboard", "beam us"] },
-        { "key": "sheppard", "label": "Sheppard — fly the jumper in", "summary": "Park the puddle jumper in the open hangar bay for a clean getaway. Long hike to the bridge.", "keywords": ["sheppard", "shepard", "shep", "john", "jumper", "puddle jumper", "hangar", "fly in"] },
-        { "key": "garak", "label": "Garak — enter via the hull breach", "summary": "Jumper, then EVA through the rupture midway between bridge and hangar. Slow, exposed, unexpected.", "keywords": ["garak", "breach", "hull", "rupture", "eva", "spacewalk"] },
-        { "key": "mckay", "label": "McKay — skip this one", "summary": "\"The three worst ideas since the Matrix sequels.\" Don't board at all.", "keywords": ["mckay", "rodney", "skip", "leave", "don't board", "dont board", "matrix"] }
+        {
+          "key": "scotty",
+          "label": "Scotty — beam aboard",
+          "summary": "Transport straight to the bridge in a lull between pulses. Fast — but extraction may not be instant.",
+          "keywords": [
+            "scotty",
+            "scottie",
+            "beam",
+            "transport",
+            "transporter",
+            "beam aboard",
+            "beam us"
+          ]
+        },
+        {
+          "key": "sheppard",
+          "label": "Sheppard — fly the jumper in",
+          "summary": "Park the puddle jumper in the open hangar bay for a clean getaway. Long hike to the bridge.",
+          "keywords": [
+            "sheppard",
+            "shepard",
+            "shep",
+            "john",
+            "jumper",
+            "puddle jumper",
+            "hangar",
+            "fly in"
+          ]
+        },
+        {
+          "key": "garak",
+          "label": "Garak — enter via the hull breach",
+          "summary": "Jumper, then EVA through the rupture midway between bridge and hangar. Slow, exposed, unexpected.",
+          "keywords": [
+            "garak",
+            "breach",
+            "hull",
+            "rupture",
+            "eva",
+            "spacewalk"
+          ]
+        },
+        {
+          "key": "mckay",
+          "label": "McKay — skip this one",
+          "summary": "\"The three worst ideas since the Matrix sequels.\" Don't board at all.",
+          "keywords": [
+            "mckay",
+            "rodney",
+            "skip",
+            "leave",
+            "don't board",
+            "dont board",
+            "matrix"
+          ]
+        }
       ],
       "canon": "sheppard"
     },
@@ -56,10 +206,70 @@
       "title": "Choose the Away Team",
       "question": "Two ATA-gene pilots lead the jumper team. Pick a row, A through D.",
       "options": [
-        { "key": "A", "label": "Row A", "summary": "Sheppard · Data · G'Kar · Dr. Fraiser", "keywords": ["row a", "option a", "team a", "data", "g'kar", "gkar", "fraiser", "frasier"], "letter": "A" },
-        { "key": "B", "label": "Row B", "summary": "Sheppard · Dr. McCoy · Aeryn Sun · Teal'c", "keywords": ["row b", "option b", "team b", "mccoy", "bones", "aeryn", "teal'c", "tealc", "teal c"], "letter": "B" },
-        { "key": "C", "label": "Row C", "summary": "O'Neill · Carter · Garak · Odo", "keywords": ["row c", "option c", "team c", "carter", "sam", "garak", "odo"], "letter": "C" },
-        { "key": "D", "label": "Row D", "summary": "O'Neill · McKay · Rommie · Daniel Jackson", "keywords": ["row d", "option d", "team d", "rommie", "daniel", "jackson", "mckay", "rodney"], "letter": "D" }
+        {
+          "key": "A",
+          "label": "Row A",
+          "summary": "Sheppard · Data · G'Kar · Dr. Fraiser",
+          "keywords": [
+            "row a",
+            "option a",
+            "team a",
+            "data",
+            "g'kar",
+            "gkar",
+            "fraiser",
+            "frasier"
+          ],
+          "letter": "A"
+        },
+        {
+          "key": "B",
+          "label": "Row B",
+          "summary": "Sheppard · Dr. McCoy · Aeryn Sun · Teal'c",
+          "keywords": [
+            "row b",
+            "option b",
+            "team b",
+            "mccoy",
+            "bones",
+            "aeryn",
+            "teal'c",
+            "tealc",
+            "teal c"
+          ],
+          "letter": "B"
+        },
+        {
+          "key": "C",
+          "label": "Row C",
+          "summary": "O'Neill · Carter · Garak · Odo",
+          "keywords": [
+            "row c",
+            "option c",
+            "team c",
+            "carter",
+            "sam",
+            "garak",
+            "odo"
+          ],
+          "letter": "C"
+        },
+        {
+          "key": "D",
+          "label": "Row D",
+          "summary": "O'Neill · McKay · Rommie · Daniel Jackson",
+          "keywords": [
+            "row d",
+            "option d",
+            "team d",
+            "rommie",
+            "daniel",
+            "jackson",
+            "mckay",
+            "rodney"
+          ],
+          "letter": "D"
+        }
       ],
       "canon": "D"
     },
@@ -71,11 +281,60 @@
       "title": "The Hangar Doors",
       "question": "The hangar doors are jammed open to space. Whose advice do you take?",
       "options": [
-        { "key": "rommie", "label": "Rommie — crank them shut by hand", "summary": "Her android frame handles vacuum. Slow and exposed — and the anomaly's pulses could knock her offline.", "keywords": ["rommie", "romie", "andromeda", "android", "manual", "manually", "crank", "by hand"] },
-        { "key": "mckay", "label": "McKay — run a hard line", "summary": "Power the dead servos from the jumper. Works — but may bleed the jumper's reserves. Potentially. Ish.", "keywords": ["mckay", "rodney", "hard line", "cable", "servo", "servos", "power the doors", "jumper power"] },
-        { "key": "oneill", "label": "O'Neill — leave it open, go in", "summary": "They're already in EV suits. Fastest way in — but any retreat means crossing vacuum again.", "keywords": ["o'neill", "oneill", "o’neill", "jack", "airlock", "leave it open", "leave the bay", "dressed for the occasion", "go in"] }
+        {
+          "key": "rommie",
+          "label": "Rommie — crank them shut by hand",
+          "summary": "Her android frame handles vacuum. Slow and exposed — and the anomaly's pulses could knock her offline.",
+          "keywords": [
+            "rommie",
+            "romie",
+            "andromeda",
+            "android",
+            "manual",
+            "manually",
+            "crank",
+            "by hand"
+          ]
+        },
+        {
+          "key": "mckay",
+          "label": "McKay — run a hard line",
+          "summary": "Power the dead servos from the jumper. Works — but may bleed the jumper's reserves. Potentially. Ish.",
+          "keywords": [
+            "mckay",
+            "rodney",
+            "hard line",
+            "cable",
+            "servo",
+            "servos",
+            "power the doors",
+            "jumper power"
+          ]
+        },
+        {
+          "key": "oneill",
+          "label": "O'Neill — leave it open, go in",
+          "summary": "They're already in EV suits. Fastest way in — but any retreat means crossing vacuum again.",
+          "keywords": [
+            "o'neill",
+            "oneill",
+            "o’neill",
+            "jack",
+            "airlock",
+            "leave it open",
+            "leave the bay",
+            "dressed for the occasion",
+            "go in"
+          ]
+        }
       ],
-      "canon": null
+      "canon": null,
+      "awayTeam": [
+        "O’Neill",
+        "Daniel",
+        "Rommie",
+        "McKay"
+      ]
     }
   }
 }
