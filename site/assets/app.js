@@ -99,12 +99,20 @@ function renderProse(text, { dropHeadline = false, dropAside = false, headline =
     .join('');
 }
 
+// Twitter videos refuse cross-site playback, so prefer the local mirror, then the
+// dev server proxy, and only then the original URL.
+function videoSrc(m) {
+  if (m.local) return m.local;
+  if (location.protocol.startsWith('http')) return `proxy?u=${encodeURIComponent(m.url)}`;
+  return m.url;
+}
+
 function renderMedia(media, { max = 4, autoplay = false } = {}) {
   return (media || [])
     .slice(0, max)
     .map((m) =>
       m.type === 'video' || m.type === 'gif'
-        ? `<video src="${esc(m.url)}" ${m.thumb ? `poster="${esc(m.thumb)}"` : ''} controls playsinline preload="none" ${autoplay || m.type === 'gif' ? 'muted loop autoplay' : ''}></video>`
+        ? `<video src="${esc(videoSrc(m))}" ${m.thumb ? `poster="${esc(m.thumb)}"` : ''} controls playsinline preload="none" ${autoplay || m.type === 'gif' ? 'muted loop autoplay' : ''}></video>`
         : `<a href="${esc(m.url)}" target="_blank" rel="noopener"><img src="${esc(m.url)}" alt="" loading="lazy"></a>`
     )
     .join('');

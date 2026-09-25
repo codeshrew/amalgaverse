@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T18:05:07.602Z",
+  "generatedAt": "2026-09-25T20:58:39.620Z",
   "series": {
     "title": "The Amalgaverse",
     "showrunner": "Joseph Mallozzi",
@@ -54,7 +54,8 @@
           "thumb": "https://pbs.twimg.com/amplify_video_thumb/2101702276997898240/img/lKMk_T0avkMzViCE.jpg",
           "width": 1920,
           "height": 1080,
-          "duration": 22.558
+          "duration": 22.558,
+          "local": "media/ha1h_3ixiGn70lzm.mp4"
         }
       ],
       "stats": {
@@ -62,7 +63,7 @@
         "reposts": 90,
         "likes": 395,
         "quotes": 13,
-        "views": 40685,
+        "views": 40734,
         "bookmarks": 41
       },
       "prev": null,
@@ -114,7 +115,7 @@
         "reposts": 101,
         "likes": 680,
         "quotes": 20,
-        "views": 43350,
+        "views": 43405,
         "bookmarks": 47
       },
       "prev": "2101703241687863782",
@@ -189,7 +190,8 @@
           "thumb": "https://pbs.twimg.com/amplify_video_thumb/2102109625092857856/img/ALFPpEAwo2PBAHo_.jpg",
           "width": 1920,
           "height": 1080,
-          "duration": 50.113
+          "duration": 50.113,
+          "local": "media/yOb3PYGOjp2tAxja.mp4"
         }
       ],
       "stats": {
@@ -197,7 +199,7 @@
         "reposts": 59,
         "likes": 395,
         "quotes": 23,
-        "views": 46811,
+        "views": 46950,
         "bookmarks": 39
       },
       "prev": "2102065567318638730",
@@ -292,15 +294,16 @@
           "thumb": "https://pbs.twimg.com/amplify_video_thumb/2102772382138007552/img/tdF7iJG4wwQaBBR3.jpg",
           "width": 464,
           "height": 688,
-          "duration": 30.186
+          "duration": 30.186,
+          "local": "media/tJcOcc0leJpAgh-u.mp4"
         }
       ],
       "stats": {
-        "replies": 441,
+        "replies": 442,
         "reposts": 72,
         "likes": 512,
         "quotes": 12,
-        "views": 38669,
+        "views": 39393,
         "bookmarks": 40
       },
       "prev": "2102427955456815176",
@@ -317,7 +320,8 @@
               "thumb": "https://pbs.twimg.com/amplify_video_thumb/2102772382158987264/img/nzbhAlaKO66DRrjd.jpg",
               "width": 1920,
               "height": 1080,
-              "duration": 50.317
+              "duration": 50.317,
+              "local": "media/cSP8JwVobEAJOKk2.mp4"
             }
           ]
         },
@@ -360,7 +364,7 @@
           "mckay": "Risk-averse voters argued the mission wasn't worth it and favored remote scans or handing it off entirely."
         },
         "wildcards": "Recurring gags included dread over transporter mishaps, McKay's chronic cowardice being both mocked and grudgingly respected, and several crews trying to split the difference by sending two teams at once.",
-        "reported": 441,
+        "reported": 442,
         "asOf": "2026-09-25T18:03:54.449Z"
       }
     },
@@ -418,11 +422,11 @@
         }
       ],
       "stats": {
-        "replies": 599,
+        "replies": 604,
         "reposts": 45,
-        "likes": 405,
+        "likes": 409,
         "quotes": 20,
-        "views": 33450,
+        "views": 42177,
         "bookmarks": 27
       },
       "prev": "2102790343305626057",
@@ -439,36 +443,37 @@
               "thumb": "https://pbs.twimg.com/amplify_video_thumb/2102894432685096960/img/klj0YjtHrJI229Ab.jpg",
               "width": 464,
               "height": 688,
-              "duration": 30
+              "duration": 30,
+              "local": "media/OByayiru8d7-Le8i.mp4"
             }
           ]
         }
       ],
       "votes": {
-        "total": 487,
-        "voters": 418,
-        "counted": 352,
-        "unclear": 66,
+        "total": 525,
+        "voters": 456,
+        "counted": 386,
+        "unclear": 70,
         "other": 0,
         "tally": {
-          "A": 89,
-          "B": 52,
-          "C": 84,
-          "D": 127
+          "A": 102,
+          "B": 57,
+          "C": 94,
+          "D": 133
         },
         "method": "ai",
         "leader": "D",
-        "margin": 38,
-        "headline": "Row D wins the vote, ahead of A, C, then B",
+        "margin": 31,
+        "headline": "Row D wins the vote, Row A a solid runner-up",
         "reasons": {
-          "A": "Backers wanted Data's vacuum-proof strength and science skills paired with Sheppard's piloting and a doctor on hand for survivors.",
-          "B": "Voters leaned into muscle and medical coverage, banking on McCoy and heavy hitters for a possible rescue-and-fight scenario.",
-          "C": "Fans favored O'Neill and Carter's chemistry plus Odo and Garak's unconventional infiltration and deception skills.",
-          "D": "Crew liked the lean, no-medic loadout, betting on an empty ship and leaning on Daniel's translation skills and McKay's technical fixes."
+          "A": "Backers wanted balance, prizing an android who needs no air alongside a doctor for any survivors.",
+          "B": "Voters leaned toward muscle and medical coverage in case the away team met trouble or found the injured.",
+          "C": "Fans favored the science-and-espionage combo, drawn to a shapeshifter's infiltration skills and a tailor's suspicious mind.",
+          "D": "The crew reasoned a lifeless derelict called for translation and technical insight over a medic, betting no one aboard needed saving."
         },
-        "wildcards": "Recurring bits included jokes about picking C on multiple-choice instinct, hopes that O'Neill and the scientists would get separated for their own safety, and a few write-ins pining for dream teams outside the given rows.",
-        "reported": 599,
-        "asOf": "2026-09-25T18:04:06.049Z"
+        "wildcards": "Several officers admitted indecision between C and D, one crew member proposed dosing the whole roster with the gene long-term, and more than one voter flatly ruled out sending the ship's doctor at all.",
+        "reported": 604,
+        "asOf": "2026-09-25T20:56:08.018Z"
       }
     },
     {
@@ -517,16 +522,17 @@
           "thumb": "https://pbs.twimg.com/amplify_video_thumb/2103487944522653697/img/EHVt8AqkvxRgIFD5.jpg",
           "width": 784,
           "height": 1168,
-          "duration": 10.09
+          "duration": 10.09,
+          "local": "media/EzBainLQQPvLxxmy.mp4"
         }
       ],
       "stats": {
-        "replies": 236,
-        "reposts": 35,
-        "likes": 274,
-        "quotes": 6,
-        "views": 8538,
-        "bookmarks": 15
+        "replies": 318,
+        "reposts": 51,
+        "likes": 423,
+        "quotes": 8,
+        "views": 16769,
+        "bookmarks": 26
       },
       "prev": "2103152730714063183",
       "next": null,
@@ -548,32 +554,47 @@
         }
       ],
       "votes": {
-        "total": 189,
-        "voters": 174,
-        "counted": 126,
-        "unclear": 48,
+        "total": 323,
+        "voters": 296,
+        "counted": 240,
+        "unclear": 56,
         "other": 0,
         "tally": {
-          "rommie": 19,
-          "mckay": 28,
-          "oneill": 79
+          "rommie": 26,
+          "mckay": 49,
+          "oneill": 165
         },
         "method": "ai",
         "leader": "oneill",
-        "margin": 51,
-        "headline": "O'Neill's push-forward plan holds a commanding lead in the count",
+        "margin": 116,
+        "headline": "O'Neill's EVA plan holds a commanding lead as voting continues",
         "reasons": {
-          "oneill": "Voters favor keeping the exit route open and the jumper at full power rather than risking doors that might not reopen.",
-          "mckay": "Supporters trust Rodney's engineering to solve the servo problem directly, even at some cost to jumper power.",
-          "rommie": "This bloc likes preserving the jumper's power and avoiding the jamming risk, though some worry about leaving the android exposed."
+          "oneill": "Fleet favors going in through the airlock now, arguing it keeps the jumper at full power and avoids the risk of doors that won't reopen for a fast getaway.",
+          "mckay": "Backers trust his technical read that a hard line only bleeds minor power and removes the immediate hazard to the away team.",
+          "rommie": "Supporters like that it solves the door problem without draining the jumper, though several flag the risk of leaving her exposed or offline."
         },
-        "wildcards": "Recurring threads include contingency planning with Scotty on standby, jokes about never hearing the end of it if McKay's fix works, and a running bit imagining the away team's voices during the debate.",
-        "reported": 236,
-        "asOf": "2026-09-25T18:04:38.500Z"
+        "wildcards": "Recurring chatter includes rigging a lifeline or tether for whoever goes EVA, keeping a rescue jumper on standby, and a running joke about never hearing the end of it if the tech genius is proven right.",
+        "reported": 318,
+        "asOf": "2026-09-25T20:57:16.792Z"
       }
     }
   ],
   "dispatches": [
+    {
+      "id": "2103551935450366453",
+      "url": "https://x.com/BaronDestructo/status/2103551935450366453",
+      "createdAt": "2026-09-25T18:27:18.000Z",
+      "text": "Join us live tomorrow when I drop in on David and Dial the Gate.  Let's talk Stargate, Dark Matter and, of course, #Amalgaverse!",
+      "media": [],
+      "stats": {
+        "replies": 9,
+        "reposts": 34,
+        "likes": 169,
+        "quotes": 3,
+        "views": 2632,
+        "bookmarks": 3
+      }
+    },
     {
       "id": "2102535298156752953",
       "url": "https://x.com/BaronDestructo/status/2102535298156752953",
@@ -585,7 +606,7 @@
         "reposts": 31,
         "likes": 270,
         "quotes": 4,
-        "views": 7788,
+        "views": 7793,
         "bookmarks": 4
       }
     },
@@ -624,7 +645,7 @@
         "reposts": 69,
         "likes": 430,
         "quotes": 4,
-        "views": 9194,
+        "views": 9195,
         "bookmarks": 12
       }
     },
@@ -672,7 +693,8 @@
           "thumb": "https://pbs.twimg.com/amplify_video_thumb/2099283672398508039/img/5Iuc62x6y-zioq_9.jpg",
           "width": 1920,
           "height": 1080,
-          "duration": 22.558
+          "duration": 22.558,
+          "local": "media/6w9Gcbxt2kwWFYqJ.mp4"
         }
       ],
       "stats": {
@@ -680,7 +702,7 @@
         "reposts": 54,
         "likes": 392,
         "quotes": 10,
-        "views": 24719,
+        "views": 24722,
         "bookmarks": 20
       }
     }

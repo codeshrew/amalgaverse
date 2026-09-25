@@ -251,6 +251,31 @@ for (const t of ordered) {
   beats.push(beat);
 }
 
+// ------------------------------------------------------------ local videos
+// video.twimg.com refuses cross-site browser requests (403 on Sec-Fetch-Site),
+// so videos are mirrored into site/media/ (gitignored) and played from there.
+mkdirSync(root + 'site/media', { recursive: true });
+async function mirrorVideo(m) {
+  if (!['video', 'gif'].includes(m.type) || !m.url) return;
+  const name = m.url.split('?')[0].split('/').pop();
+  const rel = `media/${name}`;
+  if (!existsSync(root + 'site/' + rel)) {
+    try {
+      const res = await fetch(m.url);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      writeFileSync(root + 'site/' + rel, Buffer.from(await res.arrayBuffer()));
+      log('Mirrored video', rel);
+    } catch (e) {
+      console.warn(`  ! could not mirror ${m.url}: ${e.message}`);
+      return;
+    }
+  }
+  m.local = rel;
+}
+for (const item of [...beats, ...beats.flatMap((b) => b.recap), ...dispatches]) {
+  for (const m of item.media || []) await mirrorVideo(m);
+}
+
 // ------------------------------------------------------------------ output
 const missions = [];
 for (const b of beats) {
