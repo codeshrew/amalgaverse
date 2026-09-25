@@ -480,8 +480,131 @@ function viewComms() {
   </div>`;
 }
 
+// ------------------------------------------------------------ about
+function viewAbout() {
+  const dec = decisions().filter((b) => b.votes);
+  const scanned = dec.reduce((a, b) => a + (b.votes.total || 0), 0);
+  const voters = dec.reduce((a, b) => a + (b.votes.voters || 0), 0);
+  const counted = dec.reduce((a, b) => a + (b.votes.counted || 0), 0);
+  const unclear = dec.reduce((a, b) => a + (b.votes.unclear || 0), 0);
+  const methods = [...new Set(dec.map((b) => b.votes.method))];
+  const node = (title, sub, tone = '') => `<div class="flow-node ${tone}"><div class="flow-t">${title}</div><div class="flow-s">${sub}</div></div>`;
+  const arrow = (label = '') => `<div class="flow-arrow"><span>${label}</span></div>`;
+  return `<div class="about fade-in">
+    <p class="eyebrow">Technical readout</p>
+    <h1 style="margin:8px 0 6px">How this console works</h1>
+    <p class="dim lead">A static site with no server and no X API key. It's kept current by two automated crew members: <strong>Jev</strong>, a decision model from TypeSafe, which reads the votes, and <strong>Claude</strong>, which does the writing. GitHub Actions runs the pipeline and GitHub Pages hosts the result.</p>
+
+    <div class="stat-row about-stats">
+      <div class="stat"><div class="stat-v">${fmtNum(scanned)}</div><div class="stat-k">Replies scanned</div></div>
+      <div class="stat"><div class="stat-v">${fmtNum(voters)}</div><div class="stat-k">Unique voters</div></div>
+      <div class="stat"><div class="stat-v">${fmtNum(counted)}</div><div class="stat-k">Votes counted</div></div>
+      <div class="stat"><div class="stat-v">${voters ? pctTxt(unclear / voters) : '—'}</div><div class="stat-k">Held back as unclear</div></div>
+    </div>
+
+    <div class="section-title"><h2>The pipeline</h2></div>
+    <div class="flow">
+      ${node('𝕏 · @BaronDestructo', 'A new beat daily at 12:01 PM ET. Fans vote by <em>replying</em>, not with a poll.')}
+      ${arrow('public mirrors')}
+      ${node('FxTwitter + Nitter', 'FxTwitter supplies posts, media and stats. Nitter pages through the replies. No X API needed.')}
+      ${arrow('every 30 min')}
+      ${node('GitHub Actions', '<code>scripts/update.mjs</code> finds new beats by following the quote-tweet chain, then fetches replies and mirrors the videos.', 'amber')}
+      ${arrow('one request per 25 replies')}
+      ${node('Jev · TypeSafe', 'A Choice question per reply for the vote, a Score for fleet morale, and a Choice to work out which branch the story took.', 'cyan')}
+      ${arrow('story.json')}
+      ${node('GitHub Pages', 'Plain HTML, CSS and JavaScript. No build step, no framework.', 'amber')}
+      ${arrow('live polling')}
+      ${node('Your browser', 'Also asks FxTwitter directly for live counts and new beats between pipeline runs.')}
+    </div>
+    <div class="flow side">
+      ${node('Claude · cloud routine', 'Runs 4 times a day on Anthropic\'s cloud. It rewrites rule-based catalogue entries properly and writes the fleet-sentiment readouts.', 'violet')}
+      ${arrow('git push data/')}
+      ${node('Triggers a redeploy', 'The Actions workflow runs again, and the new text goes live.')}
+    </div>
+
+    <div class="about-grid">
+      <section class="panel">
+        <h3>Why Jev for the votes</h3>
+        <p>Jev is a <em>System One</em> model. It doesn't write text. It answers typed questions with <strong>calibrated probabilities</strong> and a <strong>confidence</strong> score. Deciding which option a reply backs is exactly that kind of question.</p>
+        <ul>
+          <li><strong>Confidence gating:</strong> answers below 0.45 confidence are counted as <em>unclear</em> instead of guessed, so jokes, questions and split votes don't skew the tally.</li>
+          <li><strong>A "none" option:</strong> every vote question includes it, so off-topic replies have a correct answer.</li>
+          <li><strong>Cost:</strong> about $0.04 per million input tokens. The whole season so far costs less than a cent.</li>
+          <li><strong>Accuracy:</strong> it reads "Course 4" and "Let's check out The Fracture first" correctly. An earlier Claude Haiku batch pass missed both.</li>
+        </ul>
+      </section>
+      <section class="panel">
+        <h3>Why Claude for the words</h3>
+        <p>Jev can't generate prose. Two jobs need a writer:</p>
+        <ul>
+          <li><strong>Cataloguing a new beat:</strong> a chapter title, the question, and each option's label and summary. GitHub Actions makes a rule-based first pass by spotting "Rommie <em>suggests</em>…", "CONTACT ONE", "pick a row A–D" and "Yes/No". Claude then rewrites it and keeps the option keys stable, so Jev's labels still apply.</li>
+          <li><strong>The fleet-sentiment readout:</strong> Claude reads a sample of replies against Jev's official tally and explains <em>why</em> each option drew support. It never quotes or names anyone.</li>
+        </ul>
+        <p class="dim">Claude runs as a scheduled cloud routine following <a href="https://github.com/codeshrew/amalgaverse/blob/main/AGENT_TASKS.md" target="_blank" rel="noopener">AGENT_TASKS.md</a>. It needs no secrets and doesn't depend on anyone's laptop.</p>
+      </section>
+    </div>
+
+    <div class="section-title"><h2>Anatomy of one vote</h2></div>
+    <div class="about-grid">
+      <section class="panel">
+        <h3>1 · Who counts</h3>
+        <ul>
+          <li>Only <strong>direct replies</strong> to the beat count. Replies to other replies are conversation.</li>
+          <li><strong>One vote per account.</strong> If someone replied more than once, only their latest reply counts.</li>
+          <li>The showrunner's own replies are excluded.</li>
+        </ul>
+        <h3 style="margin-top:18px">2 · The question Jev gets (abridged)</h3>
+<pre class="code">{ "model": "jev-latest",
+  "state": {
+    "decision_asked": "Whose advice do you take?",
+    "replies": { "r0": "…", "r1": "…" }
+  },
+  "questions": {
+    "vote_0": { "type": "choice",
+      "instructions": "Which option does the reply
+                       \`replies.r0\` vote for?",
+      "criteria": { "rommie": "…", "mckay": "…",
+                    "oneill": "…", "none": "…" } },
+    "mood_0": { "type": "score", "criteria": [5 levels] }
+  } }</pre>
+      </section>
+      <section class="panel">
+        <h3>3 · What comes back (example)</h3>
+<pre class="code">"vote_0": { "choice": "oneill",
+            "probabilities": { "oneill": 0.97, … },
+            "confidence": 0.95 },
+"mood_0": { "score": 2.8, "confidence": 0.71 }</pre>
+        <h3 style="margin-top:18px">4 · Path taken vs. most replies</h3>
+        <p>Mallozzi weighs people's reasoning, not just the count. So the <em>path taken</em> isn't simply the vote winner. Jev reads the opening of the <em>next</em> post ("You've decided to…") and picks which previous option it matches. It got all four resolved branches right, with confidence of 0.97 or higher. On the mission-choice vote, Fracture and the Ghost Ship finished close, and the site shows both results.</p>
+        <h3 style="margin-top:18px">5 · Privacy</h3>
+        <p>The site publishes only totals and paraphrased reasoning. Reply text stays in the pipeline's private cache and is never committed or shown.</p>
+      </section>
+    </div>
+
+    <div class="section-title"><h2>Per-vote readout</h2></div>
+    <div class="table-wrap"><table class="about-table">
+      <thead><tr><th>Beat</th><th>Replies</th><th>Voters</th><th>Counted</th><th>Unclear</th><th>Read by</th><th>Morale</th><th>Jev/Claude agree</th></tr></thead>
+      <tbody>${dec.map((b) => `<tr><td><a href="#/beat/${b.id}">${esc(b.title)}</a></td><td>${b.votes.total}</td><td>${b.votes.voters}</td><td>${b.votes.counted}</td><td>${b.votes.unclear}</td><td>${esc({ jev: 'Jev', ai: 'Claude', keywords: 'keywords' }[b.votes.method] || b.votes.method)}</td><td>${b.votes.mood != null ? Math.round(b.votes.mood * 100) : '—'}</td><td>${b.votes.agreement != null ? pctTxt(b.votes.agreement) : '—'}</td></tr>`).join('')}</tbody>
+    </table></div>
+    <p class="dim" style="font-size:14px">Methods in use: ${methods.map((m) => esc(m)).join(', ') || '—'}. The agreement figure appears only for votes that both Jev and Claude have read. The published pipeline uses Jev alone.</p>
+
+    <div class="section-title"><h2>Fallbacks</h2></div>
+    <div class="about-grid three">
+      <section class="panel"><h3>If Nitter goes dark</h3><p>FxTwitter's first page of replies still comes through (about 70). Setting a SocialData or twitterapi.io key turns on the paid fallback, which costs a few cents a month.</p></section>
+      <section class="panel"><h3>If Jev is unavailable</h3><p>Claude reads the votes instead, or, as a last resort, keyword and row-letter matching. The badge on every tally shows which method was used.</p></section>
+      <section class="panel"><h3>If the routine misses a run</h3><p>Rule-based cataloguing keeps new beats votable, and Jev still counts them. A readout written when a different option was leading is hidden, not left up.</p></section>
+    </div>
+
+    <div class="btn-row" style="margin-top:28px">
+      <a class="btn primary" href="https://github.com/codeshrew/amalgaverse" target="_blank" rel="noopener">View the source on GitHub</a>
+      <a class="btn" href="https://docs.typesafe.ai/introduction" target="_blank" rel="noopener">TypeSafe Jev docs ↗</a>
+      <a class="btn" href="https://github.com/FxEmbed/FxEmbed" target="_blank" rel="noopener">FxTwitter ↗</a>
+    </div>
+  </div>`;
+}
+
 // ------------------------------------------------------------ router
-const ROUTES = { bridge: viewBridge, log: viewLog, map: viewMap, chronicle: viewChronicle, crew: viewCrew, comms: viewComms };
+const ROUTES = { bridge: viewBridge, log: viewLog, map: viewMap, chronicle: viewChronicle, crew: viewCrew, comms: viewComms, about: viewAbout };
 function render() {
   if (!S) return;
   const [, tab = 'bridge', arg] = (location.hash || '#/bridge').split('/');
