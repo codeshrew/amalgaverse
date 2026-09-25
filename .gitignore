@@ -3,3 +3,6 @@ node_modules/
 .DS_Store
 *.log
 site/media/
+.env
+site/data/story.json
+site/data/story.js

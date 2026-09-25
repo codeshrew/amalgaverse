@@ -5,6 +5,7 @@
 // Only aggregate numbers + a short reasoning summary leave this module; individual
 // replies stay in the local cache.
 import { askJson, llmAvailable } from './llm.mjs';
+import { jevAvailable, jevClassify } from './jev.mjs';
 
 const esc = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
@@ -137,13 +138,31 @@ export async function tallyVotes(beat, replies, { author, cache = {} } = {}) {
   const voters = dedupeVoters(replies, author, beat.id);
   let votes = {};
   let method = 'keywords';
+  let mood = null;
 
-  if (llmAvailable() && voters.length) {
+  // 1st choice: TypeSafe Jev (calibrated choice + confidence), 2nd: Claude, 3rd: keywords.
+  if (jevAvailable() && voters.length) {
+    try {
+      const known = cache.jev || {};
+      const todo = voters.filter((r) => !(r.id in known));
+      const fresh = todo.length ? await jevClassify(beat, todo, { log: console.log }) : {};
+      cache.jev = { ...known, ...fresh };
+      for (const r of voters) votes[r.id] = cache.jev[r.id]?.vote ?? null;
+      const moods = voters.map((r) => cache.jev[r.id]?.mood).filter((m) => typeof m === 'number');
+      if (moods.length) mood = moods.reduce((a, b) => a + b, 0) / moods.length / 4; // 0..1
+      method = 'jev';
+    } catch (err) {
+      console.warn(`  ! Jev vote classification failed (${err.message}); trying the next method`);
+      votes = {};
+    }
+  }
+  if (method === 'keywords' && llmAvailable() && voters.length) {
     try {
       const known = cache.votes || {};
       const todo = voters.filter((r) => !(r.id in known));
       const fresh = todo.length ? await llmClassify(beat, todo) : {};
       votes = { ...known, ...fresh };
+      cache.votes = votes;
       method = 'ai';
     } catch (err) {
       console.warn(`  ! AI vote classification failed (${err.message}); falling back to keywords`);
@@ -152,6 +171,13 @@ export async function tallyVotes(beat, replies, { author, cache = {} } = {}) {
   }
   if (method === 'keywords') {
     for (const r of voters) votes[r.id] = heuristicVote(r.text, beat.options);
+  }
+
+  // If both Jev and Claude have read the same replies, report how often they agree.
+  let agreement = null;
+  if (method === 'jev' && cache.votes) {
+    const both = voters.filter((r) => r.id in cache.votes);
+    if (both.length >= 20) agreement = both.filter((r) => (votes[r.id] ?? null) === (cache.votes[r.id] === 'other' ? null : cache.votes[r.id] ?? null)).length / both.length;
   }
 
   // A voter's earlier reply might hold the actual vote if the latest is chatter.
@@ -180,11 +206,13 @@ export async function tallyVotes(beat, replies, { author, cache = {} } = {}) {
     other,
     tally,
     method,
+    mood,
+    agreement,
     leader: ranked[0]?.[1] > 0 ? ranked[0][0] : null,
     margin: ranked.length > 1 ? ranked[0][1] - ranked[1][1] : ranked[0]?.[1] || 0,
   };
 
-  if (method === 'ai' && counted >= 5) {
+  if (llmAvailable() && method !== 'keywords' && counted >= 5) {
     const prev = cache.summary;
     const stale = !prev || !prev.counted || counted >= prev.counted * 1.08 || (beat.closed && !prev.final);
     if (stale) {
@@ -197,6 +225,6 @@ export async function tallyVotes(beat, replies, { author, cache = {} } = {}) {
     }
     if (cache.summary) Object.assign(result, { headline: cache.summary.headline, reasons: cache.summary.reasons, wildcards: cache.summary.wildcards });
   }
-  cache.votes = votes;
+  if (method === 'ai') cache.votes = votes;
   return result;
 }

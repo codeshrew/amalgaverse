@@ -326,3 +326,5 @@ h3 { font-size: 16px; font-weight: 700; letter-spacing: 0.1em; text-transform: u
   .opt-label { font-size: 16px; }
   .eyebrow { letter-spacing: 0.14em; }
 }
+.morale { margin-top: 12px; max-width: 420px; }
+.incoming { margin-bottom: 22px; border-color: rgba(92, 255, 177, 0.5); box-shadow: 0 0 26px rgba(92, 255, 177, 0.18); }

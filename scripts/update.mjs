@@ -13,6 +13,14 @@ import { tallyVotes } from './lib/votes.mjs';
 import { askJson, llmAvailable } from './lib/llm.mjs';
 
 const root = new URL('../', import.meta.url).pathname;
+
+// Local secrets (TYPESAFE_API_KEY, ANTHROPIC_API_KEY, …) can live in a gitignored .env file.
+if (existsSync(root + '.env')) {
+  for (const line of readFileSync(root + '.env', 'utf8').split('\n')) {
+    const m = line.match(/^\s*([A-Z0-9_]+)\s*=\s*(.*?)\s*$/);
+    if (m && !(m[1] in process.env)) process.env[m[1]] = m[2].replace(/^['"]|['"]$/g, '');
+  }
+}
 const P = {
   curation: root + 'data/curation.json',
   crew: root + 'data/crew.json',

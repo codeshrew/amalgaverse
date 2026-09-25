@@ -8,14 +8,30 @@ import { join } from 'node:path';
 
 const CACHE_DIR = new URL('../../.cache/llm/', import.meta.url).pathname;
 
-let available;
-export function llmAvailable() {
-  if (available === undefined) {
-    if (process.argv.includes('--no-llm') || process.env.AMALGA_NO_LLM) return (available = false);
-    const r = spawnSync('claude', ['--version'], { encoding: 'utf8' });
-    available = r.status === 0;
+// Backend: the local `claude` CLI (uses your Claude login) if installed, otherwise the
+// Anthropic API when ANTHROPIC_API_KEY is set (e.g. in GitHub Actions).
+const API_MODELS = { haiku: 'claude-haiku-4-5-20251001', sonnet: 'claude-sonnet-5' };
+let backend;
+function getBackend() {
+  if (backend === undefined) {
+    if (process.argv.includes('--no-llm') || process.env.AMALGA_NO_LLM) backend = null;
+    else if (spawnSync('claude', ['--version'], { encoding: 'utf8' }).status === 0) backend = 'cli';
+    else if (process.env.ANTHROPIC_API_KEY) backend = 'api';
+    else backend = null;
   }
-  return available;
+  return backend;
+}
+export const llmAvailable = () => getBackend() !== null;
+
+async function viaApi(prompt, model) {
+  const res = await fetch('https://api.anthropic.com/v1/messages', {
+    method: 'POST',
+    headers: { 'x-api-key': process.env.ANTHROPIC_API_KEY, 'anthropic-version': '2023-06-01', 'content-type': 'application/json' },
+    body: JSON.stringify({ model: API_MODELS[model] || model, max_tokens: 8000, messages: [{ role: 'user', content: prompt }] }),
+  });
+  if (!res.ok) throw new Error(`Anthropic API ${res.status}: ${(await res.text()).slice(0, 300)}`);
+  const j = await res.json();
+  return j.content.filter((c) => c.type === 'text').map((c) => c.text).join('');
 }
 
 function extractJson(text) {
@@ -35,6 +51,12 @@ export async function askJson(prompt, { model = 'haiku', timeoutMs = 240_000 } =
   const key = createHash('sha256').update(model + '\n' + prompt).digest('hex').slice(0, 24);
   const file = join(CACHE_DIR, key + '.json');
   if (existsSync(file)) return JSON.parse(readFileSync(file, 'utf8'));
+
+  if (getBackend() === 'api') {
+    const parsed = extractJson(await viaApi(prompt, model));
+    writeFileSync(file, JSON.stringify(parsed));
+    return parsed;
+  }
 
   const out = await new Promise((resolve, reject) => {
     const child = spawn('claude', ['-p', '--model', model, '--tools', '', '--output-format', 'json'], {

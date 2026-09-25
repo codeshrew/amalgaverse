@@ -150,12 +150,23 @@ function renderOptions(b, { reasons = true } = {}) {
 function renderVoteMeta(b) {
   const v = b.votes;
   if (!v) return `<div class="no-votes mono">No vote data yet — run <code>npm run update</code> to pull replies.</div>`;
-  const method = v.method === 'ai' ? 'read by AI' : 'keyword-matched';
+  const method = { jev: 'read by Jev', ai: 'read by Claude' }[v.method] || 'keyword-matched';
   return `<div class="vote-meta">
     <span>${v.counted} votes counted</span>
     <span>${v.voters} voters · ${v.unclear} unclear${v.other ? ` · ${v.other} write-ins` : ''}</span>
     <span>${v.total} of ${v.reported ?? v.total} replies scanned (${method})</span>
     ${v.asOf ? `<span>sync ${ago(v.asOf)}</span>` : ''}
+    ${v.agreement != null ? `<span title="Share of replies where Jev and Claude picked the same option">Jev/Claude agree ${pctTxt(v.agreement)}</span>` : ''}
+  </div>${renderMorale(v)}`;
+}
+
+function renderMorale(v) {
+  if (v.mood == null) return '';
+  const pct = Math.round(v.mood * 100);
+  const word = pct >= 75 ? 'Ecstatic' : pct >= 55 ? 'Enthusiastic' : pct >= 40 ? 'Engaged' : pct >= 25 ? 'Neutral' : 'Restless';
+  return `<div class="morale" title="Average feeling about the story across voters, scored per reply by Jev">
+    <div class="meter-cap"><span>Fleet morale</span><span>${word} · ${pct}</span></div>
+    <div class="meter"><span style="width:${pct}%"></span></div>
   </div>`;
 }
 
@@ -192,7 +203,11 @@ function viewBridge() {
   const latestDispatch = S.dispatches?.[0];
   const recent = decisions().filter((d) => d.status === 'closed').slice(-3).reverse();
 
-  return `<div class="bridge-grid fade-in">
+  const inc = liveState.incoming;
+  const banner = inc ? `<div class="panel incoming fade-in"><div class="eyebrow"><span class="badge live">Incoming transmission</span><span>${ago(inc.createdAt)}</span></div>
+    <p class="prose" style="margin:10px 0 0;font-size:17px">${esc(inc.text.split('\n').filter(Boolean).slice(1, 3).join(' ').slice(0, 280))}…</p>
+    <div class="btn-row"><a class="btn primary" href="${esc(inc.url)}" target="_blank" rel="noopener">${ICON_X} Read &amp; vote on X</a><span class="dim" style="align-self:center;font-size:14px">A new beat just dropped — the tally appears after the next data sync.</span></div></div>` : '';
+  return `${banner}<div class="bridge-grid fade-in">
     <section class="panel amber hero" aria-labelledby="cur-title">
       <div class="eyebrow">${b.status === 'open' ? '<span class="badge live">Voting open</span>' : '<span class="badge closed">Standing by</span>'}<span>${esc(beatLabel(b))}</span></div>
       <div class="hero-top">
@@ -543,6 +558,30 @@ async function refresh() {
 }
 setInterval(refresh, 5 * 60_000);
 
+// Live layer: FxTwitter answers browser requests directly, so between pipeline
+// runs the page can spot a brand-new beat and keep engagement numbers fresh.
+const liveState = { incoming: null };
+async function live() {
+  if (!S || location.protocol === 'file:') return;
+  try {
+    const res = await fetch(`https://api.fxtwitter.com/2/profile/${S.series.handle}/statuses`);
+    if (!res.ok) return;
+    const { results = [] } = await res.json();
+    const known = new Set(S.beats.map((b) => b.id));
+    for (const t of results) {
+      const b = S.beats.find((x) => x.id === t.id);
+      if (b) Object.assign(b.stats, { replies: t.replies, likes: t.likes, reposts: t.reposts ?? b.stats.reposts, quotes: t.quotes, views: t.views ?? b.stats.views });
+    }
+    const t = results.find((x) => !known.has(x.id) && x.quote?.id && known.has(x.quote.id) && /#amalgaverse/i.test(x.text) && (x.media?.all || []).length && x.text.length > 300);
+    const incoming = t ? { id: t.id, url: t.url, text: t.text, createdAt: new Date(t.created_timestamp * 1000).toISOString() } : null;
+    if (incoming?.id !== liveState.incoming?.id) {
+      liveState.incoming = incoming;
+      render();
+    }
+  } catch { /* offline or rate-limited: the pipeline data still stands */ }
+}
+setInterval(live, 3 * 60_000);
+
 // ------------------------------------------------------------ starfield
 (function stars() {
   const c = $('#stars');
@@ -581,4 +620,4 @@ setInterval(refresh, 5 * 60_000);
 
 // ------------------------------------------------------------ boot
 if (S) render();
-refresh();
+refresh().then(live);

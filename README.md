@@ -35,10 +35,27 @@ To test the reply fetcher on its own: `npm run replies -- <postId>`.
 ## How votes are counted
 
 1. Only **direct replies** to the post are counted, **one vote per account** (their latest reply), and the author's own replies are excluded.
-2. If the `claude` CLI is installed, Claude Haiku reads each reply against that beat's options, so free-form answers like "send the android" are counted correctly. Otherwise the updater falls back to keyword and row-letter matching using `data/curation.json`.
-3. Claude Sonnet writes a short "fleet sentiment" summary of *why* people voted the way they did. The site never shows individual replies. The raw replies stay in `.cache/`, which is gitignored.
+2. Each reply is read against that beat's options by the first available classifier:
+   - **[TypeSafe Jev](https://docs.typesafe.ai)** (`TYPESAFE_API_KEY`). For each reply it answers a Choice question (which option, or "none") with a calibrated confidence. Answers below 0.45 confidence count as *unclear* rather than being guessed. It also answers a Score question for **fleet morale**, which is how the fan feels about the story. Cost is about $0.04 per million input tokens, so pennies per month.
+   - **Claude**, through the local `claude` CLI, or `ANTHROPIC_API_KEY` in CI.
+   - **Keyword and row-letter matching** from `data/curation.json`.
+
+   If both Jev and Claude have read the same replies, the site shows how often they agree.
+3. Claude writes a short "fleet sentiment" summary of *why* people voted the way they did. Jev only classifies and doesn't generate text, so the summary still needs Claude. The site never shows individual replies. The raw replies stay in `.cache/`, which is gitignored.
+
+Local secrets go in a gitignored `.env` file (`TYPESAFE_API_KEY=…`, `ANTHROPIC_API_KEY=…`), and the updater loads them automatically.
 
 Mallozzi weighs people's reasoning, not just the numbers. So the "path taken" is the branch the **next post** actually followed, and it can differ from the top reply count.
+
+## GitHub Pages
+
+`.github/workflows/update.yml` runs the updater every 30 minutes, plus extra runs right after the 12:01 PM ET drop. It deploys `site/` to Pages.
+
+- Reply text, vote labels and mirrored videos persist in the Actions cache and are never committed.
+- Only `data/curation.json` changes are committed back to the repo.
+- Secrets: `TYPESAFE_API_KEY`, optional `ANTHROPIC_API_KEY` (for the sentiment text), and optional `SOCIALDATA_API_KEY` / `TWITTERAPI_IO_KEY` if Nitter blocks GitHub's servers. `gh secret set -f .env` uploads your local `.env` in one go.
+
+The published page also updates on its own between runs. FxTwitter allows direct requests from the browser, so the page checks it every few minutes for live reply, like and view counts. It also shows an **Incoming transmission** banner as soon as a new beat posts, before the next Action has run.
 
 ## Curation
 

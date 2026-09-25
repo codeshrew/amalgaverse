@@ -1,0 +1,69 @@
+name: Update & deploy
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'          # steady refresh of votes
+    - cron: '3,8,15 16,17 * * *'    # burst right after the 12:01 PM ET drop (EDT/EST)
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['site/**', 'scripts/**', 'data/**', '.github/workflows/**']
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # Reply text, per-reply vote labels and mirrored videos persist between runs here,
+      # never in git (the replies are other people's posts; the videos are large).
+      - uses: actions/cache@v4
+        with:
+          path: |
+            .cache
+            site/media
+          key: state-${{ github.run_id }}
+          restore-keys: state-
+
+      - name: Pull posts, replies and tally votes
+        env:
+          TYPESAFE_API_KEY: ${{ secrets.TYPESAFE_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SOCIALDATA_API_KEY: ${{ secrets.SOCIALDATA_API_KEY }}
+          TWITTERAPI_IO_KEY: ${{ secrets.TWITTERAPI_IO_KEY }}
+        run: node scripts/update.mjs
+
+      # Only curation changes are committed (new beats catalogued, canon resolved).
+      - name: Commit curation changes
+        run: |
+          if ! git diff --quiet data/; then
+            git config user.name "amalgaverse-bot"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/
+            git commit -m "Catalogue new #Amalgaverse beats [skip ci]"
+            git push
+          fi
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deploy
+        uses: actions/deploy-pages@v4
