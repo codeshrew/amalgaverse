@@ -76,6 +76,11 @@ jobs:
             git pull --rebase -X theirs -q && git push
           fi
 
+      # GitHub Pages serves assets with a 10-minute cache; version the URLs so a
+      # deploy shows up on the next page load.
+      - name: Cache-bust asset URLs
+        run: sed -i "s#assets/style.css#assets/style.css?v=${GITHUB_SHA::7}-${GITHUB_RUN_NUMBER}#; s#assets/app.js#assets/app.js?v=${GITHUB_SHA::7}-${GITHUB_RUN_NUMBER}#; s#data/story.js\"#data/story.js?v=${GITHUB_RUN_NUMBER}\"#" site/index.html
+
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
