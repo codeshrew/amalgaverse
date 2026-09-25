@@ -73,12 +73,13 @@ The published page also updates on its own between runs. FxTwitter allows direct
 | Publish | deploys Pages | pushes `data/`, which triggers a deploy |
 
 The routine is a scheduled Claude Code cloud agent that runs on Anthropic's infrastructure, so nothing depends on your machine. It follows [`AGENT_TASKS.md`](AGENT_TASKS.md):
-1. `node scripts/agent-tasks.mjs prepare` compares the published data with `data/` and lists what needs a writer.
+1. The routine's sandbox can only reach github.com. So each Actions run executes `agent-tasks.mjs prepare --local`, packs the task list and reply samples with AES-256-GCM, and force-pushes them to the `agent-packets` branch. The key is in the `AGENT_PACKET_KEY` secret and the routine's prompt. The repo is public, so reply text is never stored in the clear.
+   The routine runs `git fetch origin agent-packets` and then `agent-tasks.mjs unpack`.
 2. Claude writes the JSON answers.
 3. `node scripts/agent-tasks.mjs apply` validates them and merges them into `data/`.
 4. Claude commits and pushes.
 
-The routine needs no secrets. Manage it at https://claude.ai/code/routines.
+Manage the routine at https://claude.ai/code/routines. Readouts the routine writes to `data/summaries.json` are authoritative, and Actions never overwrites them.
 
 As a fallback, `scripts/local-sync.sh` does the same job from a Mac using your local `claude` login. `scripts/install-local-sync.sh` installs it as a launchd job. It's not installed by default.
 
