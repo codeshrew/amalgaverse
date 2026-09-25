@@ -1,0 +1,57 @@
+name: Deploy site (fast)
+
+# Style/layout/code changes under site/ publish in well under a minute: reuse the
+# data, videos and story.json from the last pipeline run instead of re-fetching.
+on:
+  push:
+    branches: [main]
+    paths: ['site/**', '.github/workflows/deploy-site.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: deploy-site
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Restore last pipeline state (story data + videos)
+        id: state
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            .cache
+            site/media
+            site/data
+          key: state-none
+          restore-keys: state-
+
+      - name: Fall back to the published data if the cache has none
+        run: |
+          if [ ! -f site/data/story.json ]; then
+            mkdir -p site/data
+            curl -fsSL https://codeshrew.github.io/amalgaverse/data/story.json -o site/data/story.json
+            curl -fsSL https://codeshrew.github.io/amalgaverse/data/story.js -o site/data/story.js
+          fi
+
+      - name: Cache-bust asset URLs
+        run: sed -i "s#assets/style.css#assets/style.css?v=${GITHUB_SHA::7}-${GITHUB_RUN_NUMBER}#; s#assets/app.js#assets/app.js?v=${GITHUB_SHA::7}-${GITHUB_RUN_NUMBER}#; s#data/story.js\"#data/story.js?v=${GITHUB_SHA::7}\"#" site/index.html
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deploy
+        uses: actions/deploy-pages@v4

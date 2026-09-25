@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['site/**', 'scripts/**', 'data/**', '.github/workflows/**']
+    paths: ['scripts/**', 'data/**', '.github/workflows/update.yml']   # site-only changes use deploy-site.yml
 
 permissions:
   contents: write
@@ -39,6 +39,7 @@ jobs:
           path: |
             .cache
             site/media
+            site/data
           key: state-${{ github.run_id }}
           restore-keys: state-
 

@@ -53,6 +53,8 @@ Mallozzi weighs people's reasoning, not just the numbers. So the "path taken" is
 
 ## GitHub Pages
 
+Changes that only touch `site/` (styles, layout, front-end code) go through `.github/workflows/deploy-site.yml`. It reuses the last pipeline run's data and videos from the Actions cache and publishes in under a minute. Changes to `scripts/` or `data/` run the full pipeline.
+
 `.github/workflows/update.yml` runs the updater every 30 minutes, plus extra runs right after the 12:01 PM ET drop. It deploys `site/` to Pages.
 
 - Reply text, vote labels and mirrored videos persist in the Actions cache and are never committed.
