@@ -1,0 +1,14 @@
+{
+  "name": "amalgaverse-tracker",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A sci-fi console for following Joseph Mallozzi's #Amalgaverse choose-your-own-adventure on X.",
+  "type": "module",
+  "scripts": {
+    "update": "node scripts/update.mjs",
+    "update:fast": "node scripts/update.mjs --no-llm",
+    "serve": "node scripts/serve.mjs",
+    "dev": "node scripts/update.mjs && node scripts/serve.mjs"
+  },
+  "engines": { "node": ">=20" }
+}
