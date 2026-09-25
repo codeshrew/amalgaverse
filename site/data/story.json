@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T18:04:58.319Z",
+  "generatedAt": "2026-09-25T18:05:07.602Z",
   "series": {
     "title": "The Amalgaverse",
     "showrunner": "Joseph Mallozzi",
@@ -123,16 +123,22 @@
       "votes": {
         "total": 466,
         "voters": 430,
-        "counted": 275,
-        "unclear": 155,
+        "counted": 270,
+        "unclear": 160,
         "other": 0,
         "tally": {
-          "yes": 261,
+          "yes": 256,
           "no": 14
         },
-        "method": "keywords",
+        "method": "ai",
         "leader": "yes",
-        "margin": 247,
+        "margin": 242,
+        "headline": "Crew votes overwhelmingly to sign aboard the Alt. Enterprise-D",
+        "reasons": {
+          "yes": "Most crew embraced the adventure outright, eager for orders, warp speed, and whatever chaos awaited.",
+          "no": "The small holdout balked mainly over an interrupted snack, not the mission itself."
+        },
+        "wildcards": "A missing cookie dominated sentiment across both camps, with several holdouts reversing course once reassured replicators could produce a replacement.",
         "reported": 513,
         "asOf": "2026-09-25T17:32:15.859Z"
       }
@@ -216,18 +222,26 @@
       "votes": {
         "total": 424,
         "voters": 403,
-        "counted": 362,
-        "unclear": 41,
+        "counted": 358,
+        "unclear": 45,
         "other": 0,
         "tally": {
-          "ghost": 134,
+          "ghost": 133,
           "heist": 40,
-          "delivery": 66,
-          "fracture": 122
+          "delivery": 64,
+          "fracture": 121
         },
-        "method": "keywords",
+        "method": "ai",
         "leader": "ghost",
         "margin": 12,
+        "headline": "Fleet answers the mayday: Ghost Ship wins, Fracture close behind",
+        "reasons": {
+          "ghost": "Maritime instinct won out — a mayday from a nearby vessel could not be ignored, whatever the risk.",
+          "fracture": "Twenty-three silent researchers on a known outpost made this feel like the most urgent life-at-stake call.",
+          "delivery": "A Starfleet priority channel addressed straight to the captain read as a direct order that outranked the rest.",
+          "heist": "Curiosity about a black-market weapon and a shot at outrunning the Ferengi made this the fun, high-stakes pick."
+        },
+        "wildcards": "Recurring debate over whether Starfleet orders or the old law of the sea should set the tiebreaker, plus a fair number hoping to split the ship and chase two crises at once.",
         "reported": 450,
         "asOf": "2026-09-25T17:32:25.689Z"
       }
@@ -326,18 +340,26 @@
       "votes": {
         "total": 451,
         "voters": 392,
-        "counted": 316,
-        "unclear": 76,
+        "counted": 314,
+        "unclear": 78,
         "other": 0,
         "tally": {
           "scotty": 51,
-          "sheppard": 199,
+          "sheppard": 197,
           "garak": 31,
           "mckay": 35
         },
-        "method": "keywords",
+        "method": "ai",
         "leader": "sheppard",
-        "margin": 148,
+        "margin": 146,
+        "headline": "Sheppard's jumper run wins decisively over beaming and the breach",
+        "reasons": {
+          "sheppard": "Crew favored keeping a physical ship nearby for extraction and a chance to scout the freighter en route to the bridge.",
+          "scotty": "Backers trusted transporter speed and Scotty's track record, often pairing it with the jumper as a standby rescue option.",
+          "garak": "This faction liked the element of surprise and using the hull breach for reconnaissance before anyone knew they'd boarded.",
+          "mckay": "Risk-averse voters argued the mission wasn't worth it and favored remote scans or handing it off entirely."
+        },
+        "wildcards": "Recurring gags included dread over transporter mishaps, McKay's chronic cowardice being both mocked and grudgingly respected, and several crews trying to split the difference by sending two teams at once.",
         "reported": 441,
         "asOf": "2026-09-25T18:03:54.449Z"
       }
@@ -400,7 +422,7 @@
         "reposts": 45,
         "likes": 405,
         "quotes": 20,
-        "views": 33407,
+        "views": 33450,
         "bookmarks": 27
       },
       "prev": "2102790343305626057",
@@ -425,18 +447,26 @@
       "votes": {
         "total": 487,
         "voters": 418,
-        "counted": 354,
-        "unclear": 64,
+        "counted": 352,
+        "unclear": 66,
         "other": 0,
         "tally": {
           "A": 89,
-          "B": 53,
+          "B": 52,
           "C": 84,
-          "D": 128
+          "D": 127
         },
-        "method": "keywords",
+        "method": "ai",
         "leader": "D",
-        "margin": 39,
+        "margin": 38,
+        "headline": "Row D wins the vote, ahead of A, C, then B",
+        "reasons": {
+          "A": "Backers wanted Data's vacuum-proof strength and science skills paired with Sheppard's piloting and a doctor on hand for survivors.",
+          "B": "Voters leaned into muscle and medical coverage, banking on McCoy and heavy hitters for a possible rescue-and-fight scenario.",
+          "C": "Fans favored O'Neill and Carter's chemistry plus Odo and Garak's unconventional infiltration and deception skills.",
+          "D": "Crew liked the lean, no-medic loadout, betting on an empty ship and leaning on Daniel's translation skills and McKay's technical fixes."
+        },
+        "wildcards": "Recurring bits included jokes about picking C on multiple-choice instinct, hopes that O'Neill and the scientists would get separated for their own safety, and a few write-ins pining for dream teams outside the given rows.",
         "reported": 599,
         "asOf": "2026-09-25T18:04:06.049Z"
       }
@@ -495,7 +525,7 @@
         "reposts": 35,
         "likes": 274,
         "quotes": 6,
-        "views": 8505,
+        "views": 8538,
         "bookmarks": 15
       },
       "prev": "2103152730714063183",
@@ -520,17 +550,24 @@
       "votes": {
         "total": 189,
         "voters": 174,
-        "counted": 128,
-        "unclear": 46,
+        "counted": 126,
+        "unclear": 48,
         "other": 0,
         "tally": {
-          "rommie": 20,
+          "rommie": 19,
           "mckay": 28,
-          "oneill": 80
+          "oneill": 79
         },
-        "method": "keywords",
+        "method": "ai",
         "leader": "oneill",
-        "margin": 52,
+        "margin": 51,
+        "headline": "O'Neill's push-forward plan holds a commanding lead in the count",
+        "reasons": {
+          "oneill": "Voters favor keeping the exit route open and the jumper at full power rather than risking doors that might not reopen.",
+          "mckay": "Supporters trust Rodney's engineering to solve the servo problem directly, even at some cost to jumper power.",
+          "rommie": "This bloc likes preserving the jumper's power and avoiding the jamming risk, though some worry about leaving the android exposed."
+        },
+        "wildcards": "Recurring threads include contingency planning with Scotty on standby, jokes about never hearing the end of it if McKay's fix works, and a running bit imagining the away team's voices during the debate.",
         "reported": 236,
         "asOf": "2026-09-25T18:04:38.500Z"
       }
