@@ -67,5 +67,18 @@
     "leader": "ghost",
     "method": "jev",
     "by": "claude-routine"
+  },
+  "2103877507585913079": {
+    "headline": "Fleet favors McKay's containment detour, with Rommie's bridge-first plan a strong runner-up.",
+    "reasons": {
+      "detour": "Crew reasoning holds that the compartment is barely off the route and the dying field may be sheltering a survivor, or something worth knowing about before it fails.",
+      "rommie": "Crew reasoning holds that securing the bridge and ship systems first is the safer, more methodical call, and may yield logs or sensors before facing the unknown."
+    },
+    "wildcards": "Recurring joke that no McKay detour is ever actually small, plus a steady undercurrent proposing the team just split three ways instead of choosing.",
+    "counted": 224,
+    "final": false,
+    "leader": "detour",
+    "method": "jev",
+    "by": "claude-routine"
   }
 }
