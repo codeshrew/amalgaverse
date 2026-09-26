@@ -40,14 +40,14 @@
     "method": "jev"
   },
   "2103515118818697677": {
-    "headline": "O'Neill's suit-up plan leads decisively, ahead of McKay's hard line and Rommie's manual close.",
+    "headline": "O'Neill's push through in EV suits leads comfortably, McKay's hard line second, Rommie trailing.",
     "reasons": {
-      "oneill": "Fleet favors preserving a fast escape route, since forcing the doors shut risks jamming them for good and the team's already suited for vacuum.",
-      "mckay": "Backers trust Rodney's engineering and judge a modest power drain a fair price for sealing the bay against the anomaly's pulses.",
-      "rommie": "Some crew favor a manual seal that spares the jumper's power reserves, accepting the risk to Rommie's frame instead."
+      "oneill": "Most crews want the escape route preserved, warning that forced-shut doors might never reopen for a hasty retreat.",
+      "mckay": "Some back his engineering instincts and judge the jumper's power drain an acceptable risk with backup power nearby.",
+      "rommie": "A smaller group would rather spare the away team the vacuum and keep the jumper's power reserves untouched."
     },
-    "wildcards": "A vocal minority pitch a hybrid where the team advances while McKay powers the bay, plus calls to have Scotty standing by for an emergency beam-out and running jokes about McKay's shaky confidence.",
-    "counted": 311,
+    "wildcards": "A few crews floated hybrid plans, sending O'Neill's team in while McKay works the servos at the same time, and one flagged a zat-gun-powered fix.",
+    "counted": 345,
     "final": false,
     "leader": "oneill",
     "method": "jev",
