@@ -1,6 +1,6 @@
 {
   "_readme": "Hand-curated story structure. The updater fills in anything missing (marked \"auto\": true) and never overwrites entries you edit here unless they are still auto. 'canon' = the option the story actually followed (from the next post).",
-  "head": "2103515118818697677",
+  "head": "2103877507585913079",
   "beats": {
     "2101703241687863782": {
       "kind": "briefing",
@@ -328,13 +328,25 @@
           ]
         }
       ],
-      "canon": null,
+      "canon": "oneill",
       "awayTeam": [
         "O’Neill",
         "Daniel",
         "Rommie",
         "McKay"
       ]
+    },
+    "2103877507585913079": {
+      "auto": true,
+      "kind": "decision",
+      "mission": "The Ghost Ship",
+      "missionNumber": 1,
+      "part": 1,
+      "title": "First Mission: The Ghost Ship (Part 1)",
+      "question": "So where are you headed first?",
+      "options": [],
+      "canon": null,
+      "heuristic": true
     }
   }
 }
