@@ -342,11 +342,55 @@
       "mission": "The Ghost Ship",
       "missionNumber": 1,
       "part": 1,
-      "title": "First Mission: The Ghost Ship (Part 1)",
-      "question": "So where are you headed first?",
-      "options": [],
+      "title": "The Faint Contact",
+      "question": "Do you head straight for the bridge, or detour toward the strange reading?",
+      "options": [
+        {
+          "key": "rommie",
+          "label": "Rommie — beeline for the bridge",
+          "summary": "Confirm every breach sealed and the ship secured before going deeper — safe and methodical, but the failing containment field might not wait.",
+          "keywords": [
+            "bridge",
+            "control",
+            "secure the ship",
+            "methodical",
+            "seal breaches",
+            "full ship scan",
+            "confirm systems",
+            "play it safe",
+            "command deck",
+            "rommie"
+          ]
+        },
+        {
+          "key": "detour",
+          "label": "Daniel & McKay — chase the reading",
+          "summary": "Detour to the one compartment still holding a dying containment field — maybe a survivor, maybe something the field was built to hold.",
+          "keywords": [
+            "detour",
+            "tricorder",
+            "contact",
+            "survivor",
+            "containment field",
+            "daniel",
+            "mckay",
+            "investigate",
+            "life sign",
+            "something alive",
+            "check it out",
+            "last compartment"
+          ]
+        }
+      ],
       "canon": null,
-      "heuristic": true
+      "heuristic": false,
+      "catalogedBy": "claude-routine",
+      "awayTeam": [
+        "O'Neill",
+        "Daniel",
+        "McKay",
+        "Rommie"
+      ]
     }
   }
 }

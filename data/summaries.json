@@ -40,15 +40,15 @@
     "method": "jev"
   },
   "2103515118818697677": {
-    "headline": "O'Neill's push through in EV suits leads comfortably, McKay's hard line second, Rommie trailing.",
+    "headline": "O'Neill's suit-up gambit won decisively, with McKay's hard line a distant second.",
     "reasons": {
-      "oneill": "Most crews want the escape route preserved, warning that forced-shut doors might never reopen for a hasty retreat.",
-      "mckay": "Some back his engineering instincts and judge the jumper's power drain an acceptable risk with backup power nearby.",
-      "rommie": "A smaller group would rather spare the away team the vacuum and keep the jumper's power reserves untouched."
+      "oneill": "Fans prized keeping the retreat route open, wary that hangar doors forced shut might never reopen if things went bad.",
+      "mckay": "Backers judged the jumper's small power drain an acceptable, recoverable cost for a properly sealed and pressurized bay.",
+      "rommie": "A smaller camp liked that her manual close spared both the jumper's reserves and the team's exposure to vacuum."
     },
-    "wildcards": "A few crews floated hybrid plans, sending O'Neill's team in while McKay works the servos at the same time, and one flagged a zat-gun-powered fix.",
-    "counted": 345,
-    "final": false,
+    "wildcards": "Recurring bits included Star Trek crossover jokes about Scotty beaming the team out, pitches to split the away team or splice in a hybrid plan, and a running gag over the correct spelling of O'Neill's name.",
+    "counted": 347,
+    "final": true,
     "leader": "oneill",
     "method": "jev",
     "by": "claude-routine"
