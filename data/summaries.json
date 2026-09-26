@@ -40,17 +40,18 @@
     "method": "jev"
   },
   "2103515118818697677": {
-    "headline": "O'Neill's suit-up plan holds a commanding lead as voting continues",
+    "headline": "O'Neill's suit-up plan leads decisively, ahead of McKay's hard line and Rommie's manual close.",
     "reasons": {
-      "oneill": "Crew favors keeping mobility and a guaranteed exit over risking a door that might not reopen if power or Rommie fail.",
-      "mckay": "Backers trust a controlled power drain from the jumper to solve the door for good, banking on nearby backup if reserves run low.",
-      "rommie": "Supporters like solving the jam without touching jumper power, provided a lifeline keeps their android friend recoverable if she drops."
+      "oneill": "Fleet favors preserving a fast escape route, since forcing the doors shut risks jamming them for good and the team's already suited for vacuum.",
+      "mckay": "Backers trust Rodney's engineering and judge a modest power drain a fair price for sealing the bay against the anomaly's pulses.",
+      "rommie": "Some crew favor a manual seal that spares the jumper's power reserves, accepting the risk to Rommie's frame instead."
     },
-    "wildcards": "Recurring notes flag the missing Carter as sorely missed counsel, alongside cross-franchise cameo appreciation for the crew's real-life pairing.",
-    "counted": 275,
+    "wildcards": "A vocal minority pitch a hybrid where the team advances while McKay powers the bay, plus calls to have Scotty standing by for an emergency beam-out and running jokes about McKay's shaky confidence.",
+    "counted": 311,
     "final": false,
     "leader": "oneill",
-    "method": "jev"
+    "method": "jev",
+    "by": "claude-routine"
   },
   "2102427955456815176": {
     "headline": "The Ghost Ship narrowly outpaced The Fracture; Delivery and Heist trailed behind.",
