@@ -400,7 +400,38 @@
       "part": 1,
       "title": "First Mission: The Ghost Ship (Part 1)",
       "question": "What do you do?",
-      "options": [],
+      "options": [
+        {
+          "key": "A",
+          "letter": "A",
+          "label": "Fall back",
+          "summary": "Fall back.  McKay is leading the way!",
+          "keywords": [
+            "option a",
+            "a."
+          ]
+        },
+        {
+          "key": "B",
+          "letter": "B",
+          "label": "Have Rommie reach out and override the unit",
+          "summary": "Have Rommie reach out and override the unit.  And hope it listens.",
+          "keywords": [
+            "option b",
+            "b."
+          ]
+        },
+        {
+          "key": "C",
+          "letter": "C",
+          "label": "Trust in Jack and Daniel - and their P-90s",
+          "summary": "Trust in Jack and Daniel - and their P-90s.  Light 'im up!",
+          "keywords": [
+            "option c",
+            "c."
+          ]
+        }
+      ],
       "canon": null,
       "heuristic": true
     }
