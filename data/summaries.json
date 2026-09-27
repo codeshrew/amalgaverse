@@ -82,14 +82,14 @@
     "by": "claude-routine"
   },
   "2104239896114213067": {
-    "headline": "Fleet is overwhelmingly backing Rommie's override attempt over retreat or gunfire",
+    "headline": "Override is running away with it: B=245, A=38, C=20",
     "reasons": {
-      "B": "Most voters see no clear sign of hostility yet and trust Rommie's systems to disable or befriend the unit without wasting ammo the P-90s might not even dent.",
-      "A": "A cautious minority want to withdraw first, unwilling to risk Rommie until the unit shows clearer intent.",
-      "C": "A small contingent are ready to open fire immediately, doubting diplomacy will work on an armored machine."
+      "A": "The unit hasn't shown open hostility, so this bloc would rather pull back and preserve the team than risk Rommie or waste ammo on armor plating that might shrug off P-90 rounds anyway.",
+      "B": "Its slow, pausing advance reads as protocol rather than attack, so fans want Rommie to attempt a machine-to-machine handshake that could win an ally or ship access where bullets likely can't penetrate the plating.",
+      "C": "A smaller but vocal bloc doubts diplomacy will hold and would rather neutralize the threat outright with the P-90s before it closes the distance or compromises Rommie."
     },
-    "wildcards": "Runners-up include comparisons to ED-209's infamous override failure, Transformer name-drops, and a recurring gag about calling in Iron Man instead.",
-    "counted": 244,
+    "wildcards": "Recurring notes that Rommie herself could get overridden instead of the other way around, several votes hedging B now with C as the fallback if the override fails, and a running joke thread comparing the unit to Transformers' Shockwave and Lugnut plus a wary nod to RoboCop's ED-209.",
+    "counted": 303,
     "final": false,
     "leader": "B",
     "method": "jev",
