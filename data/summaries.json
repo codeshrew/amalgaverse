@@ -69,13 +69,13 @@
     "by": "claude-routine"
   },
   "2103877507585913079": {
-    "headline": "Crew favors the detour to the failing field over a bridge beeline.",
+    "headline": "Fleet favors the detour to the containment field over a straight bridge run.",
     "reasons": {
-      "rommie": "They'd rather secure the ship and bring sensors online before risking an unknown compartment.",
-      "detour": "It's barely out of the way and the field is failing, so they want to check it before it's too late."
+      "detour": "Most crews reason it barely counts as a detour since the field is the one compartment still drawing power, and it might be sheltering a survivor or holding in something never meant to get out.",
+      "rommie": "Those favoring the bridge argue for securing the ship and its sensors first, so the team isn't walking into the unknown blind."
     },
-    "wildcards": "Plenty keep pushing to split the team instead, and a vocal minority want to chase Daniel's life-sign contact over either official option.",
-    "counted": 246,
+    "wildcards": "A running joke: nobody believes Rodney's \"tiny detour\" will stay tiny, and a solid contingent wants to split the team entirely, even while agreeing that splitting up never ends well.",
+    "counted": 295,
     "final": false,
     "leader": "detour",
     "method": "jev",
