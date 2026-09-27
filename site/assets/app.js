@@ -2,7 +2,24 @@
 
 const $ = (sel, el = document) => el.querySelector(sel);
 const view = $('#view');
-let S = window.AMALGAVERSE || null;
+// Shared with the pipeline; versioned the same way app.js is so a deploy busts both.
+const { heuristicCatalog } = await import('./catalog.js' + new URL(import.meta.url).search);
+
+// A decision beat the pipeline hasn't catalogued yet still shows what you can vote
+// on: read the options straight from the post with the same rules the pipeline uses.
+function normalize(story) {
+  if (!story) return story;
+  for (const b of story.beats) {
+    if (b.kind === 'briefing' || b.options?.length) continue;
+    const h = heuristicCatalog(b.text || '');
+    b.options = h.options.map(({ keywords, ...o }) => o);
+    b.question ||= h.question;
+    b.optionsProvisional = b.options.length > 0;
+  }
+  return story;
+}
+
+let S = normalize(window.AMALGAVERSE || null);
 
 // ------------------------------------------------------------------ helpers
 const esc = (s = '') => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -120,6 +137,9 @@ function renderMedia(media, { max = 4, autoplay = false } = {}) {
 
 // ------------------------------------------------------------ vote blocks
 function renderOptions(b, { reasons = true } = {}) {
+  if (!b.options.length) {
+    return b.kind === 'briefing' ? '' : `<div class="no-votes">This beat's options haven't been catalogued yet. <a href="${esc(b.url)}" target="_blank" rel="noopener">Read them in the post on X ↗</a></div>`;
+  }
   const v = b.votes;
   const leader = v?.leader;
   const out = b.options.map((o, i) => {
@@ -135,7 +155,7 @@ function renderOptions(b, { reasons = true } = {}) {
     return `<div class="${cls}">
       <div class="opt-bar" data-w="${sh == null ? 0 : sh * 100}" style="${b.status === 'closed' ? '' : ''}"></div>
       <div class="opt-head">
-        <div class="opt-label">${o.letter ? '' : `<span class="opt-key">${String.fromCharCode(65 + i)}</span>`}${esc(o.label)}</div>
+        <div class="opt-label">${o.letter && /^row\b/i.test(o.label) ? '' : `<span class="opt-key">${esc(o.letter || String.fromCharCode(65 + i))}</span>`}${esc(o.label)}</div>
         <div class="opt-pct">${pctTxt(sh)}</div>
       </div>
       <div class="opt-summary">${esc(o.summary || '')}</div>
@@ -149,7 +169,7 @@ function renderOptions(b, { reasons = true } = {}) {
 
 function renderVoteMeta(b) {
   const v = b.votes;
-  if (!v) return `<div class="no-votes mono">No vote data yet — run <code>npm run update</code> to pull replies.</div>`;
+  if (!v?.counted) return `<div class="no-votes">${b.status === 'open' ? 'Tally pending. Replies are counted every 30 minutes, so the split shows up after the next sync.' : 'No votes counted for this beat.'}${b.optionsProvisional ? ' Options were read straight from the post and may be refined later.' : ''}</div>`;
   const method = { jev: 'read by Jev', ai: 'read by Claude' }[v.method] || 'keyword-matched';
   return `<div class="vote-meta">
     <span>${v.counted} votes counted</span>
@@ -206,6 +226,7 @@ function viewBridge() {
   const inc = liveState.incoming;
   const banner = inc ? `<div class="panel incoming fade-in"><div class="eyebrow"><span class="badge live">Incoming transmission</span><span>${ago(inc.createdAt)}</span></div>
     <p class="prose" style="margin:10px 0 0;font-size:17px">${esc(inc.text.split('\n').filter(Boolean).slice(1, 3).join(' ').slice(0, 280))}…</p>
+    ${inc.options?.length ? `<div class="eyebrow" style="margin-top:14px">${esc(inc.question || 'Your options')}</div><div class="options" style="margin-top:10px">${inc.options.map((o, i) => `<div class="opt"><div class="opt-head"><div class="opt-label"><span class="opt-key">${esc(o.letter || String.fromCharCode(65 + i))}</span>${esc(o.label)}</div></div>${o.summary && o.summary !== o.label ? `<div class="opt-summary">${esc(o.summary)}</div>` : ''}</div>`).join('')}</div>` : ''}
     <div class="btn-row"><a class="btn primary" href="${esc(inc.url)}" target="_blank" rel="noopener">${ICON_X} Read &amp; vote on X</a><span class="dim" style="align-self:center;font-size:14px">A new beat just dropped — the tally appears after the next data sync.</span></div></div>` : '';
   return `${banner}<div class="bridge-grid fade-in">
     <section class="panel amber hero" aria-labelledby="cur-title">
@@ -676,7 +697,7 @@ async function refresh() {
     if (!res.ok) return;
     const fresh = await res.json();
     if (!S || fresh.generatedAt !== S.generatedAt) {
-      S = fresh;
+      S = normalize(fresh);
       render();
     }
   } catch { /* offline: keep what we have */ }
@@ -698,7 +719,7 @@ async function live() {
       if (b) Object.assign(b.stats, { replies: t.replies, likes: t.likes, reposts: t.reposts ?? b.stats.reposts, quotes: t.quotes, views: t.views ?? b.stats.views });
     }
     const t = results.find((x) => !known.has(x.id) && x.quote?.id && known.has(x.quote.id) && /#amalgaverse/i.test(x.text) && (x.media?.all || []).length && x.text.length > 300);
-    const incoming = t ? { id: t.id, url: t.url, text: t.text, createdAt: new Date(t.created_timestamp * 1000).toISOString() } : null;
+    const incoming = t ? { id: t.id, url: t.url, text: t.text, createdAt: new Date(t.created_timestamp * 1000).toISOString(), ...heuristicCatalog(t.raw_text?.text || t.text) } : null;
     if (incoming?.id !== liveState.incoming?.id) {
       liveState.incoming = incoming;
       render();

@@ -65,7 +65,7 @@ The published page also updates on its own between runs. FxTwitter allows direct
 
 ### Who does what
 
-| Job | GitHub Actions (every 30 min) | Claude routine (cloud, 4× a day) |
+| Job | GitHub Actions (every 30 min) | Claude routine (cloud, 4× a day, :45 past 16, 19, 23, 03 UTC) |
 |---|---|---|
 | Fetch posts, replies and videos | ✓ | fetches reply samples only |
 | Read votes and morale with Jev | ✓ | — |

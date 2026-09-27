@@ -180,7 +180,8 @@ Return ONLY JSON:
 let prevCur = null;
 for (const t of ordered) {
   let cur = curation.beats[t.id];
-  if (!cur || (cur.auto && (cur.heuristic || !cur.options?.length) && llmAvailable())) {
+  const retryRules = cur?.heuristic && !cur.options?.length; // rules improved since, or nothing matched yet
+  if (!cur || retryRules || (cur.auto && (cur.heuristic || !cur.options?.length) && llmAvailable())) {
     log('Cataloguing new beat', t.id, cur?.heuristic ? '(upgrading rule-based entry)' : '', '…');
     const { base, previousCanon } = await autoCurate(t, prevCur);
     if (cur?.canon && !base.canon) base.canon = cur.canon;
