@@ -69,13 +69,13 @@
     "by": "claude-routine"
   },
   "2103877507585913079": {
-    "headline": "Fleet favors McKay's containment detour, with Rommie's bridge-first plan a strong runner-up.",
+    "headline": "Crew favors the detour to the failing field over a bridge beeline.",
     "reasons": {
-      "detour": "Crew reasoning holds that the compartment is barely off the route and the dying field may be sheltering a survivor, or something worth knowing about before it fails.",
-      "rommie": "Crew reasoning holds that securing the bridge and ship systems first is the safer, more methodical call, and may yield logs or sensors before facing the unknown."
+      "rommie": "They'd rather secure the ship and bring sensors online before risking an unknown compartment.",
+      "detour": "It's barely out of the way and the field is failing, so they want to check it before it's too late."
     },
-    "wildcards": "Recurring joke that no McKay detour is ever actually small, plus a steady undercurrent proposing the team just split three ways instead of choosing.",
-    "counted": 224,
+    "wildcards": "Plenty keep pushing to split the team instead, and a vocal minority want to chase Daniel's life-sign contact over either official option.",
+    "counted": 246,
     "final": false,
     "leader": "detour",
     "method": "jev",
