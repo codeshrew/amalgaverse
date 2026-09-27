@@ -398,42 +398,71 @@
       "mission": "The Ghost Ship",
       "missionNumber": 1,
       "part": 1,
-      "title": "First Mission: The Ghost Ship (Part 1)",
-      "question": "What do you do?",
+      "title": "The Corridor Sentinel",
+      "question": "As the hulking utility unit advances down the corridor, what do you do?",
       "options": [
         {
           "key": "A",
-          "letter": "A",
-          "label": "Fall back",
-          "summary": "Fall back.  McKay is leading the way!",
+          "label": "Fall back — let McKay lead the retreat",
+          "summary": "Retreat down the corridor with McKay setting the pace — safe for now, but it leaves the unit's intentions, and the route to the bridge, unresolved.",
           "keywords": [
-            "option a",
-            "a."
-          ]
+            "fall back",
+            "retreat",
+            "run away",
+            "pull back",
+            "back away",
+            "withdraw",
+            "flee",
+            "regroup",
+            "mckay leading"
+          ],
+          "letter": "A"
         },
         {
           "key": "B",
-          "letter": "B",
-          "label": "Have Rommie reach out and override the unit",
-          "summary": "Have Rommie reach out and override the unit.  And hope it listens.",
+          "label": "Rommie — reach out and override the unit",
+          "summary": "Have Rommie attempt a machine-to-machine override — a shot at a new ally or ship access, but she could get compromised instead.",
           "keywords": [
-            "option b",
-            "b."
-          ]
+            "rommie",
+            "override",
+            "hack",
+            "reach out",
+            "interface",
+            "talk to it",
+            "negotiate",
+            "communicate",
+            "android",
+            "diplomacy"
+          ],
+          "letter": "B"
         },
         {
           "key": "C",
-          "letter": "C",
-          "label": "Trust in Jack and Daniel - and their P-90s",
-          "summary": "Trust in Jack and Daniel - and their P-90s.  Light 'im up!",
+          "label": "O'Neill & Daniel — light it up with the P-90s",
+          "summary": "Trust the P-90s to put it down fast — decisive, though the armor plating might shrug the rounds off entirely.",
           "keywords": [
-            "option c",
-            "c."
-          ]
+            "shoot",
+            "p90",
+            "light it up",
+            "open fire",
+            "guns",
+            "attack",
+            "oneill",
+            "jack and daniel",
+            "blast it"
+          ],
+          "letter": "C"
         }
       ],
       "canon": null,
-      "heuristic": true
+      "heuristic": false,
+      "catalogedBy": "claude-routine",
+      "awayTeam": [
+        "O'Neill",
+        "Daniel",
+        "McKay",
+        "Rommie"
+      ]
     }
   }
 }

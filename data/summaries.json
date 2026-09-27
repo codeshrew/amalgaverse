@@ -69,15 +69,29 @@
     "by": "claude-routine"
   },
   "2103877507585913079": {
-    "headline": "Fleet favors the detour to the containment field over a straight bridge run.",
+    "headline": "Crew chased McKay's containment-field detour over securing the bridge first",
     "reasons": {
-      "detour": "Most crews reason it barely counts as a detour since the field is the one compartment still drawing power, and it might be sheltering a survivor or holding in something never meant to get out.",
-      "rommie": "Those favoring the bridge argue for securing the ship and its sensors first, so the team isn't walking into the unknown blind."
+      "detour": "Backers argued the failing containment field couldn't wait, calling it a short detour that might reveal a survivor, or a threat worth knowing about before it got loose.",
+      "rommie": "Backers favored locking down the bridge first for full sensors and ship control before wading into an unknown containment risk."
     },
-    "wildcards": "A running joke: nobody believes Rodney's \"tiny detour\" will stay tiny, and a solid contingent wants to split the team entirely, even while agreeing that splitting up never ends well.",
-    "counted": 295,
-    "final": false,
+    "wildcards": "Plenty called for splitting the team to hit both destinations at once, and several leaned on horror-movie logic about never investigating the ominous power drain.",
+    "counted": 303,
+    "final": true,
     "leader": "detour",
+    "method": "jev",
+    "by": "claude-routine"
+  },
+  "2104239896114213067": {
+    "headline": "Fleet is overwhelmingly backing Rommie's override attempt over retreat or gunfire",
+    "reasons": {
+      "B": "Most voters see no clear sign of hostility yet and trust Rommie's systems to disable or befriend the unit without wasting ammo the P-90s might not even dent.",
+      "A": "A cautious minority want to withdraw first, unwilling to risk Rommie until the unit shows clearer intent.",
+      "C": "A small contingent are ready to open fire immediately, doubting diplomacy will work on an armored machine."
+    },
+    "wildcards": "Runners-up include comparisons to ED-209's infamous override failure, Transformer name-drops, and a recurring gag about calling in Iron Man instead.",
+    "counted": 244,
+    "final": false,
+    "leader": "B",
     "method": "jev",
     "by": "claude-routine"
   }
