@@ -82,16 +82,29 @@
     "by": "claude-routine"
   },
   "2104239896114213067": {
-    "headline": "B=277, A=42, C=20 — the fleet backs Rommie's override, holds the guns in reserve",
+    "headline": "Fleet backed Rommie's override by a wide margin over retreat and gunfire.",
     "reasons": {
-      "A": "The unit hasn't shown real hostility, so this bloc argues for a non-confrontational pause rather than risking Rommie or wasting ammo on plating the P-90s probably can't dent.",
-      "B": "The unit paused when the team stepped back, reading as caution rather than attack, so most fans want Rommie to attempt contact — better odds than gunfire against armor plating, with a shot at a new ally or ship access, and O'Neill and Daniel standing by if it turns hostile.",
-      "C": "A smaller bloc wants a decisive strike now, unwilling to risk Rommie getting compromised by the override and preferring guaranteed results over uncertain diplomacy."
+      "A": "Skeptics argued the unit hadn't shown real hostility and pushed for a cautious withdrawal rather than risking Rommie or wasting ammo on armor plating.",
+      "B": "Most fans read the unit's pause as caution rather than aggression and wanted Rommie to attempt contact, betting a machine-to-machine link could win an ally or ship access worth more than a fight.",
+      "C": "A vocal minority distrusted the override or simply wanted the P-90s to settle it fast, decisive risk be damned."
     },
-    "wildcards": "Recurring gags compare the unit to Transformers and RoboCop's ED-209, plus jokes about a holodeck twist and requests to scan it with a tricorder first; several replies hedge with B now and C as the fallback if the override fails.",
-    "counted": 339,
-    "final": false,
+    "wildcards": "A recurring pitch was to pair B with C as a fallback if the override failed, alongside jokes nicknaming Rommie 'Rom-doll' and worry the unit could hijack her instead.",
+    "counted": 373,
+    "final": true,
     "leader": "B",
+    "method": "jev",
+    "by": "claude-routine"
+  },
+  "2104602282491019492": {
+    "headline": "Fleet overwhelmingly favors crossing the breach now over waiting.",
+    "reasons": {
+      "A": "Most fans trust the EV suits and Rommie's read of the situation, arguing the fading power source and containment field leave no time to hunt for a longer route.",
+      "B": "A small holdout worries venting the compartment is violent and unpredictable, and wants to keep a sealed retreat route open rather than risk it."
+    },
+    "wildcards": "The thread is full of 'once more unto the breach' quips, worries about getting struck by flying debris in the vacuum, and hope that the downed utility unit still has useful answers once someone checks it.",
+    "counted": 185,
+    "final": false,
+    "leader": "A",
     "method": "jev",
     "by": "claude-routine"
   }

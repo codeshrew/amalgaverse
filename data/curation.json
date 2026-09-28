@@ -470,32 +470,50 @@
       "mission": "The Ghost Ship",
       "missionNumber": 1,
       "part": 2,
-      "title": "First Mission: The Ghost Ship (Part 2)",
-      "question": "What do you do?",
+      "title": "Into the Breach",
+      "question": "Do you seal up and cross into the breached, vacuum-exposed section, or leave it sealed and find another way around?",
       "options": [
         {
           "key": "A",
-          "letter": "A",
-          "label": "Seal up and cross into the breached section",
-          "summary": "Seal up and cross into the breached section.",
+          "label": "Away team — seal up, cross the breach",
+          "summary": "Seal the compartment, vent it to the breached section, and cross in EV suits — the fastest route to the bridge, but anything not secured, Rommie included, goes out with the escaping air.",
           "keywords": [
-            "option a",
-            "a."
-          ]
+            "seal",
+            "cross",
+            "breach",
+            "vacuum",
+            "ev suits",
+            "direct route",
+            "forward",
+            "option a"
+          ],
+          "letter": "A"
         },
         {
           "key": "B",
-          "letter": "B",
-          "label": "Leave it sealed and find another way around, however long…",
-          "summary": "Leave it sealed and find another way around, however long that takes.",
+          "label": "Away team — find another way around",
+          "summary": "Leave the compartment sealed and take a longer route to the bridge — safer for the team, but it burns time the fading containment field and ebbing power source can't spare.",
           "keywords": [
-            "option b",
-            "b."
-          ]
+            "fall back",
+            "another way",
+            "detour",
+            "avoid vacuum",
+            "wait",
+            "safer route",
+            "option b"
+          ],
+          "letter": "B"
         }
       ],
       "canon": null,
-      "heuristic": true
+      "heuristic": false,
+      "catalogedBy": "claude-routine",
+      "awayTeam": [
+        "O'Neill",
+        "Daniel",
+        "Rommie",
+        "McKay"
+      ]
     }
   }
 }
