@@ -107,5 +107,19 @@
     "leader": "A",
     "method": "jev",
     "by": "claude-routine"
+  },
+  "2104964671002251496": {
+    "headline": "Rommie holds a commanding lead, with O'Neill a distant second and Daniel trailing.",
+    "reasons": {
+      "A": "Fans backing O'Neill say the leader shouldn't send his team into a risk he won't take himself.",
+      "B": "The handful behind Daniel argue he's lighter and more agile for the leap than Jack.",
+      "C": "The fleet overwhelmingly backs Rommie: an android built to shrug off vacuum and hard landings, tethered so she can be reeled back if she misses."
+    },
+    "wildcards": "A running joke keeps nominating McKay for the jump purely to hear him complain, though he isn't on the ballot, and several float having Rommie fling the others across instead.",
+    "counted": 118,
+    "final": false,
+    "leader": "C",
+    "method": "jev",
+    "by": "claude-routine"
   }
 }
