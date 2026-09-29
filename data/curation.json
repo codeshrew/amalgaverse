@@ -1,6 +1,6 @@
 {
   "_readme": "Hand-curated story structure. The updater fills in anything missing (marked \"auto\": true) and never overwrites entries you edit here unless they are still auto. 'canon' = the option the story actually followed (from the next post).",
-  "head": "2104602282491019492",
+  "head": "2104964671002251496",
   "beats": {
     "2101703241687863782": {
       "kind": "briefing",
@@ -505,7 +505,7 @@
           "letter": "B"
         }
       ],
-      "canon": null,
+      "canon": "A",
       "heuristic": false,
       "catalogedBy": "claude-routine",
       "awayTeam": [
@@ -514,6 +514,18 @@
         "Rommie",
         "McKay"
       ]
+    },
+    "2104964671002251496": {
+      "auto": true,
+      "kind": "decision",
+      "mission": "The Ghost Ship",
+      "missionNumber": 1,
+      "part": 2,
+      "title": "First Mission: The Ghost Ship (Part 2)",
+      "question": "So who leads the way across?",
+      "options": [],
+      "canon": null,
+      "heuristic": true
     }
   }
 }
