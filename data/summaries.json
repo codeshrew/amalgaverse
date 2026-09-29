@@ -96,13 +96,13 @@
     "by": "claude-routine"
   },
   "2104602282491019492": {
-    "headline": "Fleet overwhelmingly favors sealing up and crossing the breach, ten to one.",
+    "headline": "Fleet overwhelmingly backs sealing up and crossing the breach, A leads big",
     "reasons": {
-      "A": "They're already suited up for vacuum, the containment field and power are fading, and the breach is the fastest way to the bridge.",
-      "B": "A cautious minority worries that venting atmosphere is unpredictable and wants to preserve a safer route back to the jumper."
+      "A": "The fading containment field and ebbing power source leave no time to spare, and with EV suits already on, crews see the breach as the fastest route to the bridge.",
+      "B": "A smaller contingent worries that venting the compartment is violent and unpredictable, and would rather keep a sealed retreat path than gamble on getting back to the jumper."
     },
-    "wildcards": "A few crew want to salvage the disabled utility bot as an escort or intel source, and others are already planning mag boots, tethers, and hand signals for the crossing.",
-    "counted": 312,
+    "wildcards": "Crews keep quoting \"once more unto the breach\" and punning on \"seal up,\" while a few worry about salvaging the disabled utility bot and whether Rommie can reseal the route home.",
+    "counted": 342,
     "final": false,
     "leader": "A",
     "method": "jev",
