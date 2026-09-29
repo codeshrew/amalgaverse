@@ -96,14 +96,14 @@
     "by": "claude-routine"
   },
   "2104602282491019492": {
-    "headline": "Fleet overwhelmingly backs sealing up and crossing the breach, A leads big",
+    "headline": "Fleet chose to seal up and cross the breach — A won big over B",
     "reasons": {
-      "A": "The fading containment field and ebbing power source leave no time to spare, and with EV suits already on, crews see the breach as the fastest route to the bridge.",
-      "B": "A smaller contingent worries that venting the compartment is violent and unpredictable, and would rather keep a sealed retreat path than gamble on getting back to the jumper."
+      "A": "Crews pointed to the fading containment field and ebbing power source, judged the breach the fastest route to the bridge with EV suits already on, and trusted Rommie's confidence and vacuum immunity to see them through.",
+      "B": "A smaller contingent worried that venting the compartment was violent and unpredictable, and wanted to keep a sealed retreat path rather than gamble on returning to the jumper."
     },
-    "wildcards": "Crews keep quoting \"once more unto the breach\" and punning on \"seal up,\" while a few worry about salvaging the disabled utility bot and whether Rommie can reseal the route home.",
-    "counted": 342,
-    "final": false,
+    "wildcards": "Crews kept quoting \"once more unto the breach\" and punning on \"seal up,\" joked about Rommie's one-armed takedown of the wrench-throwing bot, and wondered whether the disabled utility unit still held ship data worth extracting.",
+    "counted": 367,
+    "final": true,
     "leader": "A",
     "method": "jev",
     "by": "claude-routine"

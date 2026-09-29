@@ -521,11 +521,67 @@
       "mission": "The Ghost Ship",
       "missionNumber": 1,
       "part": 2,
-      "title": "First Mission: The Ghost Ship (Part 2)",
+      "title": "First Across the Gap",
       "question": "So who leads the way across?",
-      "options": [],
+      "options": [
+        {
+          "key": "A",
+          "label": "O'Neill — pull rank and jump first",
+          "summary": "As team leader, O'Neill volunteers to make the tethered leap himself — commanding, but age and reflexes stack the odds against him if the mag locks don't catch.",
+          "keywords": [
+            "oneill",
+            "jack",
+            "team leader",
+            "volunteer",
+            "go first",
+            "pulls rank",
+            "claims it",
+            "leads the jump"
+          ],
+          "letter": "A"
+        },
+        {
+          "key": "B",
+          "label": "Daniel — younger and more spry, he goes",
+          "summary": "Daniel argues he's the fitter bet for the leap than Jack — reasonable odds on agility, though he's the least combat-hardened of the three.",
+          "keywords": [
+            "daniel",
+            "jackson",
+            "spry",
+            "younger",
+            "volunteer",
+            "agile",
+            "daniel goes",
+            "more nimble"
+          ],
+          "letter": "B"
+        },
+        {
+          "key": "C",
+          "label": "Rommie — send the android, she risks least",
+          "summary": "Rommie points out vacuum won't do to her what it would do to them — the safest bet for the team, but it leaves her alone on the far side first if the tether fails.",
+          "keywords": [
+            "rommie",
+            "android",
+            "ai",
+            "safest choice",
+            "send rommie",
+            "vacuum proof",
+            "no risk",
+            "machine goes first"
+          ],
+          "letter": "C"
+        }
+      ],
       "canon": null,
-      "heuristic": true
+      "heuristic": false,
+      "catalogedBy": "claude-routine",
+      "awayTeam": [
+        "O'Neill",
+        "Daniel",
+        "Rommie",
+        "McKay"
+      ]
     }
   }
 }
