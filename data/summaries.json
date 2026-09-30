@@ -123,14 +123,14 @@
     "by": "claude-routine"
   },
   "2105327058440339834": {
-    "headline": "Fleet overwhelmingly favors blowing the door with a smidge of C4.",
+    "headline": "Blowing the door commands a wide lead over the hull stroll, with turning back a distant third.",
     "reasons": {
-      "A": "Fans favoring the stroll worry C4 could trigger decompression or further destabilize an already-damaged derelict, and see the exposed walk as the lower-risk path despite what it could mean for Rommie.",
-      "B": "Most want O'Neill's fast, fun fix, trusting his demolitions know-how and reasoning it beats risking Rommie's systems or burning more time outside.",
-      "C": "A small group would rather retreat and search for another way in, unwilling to gamble Rommie's systems or risk debris from an explosion."
+      "A": "Backers call the hull crossing the more survivable bet, since a botched charge near a rickety hull could mean debris, decompression, or losing a crew member outright, even though the anomaly's pulse still threatens Rommie outside.",
+      "B": "The wide favorite is time pressure plus faith in O'Neill's expertise: a small, controlled charge gets the team moving fast without exposing Rommie to the pulse.",
+      "C": "The cautious few would rather spend time than risk Rommie or the unknown behind the door, preferring to route around the problem entirely."
     },
-    "wildcards": "The running gag over O'Neill's 'smidge' of C4 keeps multiplying, one fan asked @grok whether C4 even ignites in a vacuum, and another pitched splitting the team between the airlock route and the door.",
-    "counted": 181,
+    "wildcards": "Running jokes about the size of a proper 'smidge' of C4 are everywhere, alongside a genuine debate over whether C4 can even detonate in a vacuum, plus a stray pitch to split the team and open the door from the far side instead.",
+    "counted": 284,
     "final": false,
     "leader": "B",
     "method": "jev",
