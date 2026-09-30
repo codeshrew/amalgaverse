@@ -589,42 +589,69 @@
       "mission": "The Ghost Ship",
       "missionNumber": 1,
       "part": 2,
-      "title": "First Mission: The Ghost Ship (Part 2)",
-      "question": "So what do you do?",
+      "title": "Access Denied",
+      "question": "With the door refusing to budge, how should the team reach the containment compartment?",
       "options": [
         {
           "key": "A",
-          "letter": "A",
-          "label": "Take a stroll",
-          "summary": "Take a stroll",
+          "label": "Daniel — lead a stroll across the hull",
+          "summary": "Exit through the breach and cross the exposed hull to a topside airlock — fast, but a stray anomalous pulse mid-crossing could scramble Rommie's systems.",
           "keywords": [
-            "option a",
-            "a."
-          ]
+            "stroll",
+            "walk",
+            "spacewalk",
+            "airlock",
+            "outside",
+            "hull",
+            "exterior",
+            "take a stroll",
+            "go outside",
+            "a"
+          ],
+          "letter": "A"
         },
         {
           "key": "B",
-          "letter": "B",
-          "label": "Blow the door",
-          "summary": "Blow the door",
+          "label": "O'Neill — blow the door with C4",
+          "summary": "Charge the door with just a smidge of C4 — quick and satisfying, but risks shrapnel, structural damage, or waking whatever's on the other side.",
           "keywords": [
-            "option b",
-            "b."
-          ]
+            "c4",
+            "blow the door",
+            "explosives",
+            "blast",
+            "boom",
+            "smidge",
+            "explosion",
+            "charge",
+            "b"
+          ],
+          "letter": "B"
         },
         {
           "key": "C",
-          "letter": "C",
-          "label": "Turn back and find another way around",
-          "summary": "Turn back and find another way around",
+          "label": "Team — turn back and find another route",
+          "summary": "Abandon the crossing and retreat to search for a different way in — the safest call, but it costs time and concedes the door.",
           "keywords": [
-            "option c",
-            "c."
-          ]
+            "turn back",
+            "retreat",
+            "go back",
+            "another way",
+            "find another route",
+            "give up",
+            "c"
+          ],
+          "letter": "C"
         }
       ],
       "canon": null,
-      "heuristic": true
+      "heuristic": false,
+      "catalogedBy": "claude-routine",
+      "awayTeam": [
+        "O'Neill",
+        "Daniel",
+        "Rommie",
+        "McKay"
+      ]
     }
   }
 }

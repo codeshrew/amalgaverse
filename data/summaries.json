@@ -109,16 +109,30 @@
     "by": "claude-routine"
   },
   "2104964671002251496": {
-    "headline": "Rommie commands a wide lead, O'Neill trails, Daniel barely registers.",
+    "headline": "Rommie made the leap, chosen by an overwhelming fleet consensus.",
     "reasons": {
-      "A": "Fans back O'Neill's instinct to make the risky jump himself rather than order a teammate into it.",
-      "B": "A few argue Daniel is the more agile choice, or just want him to have something to do.",
-      "C": "Most argue Rommie is immune to vacuum and built to survive a bad landing, calling her by far the safest bet."
+      "A": "A minority argued O'Neill should lead as team commander, unwilling to let someone else carry the risk he was ready to take himself.",
+      "B": "A handful backed Daniel mainly for variety, or on the grounds that he simply needed something to do.",
+      "C": "Most of the fleet reasoned Rommie was the obvious pick since vacuum and a hard landing can't hurt an android, making her both the safest crosser and the strongest anchor for the tether."
     },
-    "wildcards": "Recurring gags about sacrificing McKay for entertainment, plus a few pitches to skip the jump and walk the walls on mag boots instead.",
-    "counted": 339,
-    "final": false,
+    "wildcards": "Several fans proposed skipping the jump entirely by mag-booting along the walls or ceiling instead, and running jokes about 'android overuse' and McKay drawing the short straw kept resurfacing.",
+    "counted": 342,
+    "final": true,
     "leader": "C",
+    "method": "jev",
+    "by": "claude-routine"
+  },
+  "2105327058440339834": {
+    "headline": "Fleet overwhelmingly favors blowing the door with a smidge of C4.",
+    "reasons": {
+      "A": "Fans favoring the stroll worry C4 could trigger decompression or further destabilize an already-damaged derelict, and see the exposed walk as the lower-risk path despite what it could mean for Rommie.",
+      "B": "Most want O'Neill's fast, fun fix, trusting his demolitions know-how and reasoning it beats risking Rommie's systems or burning more time outside.",
+      "C": "A small group would rather retreat and search for another way in, unwilling to gamble Rommie's systems or risk debris from an explosion."
+    },
+    "wildcards": "The running gag over O'Neill's 'smidge' of C4 keeps multiplying, one fan asked @grok whether C4 even ignites in a vacuum, and another pitched splitting the team between the airlock route and the door.",
+    "counted": 181,
+    "final": false,
+    "leader": "B",
     "method": "jev",
     "by": "claude-routine"
   }
