@@ -109,14 +109,14 @@
     "by": "claude-routine"
   },
   "2104964671002251496": {
-    "headline": "Rommie holds a commanding lead, O'Neill a distant second, Daniel trailing.",
+    "headline": "Rommie commands a wide lead, O'Neill trails, Daniel barely registers.",
     "reasons": {
-      "C": "Fans reason an android shrugs off the vacuum and a hard landing far better than flesh does, and can anchor the tether or haul the rest across after.",
-      "A": "Fans back the team leader's spec-ops nerve and his refusal to send anyone into danger he wouldn't face himself.",
-      "B": "A smaller group argue he's more agile than Jack and simply due for something to do this mission."
+      "A": "Fans back O'Neill's instinct to make the risky jump himself rather than order a teammate into it.",
+      "B": "A few argue Daniel is the more agile choice, or just want him to have something to do.",
+      "C": "Most argue Rommie is immune to vacuum and built to survive a bad landing, calling her by far the safest bet."
     },
-    "wildcards": "A running gag has fans nominating McKay to be thrown across instead, and a few worry the crew is leaning on Rommie too often.",
-    "counted": 301,
+    "wildcards": "Recurring gags about sacrificing McKay for entertainment, plus a few pitches to skip the jump and walk the walls on mag boots instead.",
+    "counted": 339,
     "final": false,
     "leader": "C",
     "method": "jev",
