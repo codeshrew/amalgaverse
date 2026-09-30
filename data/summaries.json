@@ -109,14 +109,14 @@
     "by": "claude-routine"
   },
   "2104964671002251496": {
-    "headline": "Rommie holds a commanding lead, O'Neill trailing, Daniel a distant third.",
+    "headline": "Rommie holds a commanding lead, O'Neill a distant second, Daniel trailing.",
     "reasons": {
-      "C": "The fleet's logic holds that vacuum can't kill an android, so she jumps with the least risk and the best odds of sticking the landing, then anchors the tether for everyone else.",
-      "A": "A smaller contingent argues the leader shouldn't send anyone into danger he wouldn't take on himself, and that Jack's special-ops training gives him a real shot at the jump.",
-      "B": "A few back Daniel as the more agile organic option, though most who raise him talk themselves back into Rommie."
+      "C": "Fans reason an android shrugs off the vacuum and a hard landing far better than flesh does, and can anchor the tether or haul the rest across after.",
+      "A": "Fans back the team leader's spec-ops nerve and his refusal to send anyone into danger he wouldn't face himself.",
+      "B": "A smaller group argue he's more agile than Jack and simply due for something to do this mission."
     },
-    "wildcards": "The standing gag is tethering McKay and lobbing him across instead, and a side debate keeps breaking out over how gravity and vacuum would actually behave at that hole in the floor.",
-    "counted": 255,
+    "wildcards": "A running gag has fans nominating McKay to be thrown across instead, and a few worry the crew is leaning on Rommie too often.",
+    "counted": 301,
     "final": false,
     "leader": "C",
     "method": "jev",
