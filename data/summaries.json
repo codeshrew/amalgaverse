@@ -137,13 +137,13 @@
     "by": "claude-routine"
   },
   "2105689446930694283": {
-    "headline": "Crew leans hard toward waking the android now, 52 to 17.",
+    "headline": "Fleet leans heavily toward waking the android, chasing answers over caution",
     "reasons": {
-      "A": "Most want the android's answers immediately, trusting the team's firepower and Daniel's diplomacy to manage whatever wakes up before the skittering threat closes in.",
-      "B": "The cautious minority want to search the bridge and gather intel first, wary of an unknown android whose directives and reaction to intruders are unproven."
+      "A": "Most fans want intel now, betting the android is the only real source of answers and trusting the team's weapons and Rommie to handle it if it turns hostile.",
+      "B": "The cautious minority would rather keep the android dormant and search the bridge first, wary it could be dangerous or tied to whatever is skittering in the walls."
     },
-    "wildcards": "A running joke that the skittering is Replicators again (with a Fifth-in-the-making jab), plus quips about breakfast requests and letting Daniel do the talking.",
-    "counted": 69,
+    "wildcards": "Replicator theories dominate the chatter, alongside running jokes about the android moonlighting as the ship's cook and Rommie facing competition from a new rival android.",
+    "counted": 241,
     "final": false,
     "leader": "A",
     "method": "jev",
