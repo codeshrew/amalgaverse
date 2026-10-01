@@ -1,6 +1,6 @@
 {
   "_readme": "Hand-curated story structure. The updater fills in anything missing (marked \"auto\": true) and never overwrites entries you edit here unless they are still auto. 'canon' = the option the story actually followed (from the next post).",
-  "head": "2105327058440339834",
+  "head": "2105689446930694283",
   "beats": {
     "2101703241687863782": {
       "kind": "briefing",
@@ -643,7 +643,7 @@
           "letter": "C"
         }
       ],
-      "canon": null,
+      "canon": "B",
       "heuristic": false,
       "catalogedBy": "claude-routine",
       "awayTeam": [
@@ -652,6 +652,39 @@
         "Rommie",
         "McKay"
       ]
+    },
+    "2105689446930694283": {
+      "auto": true,
+      "kind": "decision",
+      "mission": "The Ghost Ship",
+      "missionNumber": 1,
+      "part": 2,
+      "title": "First Mission: The Ghost Ship (Part 2)",
+      "question": null,
+      "options": [
+        {
+          "key": "A",
+          "letter": "A",
+          "label": "Let the cycle finish",
+          "summary": "Let the cycle finish.  Let it complete and awaken the fully charged android.  Then question the one thing onboard that may have the answers.",
+          "keywords": [
+            "option a",
+            "a."
+          ]
+        },
+        {
+          "key": "B",
+          "letter": "B",
+          "label": "Restart the cycle",
+          "summary": "Restart the cycle.  Interrupt the charge before it finishes, keeping the android locked in the field while you search the bridge.",
+          "keywords": [
+            "option b",
+            "b."
+          ]
+        }
+      ],
+      "canon": null,
+      "heuristic": true
     }
   }
 }
