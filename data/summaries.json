@@ -123,14 +123,14 @@
     "by": "claude-routine"
   },
   "2105327058440339834": {
-    "headline": "Blowing the door commands a wide lead over the hull stroll, with turning back a distant third.",
+    "headline": "O'Neill's C4 holds a commanding lead, with the hull stroll a distant second.",
     "reasons": {
-      "A": "Backers call the hull crossing the more survivable bet, since a botched charge near a rickety hull could mean debris, decompression, or losing a crew member outright, even though the anomaly's pulse still threatens Rommie outside.",
-      "B": "The wide favorite is time pressure plus faith in O'Neill's expertise: a small, controlled charge gets the team moving fast without exposing Rommie to the pulse.",
-      "C": "The cautious few would rather spend time than risk Rommie or the unknown behind the door, preferring to route around the problem entirely."
+      "A": "Fans worried the pulse could fry Rommie mid-crossing lean toward crossing the hull instead, trusting mag boots over an irreversible blast next to an unstable derelict.",
+      "B": "Most fans trust O'Neill's expertise and the ticking clock, reasoning a controlled smidge of C4 is faster and keeps everyone safely inside the hull.",
+      "C": "A smaller group wants to retreat rather than gamble Rommie on the hull or risk decompression and debris from blowing the door."
     },
-    "wildcards": "Running jokes about the size of a proper 'smidge' of C4 are everywhere, alongside a genuine debate over whether C4 can even detonate in a vacuum, plus a stray pitch to split the team and open the door from the far side instead.",
-    "counted": 284,
+    "wildcards": "The refrain is Jack's 'just a smidge' of C4, alongside jokes about timing the anomaly's pulses and one pitch to split the team and open the door from both sides.",
+    "counted": 317,
     "final": false,
     "leader": "B",
     "method": "jev",
