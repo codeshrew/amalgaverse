@@ -123,16 +123,29 @@
     "by": "claude-routine"
   },
   "2105327058440339834": {
-    "headline": "O'Neill's C4 holds a commanding lead, with the hull stroll a distant second.",
+    "headline": "O'Neill's C4 carried the vote by a wide margin over the stroll.",
     "reasons": {
-      "A": "Fans worried the pulse could fry Rommie mid-crossing lean toward crossing the hull instead, trusting mag boots over an irreversible blast next to an unstable derelict.",
-      "B": "Most fans trust O'Neill's expertise and the ticking clock, reasoning a controlled smidge of C4 is faster and keeps everyone safely inside the hull.",
-      "C": "A smaller group wants to retreat rather than gamble Rommie on the hull or risk decompression and debris from blowing the door."
+      "A": "Backers favored the spacewalk as the safer, less destructive route, even though it cost more time.",
+      "B": "Backers wanted speed and trusted O'Neill's expertise, treating the C4 as both the fastest fix and the fun choice.",
+      "C": "A small minority preferred retreating outright, wary that a locked, powered door meant something was guarding the far side."
     },
-    "wildcards": "The refrain is Jack's 'just a smidge' of C4, alongside jokes about timing the anomaly's pulses and one pitch to split the team and open the door from both sides.",
-    "counted": 317,
-    "final": false,
+    "wildcards": "A running joke held that \"when in doubt, C4\" settles everything, and one fan proposed a fourth option splitting the team between the hull walk and the door.",
+    "counted": 353,
+    "final": true,
     "leader": "B",
+    "method": "jev",
+    "by": "claude-routine"
+  },
+  "2105689446930694283": {
+    "headline": "Fans are leaning heavily toward waking the android, nearly four to one.",
+    "reasons": {
+      "A": "Voters want answers now, betting the android is more likely an ally than a threat against whatever's skittering in the walls.",
+      "B": "A smaller group wants more intel first, worried the android could be dangerous or replicator-linked and best questioned while still dormant."
+    },
+    "wildcards": "Replicators are the running theory for the skittering in the walls, and one fan half-jokingly hoped the android wakes up as the ship's new cook.",
+    "counted": 35,
+    "final": false,
+    "leader": "A",
     "method": "jev",
     "by": "claude-routine"
   }

@@ -659,32 +659,51 @@
       "mission": "The Ghost Ship",
       "missionNumber": 1,
       "part": 2,
-      "title": "First Mission: The Ghost Ship (Part 2)",
-      "question": null,
+      "title": "Counter to Zero",
+      "question": "Should the team let the android's charge cycle finish, or interrupt it and search the bridge instead?",
       "options": [
         {
           "key": "A",
-          "letter": "A",
-          "label": "Let the cycle finish",
-          "summary": "Let the cycle finish.  Let it complete and awaken the fully charged android.  Then question the one thing onboard that may have the answers.",
+          "label": "Team — let the cycle finish",
+          "summary": "Let the charge complete and question the awakened android for answers — fast information, but no guarantee it's friendly, and the skittering in the walls keeps closing in.",
           "keywords": [
-            "option a",
-            "a."
-          ]
+            "let it finish",
+            "wake it up",
+            "let the android wake",
+            "finish the cycle",
+            "talk to the android",
+            "ask it questions",
+            "let her charge",
+            "option a"
+          ],
+          "letter": "A"
         },
         {
           "key": "B",
-          "letter": "B",
-          "label": "Restart the cycle",
-          "summary": "Restart the cycle.  Interrupt the charge before it finishes, keeping the android locked in the field while you search the bridge.",
+          "label": "Team — restart the charge cycle",
+          "summary": "Interrupt the cycle to keep the android dormant and search the bridge instead — safer and more cautious, but leaves the crew without a possible ally against whatever's in the walls.",
           "keywords": [
-            "option b",
-            "b."
-          ]
+            "restart the cycle",
+            "interrupt the charge",
+            "search the bridge",
+            "keep it contained",
+            "don't wake it",
+            "unplug it",
+            "get more intel first",
+            "option b"
+          ],
+          "letter": "B"
         }
       ],
       "canon": null,
-      "heuristic": true
+      "heuristic": false,
+      "catalogedBy": "claude-routine",
+      "awayTeam": [
+        "O'Neill",
+        "Daniel Jackson",
+        "Rommie",
+        "McKay"
+      ]
     }
   }
 }
