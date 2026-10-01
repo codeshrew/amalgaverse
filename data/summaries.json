@@ -137,13 +137,13 @@
     "by": "claude-routine"
   },
   "2105689446930694283": {
-    "headline": "Fans are leaning heavily toward waking the android, nearly four to one.",
+    "headline": "Crew leans hard toward waking the android now, 52 to 17.",
     "reasons": {
-      "A": "Voters want answers now, betting the android is more likely an ally than a threat against whatever's skittering in the walls.",
-      "B": "A smaller group wants more intel first, worried the android could be dangerous or replicator-linked and best questioned while still dormant."
+      "A": "Most want the android's answers immediately, trusting the team's firepower and Daniel's diplomacy to manage whatever wakes up before the skittering threat closes in.",
+      "B": "The cautious minority want to search the bridge and gather intel first, wary of an unknown android whose directives and reaction to intruders are unproven."
     },
-    "wildcards": "Replicators are the running theory for the skittering in the walls, and one fan half-jokingly hoped the android wakes up as the ship's new cook.",
-    "counted": 35,
+    "wildcards": "A running joke that the skittering is Replicators again (with a Fifth-in-the-making jab), plus quips about breakfast requests and letting Daniel do the talking.",
+    "counted": 69,
     "final": false,
     "leader": "A",
     "method": "jev",
