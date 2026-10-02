@@ -137,13 +137,13 @@
     "by": "claude-routine"
   },
   "2105689446930694283": {
-    "headline": "Fans favor waking the android for answers; A leads B by a wide margin.",
+    "headline": "The fleet favors waking the android, A=243 to B=85",
     "reasons": {
-      "A": "Most want the android awake now, betting it holds answers about the ship and the skittering threat, with weapons and Rommie ready in case it turns hostile.",
-      "B": "Cautious voices want the charge halted and the bridge searched first, wary the android could be hostile, tied to the skittering sounds, or another replicator in disguise."
+      "A": "They want the android conscious and talking fast, betting it's their best shot at answers before whatever's scuttling in the walls reaches them.",
+      "B": "They'd rather pull intel from the bridge first, since an android with unknown directives and a possible replicator connection is too great a risk to wake blind."
     },
-    "wildcards": "Replicator paranoia runs through nearly every reply, alongside running jokes about the android becoming Rommie's rival, the ship's new cook, or getting a name of its own.",
-    "counted": 284,
+    "wildcards": "Replicator paranoia runs through nearly every reply regardless of vote, alongside callbacks to Alien, Terminator, Cylons and the Android's rough debut on Dark Matter, plus a running joke that the new android's first order of business should be learning to cook breakfast.",
+    "counted": 328,
     "final": false,
     "leader": "A",
     "method": "jev",
