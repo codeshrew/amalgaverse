@@ -148,5 +148,19 @@
     "leader": "A",
     "method": "jev",
     "by": "claude-routine"
+  },
+  "2106051834058342626": {
+    "headline": "Daniel's diplomacy dominates the vote; stasis and the neural link trail far behind.",
+    "reasons": {
+      "A": "A minority argue the containment field exists for good reason and see no need to risk waking an unknown factor before the ship is even secured.",
+      "B": "Most fans trust Daniel as the team's seasoned negotiator, betting he can learn what happened to the ship and win cooperation without provoking a hostile response.",
+      "C": "A smaller group would rather have Rommie force the link outright, arguing it's the fastest route to control and distrusting the android's Traugott Corporation programming."
+    },
+    "wildcards": "Many back a hybrid plan — let Daniel talk while Rommie stands by to intervene and Jack keeps weapons ready — alongside running jokes about Daniel's habit of surviving near-death encounters with alien women and suspicion toward the ship's Traugott Corporation ownership.",
+    "counted": 110,
+    "final": false,
+    "leader": "B",
+    "method": "jev",
+    "by": "claude-routine"
   }
 }
