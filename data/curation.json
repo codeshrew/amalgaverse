@@ -711,11 +711,67 @@
       "mission": "The Ghost Ship",
       "missionNumber": 1,
       "part": 3,
-      "title": "First Mission: The Ghost Ship (Part 3)",
-      "question": "She waits.  Your move.  What do you do?",
-      "options": [],
+      "title": "The Android's Warning",
+      "question": "Should the away team re-contain the newly awakened android, try to talk her into cooperating, or have Rommie force a neural link to seize control of her?",
+      "options": [
+        {
+          "key": "A",
+          "label": "Team — put her back under",
+          "summary": "Flip the containment field back on and return Maia to stasis — safe, but leaves the team without an ally or any answers about the ship.",
+          "keywords": [
+            "contain",
+            "stasis",
+            "re-freeze",
+            "put her back",
+            "safe",
+            "cautious",
+            "don't wake her",
+            "shut her down"
+          ],
+          "letter": "A"
+        },
+        {
+          "key": "B",
+          "label": "Daniel — talk her into helping",
+          "summary": "Let Daniel explain the situation and propose working together to restore ship functions — diplomatic, but she's already warned them off and threatened legal action.",
+          "keywords": [
+            "talk",
+            "negotiate",
+            "daniel",
+            "diplomacy",
+            "cooperate",
+            "peaceful",
+            "communicate",
+            "reason with her"
+          ],
+          "letter": "B"
+        },
+        {
+          "key": "C",
+          "label": "Rommie — neural-link to seize control",
+          "summary": "Have Rommie force a neural link to take over Maia outright — fast if it works, but forcing a peer AI is a gamble that could turn hostile.",
+          "keywords": [
+            "neural link",
+            "rommie",
+            "seize control",
+            "hack",
+            "force",
+            "ai fight",
+            "take over",
+            "override"
+          ],
+          "letter": "C"
+        }
+      ],
       "canon": null,
-      "heuristic": true
+      "heuristic": false,
+      "catalogedBy": "claude-routine",
+      "awayTeam": [
+        "Jack O'Neill",
+        "Daniel Jackson",
+        "Rommie",
+        "Rodney McKay"
+      ]
     }
   }
 }

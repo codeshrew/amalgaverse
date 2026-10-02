@@ -137,14 +137,14 @@
     "by": "claude-routine"
   },
   "2105689446930694283": {
-    "headline": "The fleet favors waking the android, A=243 to B=85",
+    "headline": "The fleet voted decisively to wake the android, 248 votes to 87.",
     "reasons": {
-      "A": "They want the android conscious and talking fast, betting it's their best shot at answers before whatever's scuttling in the walls reaches them.",
-      "B": "They'd rather pull intel from the bridge first, since an android with unknown directives and a possible replicator connection is too great a risk to wake blind."
+      "A": "Most reasoned the android was the best source of answers against whatever was skittering in the walls, and trusted Daniel and Rommie to handle first contact.",
+      "B": "A cautious minority preferred gathering intelligence from the bridge first, wary of waking an unknown android before confirming it wasn't hostile."
     },
-    "wildcards": "Replicator paranoia runs through nearly every reply regardless of vote, alongside callbacks to Alien, Terminator, Cylons and the Android's rough debut on Dark Matter, plus a running joke that the new android's first order of business should be learning to cook breakfast.",
-    "counted": 328,
-    "final": false,
+    "wildcards": "Replicator theories ran rampant among the crew, alongside lighter chatter about recruiting the android as ship's cook and nostalgia for classic O'Neill-Jackson banter.",
+    "counted": 335,
+    "final": true,
     "leader": "A",
     "method": "jev",
     "by": "claude-routine"
