@@ -162,5 +162,18 @@
     "leader": "B",
     "method": "jev",
     "by": "claude-routine"
+  },
+  "2106414222142005299": {
+    "headline": "Fleet opinion favors granting access, nearly two to one over refusal.",
+    "reasons": {
+      "yes": "Most argue trust has to start somewhere and that Rommie is strong enough to handle or sever the link herself, usually on the condition that she consents first.",
+      "no": "Dissenters call Maia's intentions unproven and refuse to risk Rommie's memory and systems on an unverified android, with several suspecting a trap."
+    },
+    "wildcards": "A running theme insists the call belongs to Rommie alone, not the crew, alongside proposals for a two-way data swap, a backup of Rommie beforehand, and jokes about factory resets and well-used sockets.",
+    "counted": 267,
+    "final": false,
+    "leader": "yes",
+    "method": "jev",
+    "by": "claude-routine"
   }
 }
