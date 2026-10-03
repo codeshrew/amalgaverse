@@ -150,14 +150,14 @@
     "by": "claude-routine"
   },
   "2106051834058342626": {
-    "headline": "Daniel's diplomacy dominates the vote; stasis and the neural link trail far behind.",
+    "headline": "Daniel's diplomacy is running away with the vote, with stasis and the neural link far behind.",
     "reasons": {
-      "A": "A minority argue the containment field exists for good reason and see no need to risk waking an unknown factor before the ship is even secured.",
-      "B": "Most fans trust Daniel as the team's seasoned negotiator, betting he can learn what happened to the ship and win cooperation without provoking a hostile response.",
-      "C": "A smaller group would rather have Rommie force the link outright, arguing it's the fastest route to control and distrusting the android's Traugott Corporation programming."
+      "A": "Some argue the containment field was there for a reason and would rather not gamble on an unknown android before the ship itself is secured.",
+      "B": "Most trust Daniel as the crew's seasoned negotiator, betting he can win cooperation and information without provoking the android or risking Rommie in a hostile link.",
+      "C": "A few would rather have Rommie force the link outright, arguing speed and control matter more than diplomacy given the android's Traugott Corporation origins."
     },
-    "wildcards": "Many back a hybrid plan — let Daniel talk while Rommie stands by to intervene and Jack keeps weapons ready — alongside running jokes about Daniel's habit of surviving near-death encounters with alien women and suspicion toward the ship's Traugott Corporation ownership.",
-    "counted": 110,
+    "wildcards": "Several favor a hybrid approach — Daniel talks while Rommie stands ready to intervene and O'Neill keeps weapons at hand — alongside running jokes about Daniel's habit of surviving encounters with alien women and recurring suspicion of the ship's Traugott Corporation ownership and its name, the Waldorf Astoria.",
+    "counted": 135,
     "final": false,
     "leader": "B",
     "method": "jev",
