@@ -150,15 +150,15 @@
     "by": "claude-routine"
   },
   "2106051834058342626": {
-    "headline": "Daniel's diplomacy commands the vote; stasis and a forced link trail far behind.",
+    "headline": "The fleet voted decisively to let Daniel talk Maia around, well ahead of stasis or a forced link.",
     "reasons": {
-      "A": "Minority support holds that re-containment is the only risk-free move, given how little is known about the android and her Traugott Corp programming.",
-      "B": "The overwhelming majority back Daniel's negotiating record, betting that talk yields answers and an ally with less risk than force.",
-      "C": "A small faction would rather have Rommie seize control outright, doubting that legal threats warrant patience."
+      "A": "The cautious minority preferred to put Maia straight back under, reasoning the team already had a damaged ship and an unknown risk on its hands and could sort her out later.",
+      "B": "Most fans backed Daniel as the fleet's resident diplomat, arguing Maia's talk of legal action was no real threat and that honest explanation was the safest way to win her help without provoking her.",
+      "C": "A small group wanted Rommie to force the link immediately, betting she could outmatch Maia outright and end the standoff before it dragged on."
     },
-    "wildcards": "Many crews are plotting B now, C later if talks stall, while others swap jokes about leftover C4 and digging up the in-universe Traugott Corp website.",
-    "counted": 372,
-    "final": false,
+    "wildcards": "Several fans plotted fallback chains (try Daniel, then Rommie or stasis if that fails), and more than one went hunting for the in-universe Traugott Corporation's own website as a running joke.",
+    "counted": 375,
+    "final": true,
     "leader": "B",
     "method": "jev",
     "by": "claude-routine"

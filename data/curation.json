@@ -779,11 +779,53 @@
       "mission": "The Ghost Ship",
       "missionNumber": 1,
       "part": 3,
-      "title": "First Mission: The Ghost Ship (Part 3)",
+      "title": "The Interface Request",
       "question": "Do you allow Maia to interface with Rommie?",
-      "options": [],
+      "options": [
+        {
+          "key": "yes",
+          "label": "Rommie — allow the interface",
+          "summary": "Let Maia link with Rommie to verify the team's story firsthand — it buys the bridge and ship's systems, but hands an unknown AI a look at everything Rommie has recorded.",
+          "keywords": [
+            "yes",
+            "allow it",
+            "let her link",
+            "interface",
+            "approve",
+            "go ahead",
+            "trust her",
+            "let them connect",
+            "do it",
+            "sign off"
+          ]
+        },
+        {
+          "key": "no",
+          "label": "Team — refuse the interface",
+          "summary": "Keep Rommie's memory to themselves and decline the link — safer for Rommie, but Maia's suspicion stands and the bridge stays locked.",
+          "keywords": [
+            "no",
+            "refuse",
+            "deny",
+            "don't allow",
+            "keep her out",
+            "block it",
+            "reject",
+            "not happening",
+            "stop her",
+            "negative"
+          ]
+        }
+      ],
       "canon": null,
-      "heuristic": true
+      "heuristic": false,
+      "catalogedBy": "claude-routine",
+      "awayTeam": [
+        "Jack O'Neill",
+        "Daniel Jackson",
+        "Rommie",
+        "Rodney McKay"
+      ]
     }
   }
 }
