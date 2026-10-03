@@ -150,14 +150,14 @@
     "by": "claude-routine"
   },
   "2106051834058342626": {
-    "headline": "Daniel's diplomacy is running away with the vote, with stasis and the neural link far behind.",
+    "headline": "Daniel's diplomacy commands the vote; stasis and a forced link trail far behind.",
     "reasons": {
-      "A": "Some argue the containment field was there for a reason and would rather not gamble on an unknown android before the ship itself is secured.",
-      "B": "Most trust Daniel as the crew's seasoned negotiator, betting he can win cooperation and information without provoking the android or risking Rommie in a hostile link.",
-      "C": "A few would rather have Rommie force the link outright, arguing speed and control matter more than diplomacy given the android's Traugott Corporation origins."
+      "A": "Minority support holds that re-containment is the only risk-free move, given how little is known about the android and her Traugott Corp programming.",
+      "B": "The overwhelming majority back Daniel's negotiating record, betting that talk yields answers and an ally with less risk than force.",
+      "C": "A small faction would rather have Rommie seize control outright, doubting that legal threats warrant patience."
     },
-    "wildcards": "Several favor a hybrid approach — Daniel talks while Rommie stands ready to intervene and O'Neill keeps weapons at hand — alongside running jokes about Daniel's habit of surviving encounters with alien women and recurring suspicion of the ship's Traugott Corporation ownership and its name, the Waldorf Astoria.",
-    "counted": 135,
+    "wildcards": "Many crews are plotting B now, C later if talks stall, while others swap jokes about leftover C4 and digging up the in-universe Traugott Corp website.",
+    "counted": 372,
     "final": false,
     "leader": "B",
     "method": "jev",
