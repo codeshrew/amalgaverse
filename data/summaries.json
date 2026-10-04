@@ -164,13 +164,13 @@
     "by": "claude-routine"
   },
   "2106414222142005299": {
-    "headline": "Fleet opinion favors granting access, nearly two to one over refusal.",
+    "headline": "Fleet favors the interface, 207 to 107, with Rommie's consent as the real condition.",
     "reasons": {
-      "yes": "Most argue trust has to start somewhere and that Rommie is strong enough to handle or sever the link herself, usually on the condition that she consents first.",
-      "no": "Dissenters call Maia's intentions unproven and refuse to risk Rommie's memory and systems on an unverified android, with several suspecting a trap."
+      "yes": "Crew reasoning holds that Rommie can defend herself or sever the link if Maia turns hostile, and that sharing data is the fastest route to proving the team's story and building trust.",
+      "no": "Dissenters argue an unvetted android is too great a risk to Rommie's memory and the ship's systems, especially with the vessel already compromised and Maia's intentions unknown."
     },
-    "wildcards": "A running theme insists the call belongs to Rommie alone, not the crew, alongside proposals for a two-way data swap, a backup of Rommie beforehand, and jokes about factory resets and well-used sockets.",
-    "counted": 267,
+    "wildcards": "A strong recurring current holds that the decision isn't the fleet's to make at all, only Rommie's, with scattered jokes about backing her up first, a Spock mind-meld comparison, and demands the exchange go both ways.",
+    "counted": 314,
     "final": false,
     "leader": "yes",
     "method": "jev",
