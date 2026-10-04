@@ -175,5 +175,18 @@
     "leader": "yes",
     "method": "jev",
     "by": "claude-routine"
+  },
+  "2106776610502238604": {
+    "headline": "Crew overwhelmingly backs Maia's deal, eager for bridge access and answers",
+    "reasons": {
+      "yes": "Most crew see the trade as an easy call — bridge and system access is the whole reason they came aboard, and Rommie's vouching for Maia is enough to proceed, though many add conditions or plan to stay alert in case she's not telling the whole truth.",
+      "no": "The handful of holdouts distrust the vague terms of a \"purge\" against an unidentified entity, arguing there's too little information to justify the fight Maia is picking."
+    },
+    "wildcards": "Several crew members float theories linking the ship's chittering sounds to Replicators, while others lighten the mood with jokes about Thor, Q moonlighting as legal counsel, and old movie references.",
+    "counted": 94,
+    "final": false,
+    "leader": "yes",
+    "method": "jev",
+    "by": "claude-routine"
   }
 }
