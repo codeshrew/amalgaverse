@@ -164,14 +164,14 @@
     "by": "claude-routine"
   },
   "2106414222142005299": {
-    "headline": "Fleet favors the interface, 207 to 107, with Rommie's consent as the real condition.",
+    "headline": "Fleet chose to allow the interface, yes topping no by nearly two to one.",
     "reasons": {
-      "yes": "Crew reasoning holds that Rommie can defend herself or sever the link if Maia turns hostile, and that sharing data is the fastest route to proving the team's story and building trust.",
-      "no": "Dissenters argue an unvetted android is too great a risk to Rommie's memory and the ship's systems, especially with the vessel already compromised and Maia's intentions unknown."
+      "yes": "Most yes voters treated it as Rommie's call to make, trusting her to handle or sever the link herself if Maia proved hostile.",
+      "no": "No voters distrusted an unknown android reading Rommie's memories, arguing the risk to her outweighed whatever the deal bought."
     },
-    "wildcards": "A strong recurring current holds that the decision isn't the fleet's to make at all, only Rommie's, with scattered jokes about backing her up first, a Spock mind-meld comparison, and demands the exchange go both ways.",
-    "counted": 314,
-    "final": false,
+    "wildcards": "A recurring current held that the decision wasn't the fleet's to make at all, only Rommie's, alongside jokes about backing her up first and demands that any data-sharing go both ways.",
+    "counted": 317,
+    "final": true,
     "leader": "yes",
     "method": "jev",
     "by": "claude-routine"

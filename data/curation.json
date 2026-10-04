@@ -833,11 +833,49 @@
       "mission": "The Ghost Ship",
       "missionNumber": 1,
       "part": 3,
-      "title": "First Mission: The Ghost Ship (Part 3)",
-      "question": "Do you agree to the deal?",
-      "options": [],
+      "title": "Maia's Bargain",
+      "question": "Should the team agree to help Maia purge the ship's intruder in exchange for full system access?",
+      "options": [
+        {
+          "key": "yes",
+          "label": "Team — agree to Maia's deal",
+          "summary": "Help Maia purge the intruder in exchange for the bridge and ship-wide access — restores the freighter, but commits the team to fighting an unknown threat.",
+          "keywords": [
+            "yes",
+            "agree",
+            "deal",
+            "help maia",
+            "purge the intruder",
+            "trust her",
+            "take the trade",
+            "team up"
+          ]
+        },
+        {
+          "key": "no",
+          "label": "Team — refuse the deal",
+          "summary": "Turn down Maia's offer and look for another way in — avoids the fight she's picked, but leaves the ship locked down and the intruder unaddressed.",
+          "keywords": [
+            "no",
+            "refuse",
+            "decline",
+            "distrust maia",
+            "too risky",
+            "walk away",
+            "find another way",
+            "don't agree"
+          ]
+        }
+      ],
       "canon": null,
-      "heuristic": true
+      "heuristic": false,
+      "catalogedBy": "claude-routine",
+      "awayTeam": [
+        "O'Neill",
+        "Daniel Jackson",
+        "Rommie",
+        "McKay"
+      ]
     }
   }
 }
