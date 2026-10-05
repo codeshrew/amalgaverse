@@ -177,13 +177,13 @@
     "by": "claude-routine"
   },
   "2106776610502238604": {
-    "headline": "Yes dominates, 110 to 3, as the crew leans toward Maia's offer.",
+    "headline": "Fleet overwhelmingly backs Maia's deal, 129 to 5, wary but committed.",
     "reasons": {
-      "yes": "Most want bridge access and sensor data before judging the intruder, leaning on Rommie's vouch for Maia while staying alert for a trap.",
-      "no": "The dissenters distrust Maia's motives and suspect she, not the newcomer, may be the real threat aboard."
+      "yes": "Most see the deal as the fastest route to the bridge and answers about the intruder, trusting Rommie's read on Maia even while bracing for a double-cross.",
+      "no": "The holdouts balk at the word purge and argue the crew knows too little about the entity's nature or motives to commit to destroying it."
     },
-    "wildcards": "Side chatter leans on replicator paranoia and requests for anti-replicator gear, plus jokes about Thor showing up, Q moonlighting as legal counsel, and a running bit about finally getting to shoot something.",
-    "counted": 113,
+    "wildcards": "Side chatter runs to Replicator and Thor theories, requests for anti-replicator weapons, and jokes about Q moonlighting as Maia's lawyer.",
+    "counted": 134,
     "final": false,
     "leader": "yes",
     "method": "jev",
