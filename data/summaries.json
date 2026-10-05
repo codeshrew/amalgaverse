@@ -177,15 +177,29 @@
     "by": "claude-routine"
   },
   "2106776610502238604": {
-    "headline": "Fleet overwhelmingly backs Maia's deal, 129 to 5, wary but committed.",
+    "headline": "Fleet overwhelmingly backed Maia's deal, 138 to 6, wary but committed.",
     "reasons": {
-      "yes": "Most see the deal as the fastest route to the bridge and answers about the intruder, trusting Rommie's read on Maia even while bracing for a double-cross.",
-      "no": "The holdouts balk at the word purge and argue the crew knows too little about the entity's nature or motives to commit to destroying it."
+      "yes": "Most trusted Rommie's read on Maia and treated the deal as the fastest route to the bridge and answers about the intruder, bracing for a double-cross but moving forward anyway.",
+      "no": "The holdouts balked at the word purge, arguing the crew knew too little about the entity's nature or motives to commit to destroying it."
     },
-    "wildcards": "Side chatter runs to Replicator and Thor theories, requests for anti-replicator weapons, and jokes about Q moonlighting as Maia's lawyer.",
-    "counted": 134,
-    "final": false,
+    "wildcards": "Side chatter ran to Replicator and Thor theories, requests for anti-replicator weapons, and jokes about Q moonlighting as Maia's lawyer.",
+    "counted": 144,
+    "final": true,
     "leader": "yes",
+    "method": "jev",
+    "by": "claude-routine"
+  },
+  "2107138998250492164": {
+    "headline": "Fleet favors caution by a wide margin, sending Rommie to confirm the leak over following Maia blind.",
+    "reasons": {
+      "A": "The lone vote to push through treated Maia's warning as just another test of nerve, favoring speed over caution now that the team has already committed to trusting her.",
+      "B": "Backers argue the team already chose to trust Maia with the earlier deal, so second-guessing her now over a detour only slows things down without changing anything.",
+      "C": "The large majority want independent confirmation first — distrust of an android that didn't volunteer the detour up front, worry over the overhead skittering, and a running trust-but-verify refrain before following her into a radiation-flooded unknown."
+    },
+    "wildcards": "Running jokes about distrusting \"clankers\" sit alongside practical calls to use Jackson and McKay's tricorders alongside Rommie, and a few float calling in Thor or the Enterprise as backup.",
+    "counted": 63,
+    "final": false,
+    "leader": "C",
     "method": "jev",
     "by": "claude-routine"
   }

@@ -883,42 +883,69 @@
       "mission": "The Ghost Ship",
       "missionNumber": 1,
       "part": 3,
-      "title": "First Mission: The Ghost Ship (Part 3)",
-      "question": "What do you do?",
+      "title": "The Long Way Around",
+      "question": "Does the team follow Maia's detour around the reactor leak, push straight through, or hold while Rommie confirms it?",
       "options": [
         {
           "key": "A",
-          "letter": "A",
-          "label": "Push straight through",
-          "summary": "Push straight through.",
+          "label": "Team — push straight through",
+          "summary": "Ignore the warning and walk straight into the vented compartment — fastest route to the bridge, but lethal exposure if Maia's telling the truth about the leak.",
           "keywords": [
-            "option a",
-            "a."
-          ]
+            "push through",
+            "straight through",
+            "ignore the detour",
+            "go straight ahead",
+            "take the radiation",
+            "risk it",
+            "no detour",
+            "charge through",
+            "keep going"
+          ],
+          "letter": "A"
         },
         {
           "key": "B",
-          "letter": "B",
-          "label": "Follow her detour",
-          "summary": "Follow her detour.",
+          "label": "Team — follow Maia's detour",
+          "summary": "Trust Maia's read on the ship and take the long way around — safer if she's honest, but drifts the team further off course and deeper into her control.",
           "keywords": [
-            "option b",
-            "b."
-          ]
+            "follow her",
+            "follow maia",
+            "take the detour",
+            "trust her",
+            "long way around",
+            "go around",
+            "follow the android",
+            "stick with maia"
+          ],
+          "letter": "B"
         },
         {
           "key": "C",
-          "letter": "C",
-          "label": "Hold, and send Rommie to confirm the leak",
-          "summary": "Hold, and send Rommie to confirm the leak.",
+          "label": "Rommie — confirm the leak first",
+          "summary": "Hold the team back and send shielded Rommie to verify the leak herself — costs time, but checks whether Maia is steering them true before committing.",
           "keywords": [
-            "option c",
-            "c."
-          ]
+            "send rommie",
+            "confirm the leak",
+            "verify first",
+            "hold position",
+            "check first",
+            "rommie checks",
+            "trust but verify",
+            "don't trust yet",
+            "pause and verify"
+          ],
+          "letter": "C"
         }
       ],
       "canon": null,
-      "heuristic": true
+      "heuristic": false,
+      "catalogedBy": "claude-routine",
+      "awayTeam": [
+        "Jack O'Neill",
+        "Daniel Jackson",
+        "Rommie",
+        "Rodney McKay"
+      ]
     }
   }
 }
