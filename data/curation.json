@@ -1,6 +1,6 @@
 {
   "_readme": "Hand-curated story structure. The updater fills in anything missing (marked \"auto\": true) and never overwrites entries you edit here unless they are still auto. 'canon' = the option the story actually followed (from the next post).",
-  "head": "2106776610502238604",
+  "head": "2107138998250492164",
   "beats": {
     "2101703241687863782": {
       "kind": "briefing",
@@ -867,7 +867,7 @@
           ]
         }
       ],
-      "canon": null,
+      "canon": "yes",
       "heuristic": false,
       "catalogedBy": "claude-routine",
       "awayTeam": [
@@ -876,6 +876,49 @@
         "Rommie",
         "McKay"
       ]
+    },
+    "2107138998250492164": {
+      "auto": true,
+      "kind": "decision",
+      "mission": "The Ghost Ship",
+      "missionNumber": 1,
+      "part": 3,
+      "title": "First Mission: The Ghost Ship (Part 3)",
+      "question": "What do you do?",
+      "options": [
+        {
+          "key": "A",
+          "letter": "A",
+          "label": "Push straight through",
+          "summary": "Push straight through.",
+          "keywords": [
+            "option a",
+            "a."
+          ]
+        },
+        {
+          "key": "B",
+          "letter": "B",
+          "label": "Follow her detour",
+          "summary": "Follow her detour.",
+          "keywords": [
+            "option b",
+            "b."
+          ]
+        },
+        {
+          "key": "C",
+          "letter": "C",
+          "label": "Hold, and send Rommie to confirm the leak",
+          "summary": "Hold, and send Rommie to confirm the leak.",
+          "keywords": [
+            "option c",
+            "c."
+          ]
+        }
+      ],
+      "canon": null,
+      "heuristic": true
     }
   }
 }
