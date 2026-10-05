@@ -190,14 +190,14 @@
     "by": "claude-routine"
   },
   "2107138998250492164": {
-    "headline": "Fleet favors caution by a wide margin, sending Rommie to confirm the leak over following Maia blind.",
+    "headline": "C holds a commanding lead as fans back verification over blind trust.",
     "reasons": {
-      "A": "The lone vote to push through treated Maia's warning as just another test of nerve, favoring speed over caution now that the team has already committed to trusting her.",
-      "B": "Backers argue the team already chose to trust Maia with the earlier deal, so second-guessing her now over a detour only slows things down without changing anything.",
-      "C": "The large majority want independent confirmation first — distrust of an android that didn't volunteer the detour up front, worry over the overhead skittering, and a running trust-but-verify refrain before following her into a radiation-flooded unknown."
+      "A": "A handful see no real threat in Maia and would rather push straight on than lose time.",
+      "B": "Backers argue Maia has done nothing to break trust yet and want the mission to keep moving rather than stall.",
+      "C": "Most voters still distrust Maia's motives and the overhead skittering, and want Rommie's shielded check before risking an exposure that might be a setup."
     },
-    "wildcards": "Running jokes about distrusting \"clankers\" sit alongside practical calls to use Jackson and McKay's tricorders alongside Rommie, and a few float calling in Thor or the Enterprise as backup.",
-    "counted": 63,
+    "wildcards": "Several fans suspect the skittering is replicators and float sending Daniel or McKay with a tricorder alongside or instead of Rommie.",
+    "counted": 131,
     "final": false,
     "leader": "C",
     "method": "jev",
