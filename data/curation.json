@@ -1,6 +1,6 @@
 {
   "_readme": "Hand-curated story structure. The updater fills in anything missing (marked \"auto\": true) and never overwrites entries you edit here unless they are still auto. 'canon' = the option the story actually followed (from the next post).",
-  "head": "2107138998250492164",
+  "head": "2107501385637855667",
   "beats": {
     "2101703241687863782": {
       "kind": "briefing",
@@ -937,7 +937,7 @@
           "letter": "C"
         }
       ],
-      "canon": null,
+      "canon": "C",
       "heuristic": false,
       "catalogedBy": "claude-routine",
       "awayTeam": [
@@ -946,6 +946,59 @@
         "Rommie",
         "Rodney McKay"
       ]
+    },
+    "2107501385637855667": {
+      "auto": true,
+      "kind": "decision",
+      "mission": "The Ghost Ship",
+      "missionNumber": 1,
+      "part": 3,
+      "title": "First Mission: The Ghost Ship (Part 3)",
+      "question": "What do you do?",
+      "options": [
+        {
+          "key": "A",
+          "letter": "A",
+          "label": "Wait for Rommie to decipher the corrupted database and re…",
+          "summary": "Wait for Rommie to decipher the corrupted database and retrieve a potential clue to the way home.",
+          "keywords": [
+            "option a",
+            "a."
+          ]
+        },
+        {
+          "key": "B",
+          "letter": "B",
+          "label": "Investigate the life sign",
+          "summary": "Investigate the life sign.  Reach it before it fades, whatever it turns out to be.",
+          "keywords": [
+            "option b",
+            "b."
+          ]
+        },
+        {
+          "key": "C",
+          "letter": "C",
+          "label": "Go to engineering and vent the drive",
+          "summary": "Go to engineering and vent the drive.  Save the ship.",
+          "keywords": [
+            "option c",
+            "c."
+          ]
+        },
+        {
+          "key": "D",
+          "letter": "D",
+          "label": "Split the team",
+          "summary": "Split the team.  O’Neill’s call.  He and Daniel will investigate the life sign, McKay accompanies Maia to engineering, while Rommie stays on the bridge to decipher the corrupted data.  Everything gets done, but it does spread them thin.",
+          "keywords": [
+            "option d",
+            "d."
+          ]
+        }
+      ],
+      "canon": null,
+      "heuristic": true
     }
   }
 }
