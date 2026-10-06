@@ -190,14 +190,14 @@
     "by": "claude-routine"
   },
   "2107138998250492164": {
-    "headline": "C holds a commanding lead as fans back verification over blind trust.",
+    "headline": "Confirm-the-leak holds a commanding lead, with the detour a distant second and pushing through nearly abandoned",
     "reasons": {
-      "A": "A handful see no real threat in Maia and would rather push straight on than lose time.",
-      "B": "Backers argue Maia has done nothing to break trust yet and want the mission to keep moving rather than stall.",
-      "C": "Most voters still distrust Maia's motives and the overhead skittering, and want Rommie's shielded check before risking an exposure that might be a setup."
+      "A": "A handful see no real threat from Maia and would rather take the fastest route straight to the bridge.",
+      "B": "Backers argue Maia has earned some trust already and the team committed to following her, so there's no reason to doubt the detour yet.",
+      "C": "The fleet wants independent confirmation before trusting Maia's word, citing the unexplained skittering and her failure to flag the detour upfront as reasons for suspicion."
     },
-    "wildcards": "Several fans suspect the skittering is replicators and float sending Daniel or McKay with a tricorder alongside or instead of Rommie.",
-    "counted": 131,
+    "wildcards": "Several crew keep pitching a tricorder scan as a cheaper alternative to risking Rommie alone, and the skittering in the walls has most of the fleet quietly betting on replicators.",
+    "counted": 145,
     "final": false,
     "leader": "C",
     "method": "jev",
