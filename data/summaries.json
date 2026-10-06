@@ -190,14 +190,14 @@
     "by": "claude-routine"
   },
   "2107138998250492164": {
-    "headline": "Confirm-the-leak holds a commanding lead, with the detour a distant second and pushing through nearly abandoned",
+    "headline": "Crew heavily favors sending Rommie to confirm the leak over the detour.",
     "reasons": {
-      "A": "A handful see no real threat from Maia and would rather take the fastest route straight to the bridge.",
-      "B": "Backers argue Maia has earned some trust already and the team committed to following her, so there's no reason to doubt the detour yet.",
-      "C": "The fleet wants independent confirmation before trusting Maia's word, citing the unexplained skittering and her failure to flag the detour upfront as reasons for suspicion."
+      "A": "A handful judge Maia non-threatening enough to risk the straight route and save time.",
+      "B": "Backers trust Maia after already agreeing to help her, and want to keep the team moving together rather than split it up.",
+      "C": "Most want proof before trusting Maia, pointing to the skittering noise and her silence about the detour, and trust Rommie's shielding to check it safely."
     },
-    "wildcards": "Several crew keep pitching a tricorder scan as a cheaper alternative to risking Rommie alone, and the skittering in the walls has most of the fleet quietly betting on replicators.",
-    "counted": 145,
+    "wildcards": "Several pitch a tricorder scan as a faster or safer check than sending Rommie alone, and the skittering sound keeps triggering jokes about hidden Replicators nearby.",
+    "counted": 183,
     "final": false,
     "leader": "C",
     "method": "jev",
