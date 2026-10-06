@@ -953,52 +953,84 @@
       "mission": "The Ghost Ship",
       "missionNumber": 1,
       "part": 3,
-      "title": "First Mission: The Ghost Ship (Part 3)",
-      "question": "What do you do?",
+      "title": "Three Crises, One Hour",
+      "question": "With a route-home clue, a fading life sign, and a reactor racing toward breach, does the team chase one lead or split up to catch them all?",
       "options": [
         {
           "key": "A",
-          "letter": "A",
-          "label": "Wait for Rommie to decipher the corrupted database and re…",
-          "summary": "Wait for Rommie to decipher the corrupted database and retrieve a potential clue to the way home.",
+          "label": "Wait — let Rommie crack the data",
+          "summary": "The team holds at the bridge while Rommie finishes decoding the derelict's database, gambling the way-home clue is worth leaving the life sign and reactor unattended.",
           "keywords": [
-            "option a",
-            "a."
-          ]
+            "wait",
+            "rommie",
+            "decipher",
+            "database",
+            "data",
+            "clue",
+            "way home",
+            "corrupted",
+            "patience"
+          ],
+          "letter": "A"
         },
         {
           "key": "B",
-          "letter": "B",
-          "label": "Investigate the life sign",
-          "summary": "Investigate the life sign.  Reach it before it fades, whatever it turns out to be.",
+          "label": "Chase the fading life sign",
+          "summary": "The team rushes to find the life sign before it fades, risking that it's the hostile entity Maia warned about and leaving the reactor countdown to run.",
           "keywords": [
-            "option b",
-            "b."
-          ]
+            "life sign",
+            "investigate",
+            "rescue",
+            "entity",
+            "fading",
+            "chase",
+            "life signal",
+            "check it out"
+          ],
+          "letter": "B"
         },
         {
           "key": "C",
-          "letter": "C",
-          "label": "Go to engineering and vent the drive",
-          "summary": "Go to engineering and vent the drive.  Save the ship.",
+          "label": "Race to engineering, vent the drive",
+          "summary": "The team heads straight to engineering to vent the reactor by hand, saving the ship first but leaving the life sign and the data clue to wait.",
           "keywords": [
-            "option c",
-            "c."
-          ]
+            "engineering",
+            "vent",
+            "reactor",
+            "drive",
+            "save the ship",
+            "core breach",
+            "fix the ship"
+          ],
+          "letter": "C"
         },
         {
           "key": "D",
-          "letter": "D",
-          "label": "Split the team",
-          "summary": "Split the team.  O’Neill’s call.  He and Daniel will investigate the life sign, McKay accompanies Maia to engineering, while Rommie stays on the bridge to decipher the corrupted data.  Everything gets done, but it does spread them thin.",
+          "label": "Split up — O'Neill divides the team",
+          "summary": "O'Neill splits the team three ways, for the life sign, engineering, and the bridge, so everything gets handled at once, but no group is at full strength.",
           "keywords": [
-            "option d",
-            "d."
-          ]
+            "split",
+            "split up",
+            "split the team",
+            "divide",
+            "multitask",
+            "everyone",
+            "o'neill's call",
+            "spread thin"
+          ],
+          "letter": "D"
         }
       ],
       "canon": null,
-      "heuristic": true
+      "heuristic": false,
+      "catalogedBy": "claude-routine",
+      "awayTeam": [
+        "O'Neill",
+        "Daniel",
+        "Rommie",
+        "McKay",
+        "Maia"
+      ]
     }
   }
 }

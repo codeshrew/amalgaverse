@@ -190,16 +190,29 @@
     "by": "claude-routine"
   },
   "2107138998250492164": {
-    "headline": "Crew heavily favors sending Rommie to confirm the leak over the detour.",
+    "headline": "Caution won: the fleet sent Rommie to confirm the leak before trusting Maia.",
     "reasons": {
-      "A": "A handful judge Maia non-threatening enough to risk the straight route and save time.",
-      "B": "Backers trust Maia after already agreeing to help her, and want to keep the team moving together rather than split it up.",
-      "C": "Most want proof before trusting Maia, pointing to the skittering noise and her silence about the detour, and trust Rommie's shielding to check it safely."
+      "C": "Most crews still didn't trust Maia and wanted Rommie to verify the leak herself before anyone followed her lead.",
+      "B": "A sizeable minority argued the team had already chosen to trust Maia and backing out now would be an insult with little payoff.",
+      "A": "A small handful wanted to push straight through, willing to bet the warning was overcautious rather than lose time on verification."
     },
-    "wildcards": "Several pitch a tricorder scan as a faster or safer check than sending Rommie alone, and the skittering sound keeps triggering jokes about hidden Replicators nearby.",
-    "counted": 183,
-    "final": false,
+    "wildcards": "Plenty of jokes about not trusting the 'clanker', replicators in the walls, and the mysterious skittering noise, plus a few votes for sending a tricorder instead of risking Rommie alone.",
+    "counted": 184,
+    "final": true,
     "leader": "C",
+    "method": "jev",
+    "by": "claude-routine"
+  },
+  "2107501385637855667": {
+    "headline": "Fleet overwhelmingly backs splitting the team; a few favor saving the ship.",
+    "reasons": {
+      "C": "A small minority insists the ship must be stabilized first, since losing it would doom every other objective anyway.",
+      "D": "Most fans want every urgent problem, the data, the life sign, and the reactor, tackled at once, trusting O'Neill's call to divide the team."
+    },
+    "wildcards": "Lots of 'split the party' tabletop-horror jokes, running gags about plot armor, and a recurring worry that Rommie should go with the life-sign team instead of staying on the bridge.",
+    "counted": 60,
+    "final": false,
+    "leader": "D",
     "method": "jev",
     "by": "claude-routine"
   }
