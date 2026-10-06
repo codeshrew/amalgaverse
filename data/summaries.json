@@ -204,13 +204,15 @@
     "by": "claude-routine"
   },
   "2107501385637855667": {
-    "headline": "Fleet overwhelmingly backs splitting the team; a few favor saving the ship.",
+    "headline": "Split the team dominates the vote, far ahead of venting the drive.",
     "reasons": {
-      "C": "A small minority insists the ship must be stabilized first, since losing it would doom every other objective anyway.",
-      "D": "Most fans want every urgent problem, the data, the life sign, and the reactor, tackled at once, trusting O'Neill's call to divide the team."
+      "A": "A lone voter holds that the way-home clue is the one priority worth protecting, and calls splitting the team a disaster waiting to happen.",
+      "B": "A single vote bets on reaching the fading life sign in time, trusting it won't turn out to be the hostile entity Maia warned about.",
+      "C": "A small bloc argues the reactor is the real clock: save the ship first, since a breach erases every other option, and split up only once it's stable.",
+      "D": "The overwhelming majority wants each specialist working their own problem at once, trusting O'Neill's call and the squeeze of time, with plenty of winking nods to the old never-split-the-party rule."
     },
-    "wildcards": "Lots of 'split the party' tabletop-horror jokes, running gags about plot armor, and a recurring worry that Rommie should go with the life-sign team instead of staying on the bridge.",
-    "counted": 60,
+    "wildcards": "Jokes about splitting the party being a horror-movie and D&D cliche run through the replies, alongside scattered pitches to swap who's paired with whom and hopes of calling in the Enterprise for backup.",
+    "counted": 156,
     "final": false,
     "leader": "D",
     "method": "jev",
