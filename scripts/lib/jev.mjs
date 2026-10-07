@@ -98,7 +98,8 @@ export async function jevClassify(beat, replies, { log = () => {} } = {}) {
  * @returns {Promise<{key: string, confidence: number} | null>}
  */
 export async function jevCanon(prevBeat, newText) {
-  const opening = newText.split(/\n\s*\n/).slice(0, 4).join('\n\n').slice(0, 2500);
+  // Recap paragraphs and a Captain's Log can come first, so read well past the opening.
+  const opening = newText.slice(0, 6000);
   const criteria = {};
   for (const o of prevBeat.options) criteria[o.key] = `${o.label}${o.summary ? ` (${o.summary})` : ''}`;
   const res = await call({

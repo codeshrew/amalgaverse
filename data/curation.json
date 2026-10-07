@@ -695,7 +695,7 @@
           "letter": "B"
         }
       ],
-      "canon": null,
+      "canon": "A",
       "heuristic": false,
       "catalogedBy": "claude-routine",
       "awayTeam": [

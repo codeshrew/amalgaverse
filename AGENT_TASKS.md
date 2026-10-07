@@ -8,6 +8,7 @@ GitHub Actions handles the mechanical work: fetching posts and replies, counting
 
 1. `git pull --rebase` to get the latest `main`.
 2. Get the work packet. GitHub Actions publishes it, encrypted, on the `agent-packets` branch. Your sandbox can't reach the live site, so don't try to.
+   - `node scripts/agent-tasks.mjs ensure-fresh`. If the packet is stale, this asks the pipeline for a new one and waits up to 9 minutes. Run it with a 10-minute command timeout and let it finish.
    - `git fetch origin agent-packets`
    - `AGENT_PACKET_KEY=<key from your prompt> node scripts/agent-tasks.mjs unpack`
 

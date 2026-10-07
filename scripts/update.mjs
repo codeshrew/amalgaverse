@@ -45,6 +45,8 @@ const crew = readJson(P.crew, { crew: [] });
 const prevStory = readJson(P.story, { beats: [], dispatches: [] });
 const tweetCache = readJson(P.cache + 'tweets.json', {});
 const summaries = readJson(root + 'data/summaries.json', {});
+// How complete the reply data is; surfaced on the site so partial tallies are labelled honestly.
+const health = { ...(prevStory.health || {}), replySource: null };
 
 // ---------------------------------------------------------------- discovery
 log('Scanning @' + AUTHOR + ' timeline…');
@@ -260,6 +262,10 @@ for (const t of ordered) {
       log(`Fetching replies for "${beat.title}" (${t.stats.replies} reported)…`);
       try {
         const fresh = await fetchReplies(t.id);
+        const src = fresh.meta?.nitterInstance === 'paid-api' ? 'paid-api' : fresh.meta?.nitterInstance ? 'nitter' : 'fxtwitter-sample';
+        health.replySource = health.replySource === 'nitter' || health.replySource === 'paid-api' ? health.replySource : src;
+        health.checkedAt = new Date().toISOString();
+        if (src === 'fxtwitter-sample') health.nitterErrors = (fresh.meta?.nitterErrors || []).slice(0, 3);
         if (fresh.meta?.nitterErrors?.length && !fresh.meta.nitterInstance) console.warn("  ! nitter unavailable:", fresh.meta.nitterErrors.slice(0, 2).join("; "));
         const merged = new Map(stored.replies.map((r) => [r.id, r]));
         for (const r of fresh) merged.set(r.id, r);
@@ -279,9 +285,18 @@ for (const t of ordered) {
       if (summaries[t.id] && (!vcache.summary || !llmAvailable())) vcache.summary = summaries[t.id];
       beat.votes = await tallyVotes({ ...cur, id: t.id, text: t.text, closed: status === 'closed', canon: cur.canon }, stored.replies, { author: AUTHOR, cache: vcache });
       beat.votes.reported = t.stats.replies;
+      beat.votes.coverage = t.stats.replies ? Math.min(1, stored.replies.length / t.stats.replies) : null;
       beat.votes.asOf = new Date(stored.fetchedAt).toISOString();
       writeJson(voteFile, vcache);
       if (vcache.summary && llmAvailable()) summaries[t.id] = vcache.summary;
+      // Never let a tally shrink because the reply cache was lost or a source went dark:
+      // if we now see far fewer voters than the last published tally (same options), keep it.
+      const prevVotes = prevStory.beats?.find((b) => b.id === t.id)?.votes;
+      const sameOptions = prevVotes && Object.keys(prevVotes.tally || {}).join('|') === Object.keys(beat.votes.tally).join('|');
+      if (sameOptions && prevVotes.voters > beat.votes.voters * 1.1) {
+        console.warn(`  ! "${beat.title}": ${beat.votes.voters} voters < previous ${prevVotes.voters}; keeping the previous tally`);
+        beat.votes = { ...prevVotes, reported: t.stats.replies, headline: beat.votes.headline ?? prevVotes.headline, reasons: beat.votes.reasons ?? prevVotes.reasons };
+      }
     } else {
       beat.votes = prevStory.beats?.find((b) => b.id === t.id)?.votes || null;
     }
@@ -322,8 +337,10 @@ for (const b of beats) {
   m.beats.push(b.id);
 }
 
+if (!health.replySource) health.replySource = prevStory.health?.replySource ?? null; // nothing fetched this run
 const story = {
   generatedAt: new Date().toISOString(),
+  health,
   series: {
     title: 'The Amalgaverse',
     showrunner: 'Joseph Mallozzi',

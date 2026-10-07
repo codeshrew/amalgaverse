@@ -171,7 +171,9 @@ function renderVoteMeta(b) {
   const v = b.votes;
   if (!v?.counted) return `<div class="no-votes">${b.status === 'open' ? 'Tally pending. Replies are counted every 30 minutes, so the split shows up after the next sync.' : 'No votes counted for this beat.'}${b.optionsProvisional ? ' Options were read straight from the post and may be refined later.' : ''}</div>`;
   const method = { jev: 'read by Jev', ai: 'read by Claude' }[v.method] || 'keyword-matched';
-  return `<div class="vote-meta">
+  const cov = v.coverage ?? (v.reported ? Math.min(1, v.total / v.reported) : null);
+  const partial = cov != null && cov < 0.75;
+  return `${partial ? `<div class="sample-note"><span class="badge">Partial sample</span> This tally is based on ${pctTxt(cov)} of the replies. The full reply feed is currently unavailable, so treat the split as an estimate. <a href="#/about">Why?</a></div>` : ''}<div class="vote-meta">
     <span>${v.counted} votes counted</span>
     <span>${v.voters} voters · ${v.unclear} unclear${v.other ? ` · ${v.other} write-ins` : ''}</span>
     <span>${v.total} of ${v.reported ?? v.total} replies scanned (${method})</span>
@@ -502,6 +504,17 @@ function viewComms() {
 }
 
 // ------------------------------------------------------------ about
+function renderSourceStatus() {
+  const h = S.health || {};
+  if (!h.replySource) return '';
+  const ok = h.replySource !== 'fxtwitter-sample';
+  const label = { nitter: 'Nitter (full reply feed)', 'paid-api': 'Paid reply API (full feed)', 'fxtwitter-sample': 'FxTwitter sample only' }[h.replySource] || h.replySource;
+  return `<div class="panel source-status ${ok ? 'ok' : 'warn'}" style="margin-top:18px">
+    <div class="eyebrow">${ok ? '<span class="badge live">Healthy</span>' : '<span class="badge lost">Degraded</span>'}<span>Reply source: ${esc(label)}</span>${h.checkedAt ? `<span>checked ${ago(h.checkedAt)}</span>` : ''}</div>
+    ${ok ? '' : '<p style="margin:10px 0 0">The free Nitter mirrors that supplied the complete reply feed are offline or behind bot walls. Until a reply source comes back, each sync adds the newest and most-liked replies FxTwitter exposes (about 100 per sync), so open votes are sampled. Tallies show how much of the thread they cover.</p>'}
+  </div>`;
+}
+
 function viewAbout() {
   const dec = decisions().filter((b) => b.votes);
   const scanned = dec.reduce((a, b) => a + (b.votes.total || 0), 0);
@@ -523,6 +536,8 @@ function viewAbout() {
       <div class="stat"><div class="stat-v">${fmtNum(counted)}</div><div class="stat-k">Votes counted</div></div>
       <div class="stat"><div class="stat-v">${voters ? pctTxt(unclear / voters) : '—'}</div><div class="stat-k">Held back as unclear</div></div>
     </div>
+
+    ${renderSourceStatus()}
 
     <div class="section-title"><h2>The pipeline</h2></div>
     <div class="flow">

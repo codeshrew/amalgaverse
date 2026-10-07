@@ -2,8 +2,9 @@ name: Update & deploy
 
 on:
   schedule:
-    - cron: '*/30 * * * *'          # steady refresh of votes
-    - cron: '3,8,15 16,17 * * *'    # burst right after the 12:01 PM ET drop (EDT/EST)
+    # GitHub drops/delays many top-of-hour and */30 schedules under load; odd minutes fire more reliably.
+    - cron: '7,37 * * * *'            # steady refresh of votes
+    - cron: '4,11,19,26 16,17 * * *'  # burst right after the 12:01 PM ET drop (EDT/EST)
   workflow_dispatch:
   push:
     branches: [main]
@@ -24,17 +25,17 @@ jobs:
     timeout-minutes: 25
     environment:
       name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
+      url: ${{ steps.deploy.outputs.page_url || steps.deploy_retry.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: 22
 
       # Reply text, per-reply vote labels and mirrored videos persist between runs here,
       # never in git (the replies are other people's posts; the videos are large).
-      - uses: actions/cache@v4
+      - uses: actions/cache@v6
         with:
           path: |
             .cache
@@ -42,6 +43,15 @@ jobs:
             site/data
           key: state-${{ github.run_id }}
           restore-keys: state-
+
+      # If the Actions cache was evicted, start from the published data so tallies
+      # (and their history) carry over instead of being rebuilt from scratch.
+      - name: Seed from the published site if the cache is cold
+        run: |
+          if [ ! -f site/data/story.json ]; then
+            mkdir -p site/data
+            curl -fsSL https://codeshrew.github.io/amalgaverse/data/story.json -o site/data/story.json || rm -f site/data/story.json
+          fi
 
       - name: Pull posts, replies and tally votes
         env:
@@ -82,9 +92,17 @@ jobs:
       - name: Cache-bust asset URLs
         run: sed -i "s#assets/style.css#assets/style.css?v=${GITHUB_SHA::7}-${GITHUB_RUN_NUMBER}#; s#assets/app.js#assets/app.js?v=${GITHUB_SHA::7}-${GITHUB_RUN_NUMBER}#; s#data/story.js\"#data/story.js?v=${GITHUB_RUN_NUMBER}\"#" site/index.html
 
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: site
       - id: deploy
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
+        continue-on-error: true
+      # Pages occasionally answers 502 while creating a deployment; one retry clears it.
+      - name: Retry deploy after a transient Pages error
+        if: steps.deploy.outcome == 'failure'
+        run: sleep 45
+      - id: deploy_retry
+        if: steps.deploy.outcome == 'failure'
+        uses: actions/deploy-pages@v5

@@ -176,12 +176,49 @@ function unpack() {
   console.log(`packet from ${p.createdAt}: ${tasks.length} task(s): ${tasks.map((t) => `${t.type}:${t.id}`).join(', ') || 'nothing to do'}`);
 }
 
+// GitHub's cron is unreliable, so the routine can ask for a fresh packet: it commits
+// data/refresh-request.json (a push to data/ starts the pipeline), then waits until
+// the agent-packets branch carries a packet built after the request.
+async function ensureFresh(maxAgeMin = 25, waitMin = 9) {
+  const git = (...a) => execFileSync('git', a, { cwd: root, encoding: 'utf8' }).trim();
+  const packetTime = () => {
+    git('fetch', '-q', 'origin', 'agent-packets');
+    return new Date(JSON.parse(git('show', 'FETCH_HEAD:packet.json')).createdAt);
+  };
+  const t0 = packetTime();
+  const age = (Date.now() - t0) / 60000;
+  if (age <= maxAgeMin) return console.log(`packet is fresh (${age.toFixed(0)} min old)`);
+  const requestedAt = new Date();
+  writeJson(root + 'data/refresh-request.json', { requestedAt: requestedAt.toISOString(), by: 'claude-routine' });
+  git('add', 'data/refresh-request.json');
+  git('commit', '-qm', 'Request a pipeline refresh (Claude routine)');
+  for (let i = 0; i < 3; i++) {
+    try {
+      git('pull', '--rebase', '-q', 'origin', 'main');
+      git('push', '-q', 'origin', 'HEAD:main');
+      break;
+    } catch (e) {
+      if (i === 2) throw e;
+    }
+  }
+  console.log(`packet was ${age.toFixed(0)} min old; requested a refresh, waiting up to ${waitMin} min…`);
+  const deadline = Date.now() + waitMin * 60000;
+  while (Date.now() < deadline) {
+    await new Promise((r) => setTimeout(r, 30000));
+    try {
+      if (packetTime() > requestedAt) return console.log('fresh packet arrived');
+    } catch { /* branch mid-update; retry */ }
+  }
+  console.log('no fresh packet in time; continuing with the existing one');
+}
+
 const cmd = process.argv[2];
 if (cmd === 'prepare') await prepare();
 else if (cmd === 'apply') apply();
 else if (cmd === 'pack') pack(process.argv[3] || DIR + 'packet.json');
 else if (cmd === 'unpack') unpack();
+else if (cmd === 'ensure-fresh') await ensureFresh();
 else {
-  console.error('usage: node scripts/agent-tasks.mjs prepare [--local] | apply | pack [file] | unpack   (unpack expects: git fetch origin agent-packets)');
+  console.error('usage: node scripts/agent-tasks.mjs prepare [--local] | apply | pack [file] | unpack | ensure-fresh   (unpack expects: git fetch origin agent-packets)');
   process.exit(1);
 }
