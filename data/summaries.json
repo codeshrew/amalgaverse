@@ -204,17 +204,31 @@
     "by": "claude-routine"
   },
   "2107501385637855667": {
-    "headline": "Split the team dominates the vote, far ahead of venting the drive.",
+    "headline": "The fleet split the team decisively, leaving the other options far behind.",
     "reasons": {
-      "A": "A lone voter holds that the way-home clue is the one priority worth protecting, and calls splitting the team a disaster waiting to happen.",
-      "B": "A single vote bets on reaching the fading life sign in time, trusting it won't turn out to be the hostile entity Maia warned about.",
-      "C": "A small bloc argues the reactor is the real clock: save the ship first, since a breach erases every other option, and split up only once it's stable.",
-      "D": "The overwhelming majority wants each specialist working their own problem at once, trusting O'Neill's call and the squeeze of time, with plenty of winking nods to the old never-split-the-party rule."
+      "A": "A lone vote preferred letting Rommie finish decoding the data, treating the way-home clue as worth the wait.",
+      "B": "A few wanted to chase the fading life sign immediately, worried it would disappear for good if the team waited.",
+      "C": "A minority argued for saving the ship first, reasoning the data and the life sign are moot if the reactor breaches.",
+      "D": "Most trusted O'Neill to divide the group so the data, the life sign, and the reactor all got tackled before the clock ran out, even though no subteam stayed at full strength."
     },
-    "wildcards": "Jokes about splitting the party being a horror-movie and D&D cliche run through the replies, alongside scattered pitches to swap who's paired with whom and hopes of calling in the Enterprise for backup.",
-    "counted": 156,
-    "final": false,
+    "wildcards": "Fans leaned hard on the \"never split the party\" trope and horror-movie references, debated swapping which android went with which group, and floated calling in backup from the Enterprise.",
+    "counted": 211,
+    "final": true,
     "leader": "D",
+    "method": "jev",
+    "by": "claude-routine"
+  },
+  "2107863773310833084": {
+    "headline": "Trust in Maia is pulling well ahead, with running a distant second.",
+    "reasons": {
+      "A": "A handful expect McKay's instincts to win out, convinced the machines are replicators that need to be stopped before they reach the core.",
+      "B": "Many argue running is the most McKay-like response, warning that if these are replicators, two people are no match and Maia risks being absorbed.",
+      "C": "Most want McKay to hold back and let Maia act, betting her calm and her knowledge of the ship mean the machines are maintenance drones, not a threat."
+    },
+    "wildcards": "There's a running joke about McKay's aim going wide and hitting the reactor instead, plus a steady debate over whether the spiders are Replicators or ship repair drones.",
+    "counted": 56,
+    "final": false,
+    "leader": "C",
     "method": "jev",
     "by": "claude-routine"
   }

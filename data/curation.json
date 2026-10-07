@@ -1038,42 +1038,71 @@
       "mission": "The Ghost Ship",
       "missionNumber": 1,
       "part": 4,
-      "title": "First Mission: The Ghost Ship (Part 4)",
+      "heuristic": false,
+      "catalogedBy": "claude-routine",
+      "title": "Spiders on the Core",
       "question": "What does McKay do?",
       "options": [
         {
           "key": "A",
-          "letter": "A",
-          "label": "Draw his weapon and fire",
-          "summary": "Draw his weapon and fire.  Drive them away from the core.",
+          "label": "McKay — draw and fire",
+          "summary": "He opens fire to drive the machines off the core, risking a stray shot that ruptures the reactor itself.",
           "keywords": [
-            "option a",
-            "a."
-          ]
+            "shoot",
+            "fire",
+            "weapon",
+            "gun",
+            "draw",
+            "attack",
+            "open fire",
+            "shoot them",
+            "blast them",
+            "kill them"
+          ],
+          "letter": "A"
         },
         {
           "key": "B",
-          "letter": "B",
-          "label": "Run",
-          "summary": "Run.  Get clear and warn the others.",
+          "label": "McKay — run and warn the others",
+          "summary": "He bolts from engineering to alert O'Neill and Daniel, saving himself but leaving Maia alone with the machines and the core unguarded.",
           "keywords": [
-            "option b",
-            "b."
-          ]
+            "run",
+            "flee",
+            "bolt",
+            "retreat",
+            "warn",
+            "get clear",
+            "escape",
+            "get help",
+            "run away"
+          ],
+          "letter": "B"
         },
         {
           "key": "C",
-          "letter": "C",
-          "label": "Trust in Maia",
-          "summary": "Trust in Maia.  Let her handle them.",
+          "label": "McKay — trust Maia to handle it",
+          "summary": "He holds back and lets Maia deal with the machines, betting her knowledge of the ship outweighs the risk that they're hostile.",
           "keywords": [
-            "option c",
-            "c."
-          ]
+            "trust maia",
+            "trust her",
+            "let maia handle it",
+            "wait",
+            "stand back",
+            "maia's call",
+            "let her",
+            "hold back"
+          ],
+          "letter": "C"
         }
       ],
-      "canon": null,
-      "heuristic": true
+      "awayTeam": [
+        "O'Neill",
+        "Daniel",
+        "Rommie",
+        "McKay",
+        "Maia"
+      ],
+      "canon": null
     }
   }
 }
