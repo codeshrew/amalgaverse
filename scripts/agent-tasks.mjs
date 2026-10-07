@@ -217,7 +217,7 @@ if (cmd === 'prepare') await prepare();
 else if (cmd === 'apply') apply();
 else if (cmd === 'pack') pack(process.argv[3] || DIR + 'packet.json');
 else if (cmd === 'unpack') unpack();
-else if (cmd === 'ensure-fresh') await ensureFresh();
+else if (cmd === 'ensure-fresh') await ensureFresh(Number(process.env.AMALGA_PACKET_MAX_AGE_MIN || 25));
 else {
   console.error('usage: node scripts/agent-tasks.mjs prepare [--local] | apply | pack [file] | unpack | ensure-fresh   (unpack expects: git fetch origin agent-packets)');
   process.exit(1);
