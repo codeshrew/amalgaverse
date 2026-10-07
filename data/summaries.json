@@ -219,14 +219,14 @@
     "by": "claude-routine"
   },
   "2107863773310833084": {
-    "headline": "Trust in Maia leads comfortably, with running a distant second and firing a long shot",
+    "headline": "Trust Maia holds a commanding lead, with warn-and-run well ahead of drawing down",
     "reasons": {
-      "A": "A minority trust McKay's Stargate-honed instincts and his past history with Replicators enough to back opening fire, risk to the core and his own aim notwithstanding.",
-      "B": "Many argue McKay would bolt to warn O'Neill and Daniel for backup, reasoning he's no marksman and Maia alone can't be trusted to handle real Replicators.",
-      "C": "The fleet mostly bets the spider-machines are ship maintenance drones rather than Replicators, so they'd rather see what Maia makes of them than risk the core to gunfire or leave her exposed by running."
+      "A": "A minority bet that reflex wins out and McKay opens fire on the machines, though just as many raise this option only to joke that he'd miss and hit the core instead.",
+      "B": "Fans here see running as the most in-character McKay move, reasoning he's a poor shot who'd rather fall back, warn the team, and return with backup than risk the reactor.",
+      "C": "The leading argument is that the machines may be ship maintenance drones rather than hostile Replicators, so McKay should hold fire, watch Maia's reaction, and defer to her knowledge of the vessel before escalating."
     },
-    "wildcards": "Plenty of fans refuse to pick just one option, floating hybrids like firing while fleeing or trusting Maia while quietly readying a weapon, and a running joke imagines McKay fumbling his gun entirely.",
-    "counted": 219,
+    "wildcards": "Several fans propose hybrid answers (fire while retreating, or trust Maia first and run if she falters), and a running joke imagines McKay fumbling the gun entirely, from ejecting his own magazine to hitting the ceiling instead of the target.",
+    "counted": 269,
     "final": false,
     "leader": "C",
     "method": "jev",
