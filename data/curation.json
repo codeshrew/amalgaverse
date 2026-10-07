@@ -1,6 +1,6 @@
 {
   "_readme": "Hand-curated story structure. The updater fills in anything missing (marked \"auto\": true) and never overwrites entries you edit here unless they are still auto. 'canon' = the option the story actually followed (from the next post).",
-  "head": "2107501385637855667",
+  "head": "2107863773310833084",
   "beats": {
     "2101703241687863782": {
       "kind": "briefing",
@@ -1021,7 +1021,7 @@
           "letter": "D"
         }
       ],
-      "canon": null,
+      "canon": "D",
       "heuristic": false,
       "catalogedBy": "claude-routine",
       "awayTeam": [
@@ -1031,6 +1031,49 @@
         "McKay",
         "Maia"
       ]
+    },
+    "2107863773310833084": {
+      "auto": true,
+      "kind": "decision",
+      "mission": "The Ghost Ship",
+      "missionNumber": 1,
+      "part": 4,
+      "title": "First Mission: The Ghost Ship (Part 4)",
+      "question": "What does McKay do?",
+      "options": [
+        {
+          "key": "A",
+          "letter": "A",
+          "label": "Draw his weapon and fire",
+          "summary": "Draw his weapon and fire.  Drive them away from the core.",
+          "keywords": [
+            "option a",
+            "a."
+          ]
+        },
+        {
+          "key": "B",
+          "letter": "B",
+          "label": "Run",
+          "summary": "Run.  Get clear and warn the others.",
+          "keywords": [
+            "option b",
+            "b."
+          ]
+        },
+        {
+          "key": "C",
+          "letter": "C",
+          "label": "Trust in Maia",
+          "summary": "Trust in Maia.  Let her handle them.",
+          "keywords": [
+            "option c",
+            "c."
+          ]
+        }
+      ],
+      "canon": null,
+      "heuristic": true
     }
   }
 }
