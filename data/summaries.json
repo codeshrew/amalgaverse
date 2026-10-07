@@ -219,14 +219,14 @@
     "by": "claude-routine"
   },
   "2107863773310833084": {
-    "headline": "Trust in Maia is pulling well ahead, with running a distant second.",
+    "headline": "Trust in Maia leads comfortably, with running a distant second and firing a long shot",
     "reasons": {
-      "A": "A handful expect McKay's instincts to win out, convinced the machines are replicators that need to be stopped before they reach the core.",
-      "B": "Many argue running is the most McKay-like response, warning that if these are replicators, two people are no match and Maia risks being absorbed.",
-      "C": "Most want McKay to hold back and let Maia act, betting her calm and her knowledge of the ship mean the machines are maintenance drones, not a threat."
+      "A": "A minority trust McKay's Stargate-honed instincts and his past history with Replicators enough to back opening fire, risk to the core and his own aim notwithstanding.",
+      "B": "Many argue McKay would bolt to warn O'Neill and Daniel for backup, reasoning he's no marksman and Maia alone can't be trusted to handle real Replicators.",
+      "C": "The fleet mostly bets the spider-machines are ship maintenance drones rather than Replicators, so they'd rather see what Maia makes of them than risk the core to gunfire or leave her exposed by running."
     },
-    "wildcards": "There's a running joke about McKay's aim going wide and hitting the reactor instead, plus a steady debate over whether the spiders are Replicators or ship repair drones.",
-    "counted": 56,
+    "wildcards": "Plenty of fans refuse to pick just one option, floating hybrids like firing while fleeing or trusting Maia while quietly readying a weapon, and a running joke imagines McKay fumbling his gun entirely.",
+    "counted": 219,
     "final": false,
     "leader": "C",
     "method": "jev",
