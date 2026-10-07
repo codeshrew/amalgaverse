@@ -27,16 +27,20 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
-      - name: Restore last pipeline state (story data + videos)
-        id: state
+      - name: Restore last pipeline state (story data)
         uses: actions/cache/restore@v6
         with:
           path: |
             .cache
-            site/media
             site/data
           key: state-none
           restore-keys: state-
+      - name: Restore mirrored videos
+        uses: actions/cache/restore@v6
+        with:
+          path: site/media
+          key: media-none
+          restore-keys: media-
 
       - name: Fall back to the published data if the cache has none
         run: |

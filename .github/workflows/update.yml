@@ -14,6 +14,7 @@ permissions:
   contents: write
   pages: write
   id-token: write
+  actions: write   # prune superseded caches
 
 concurrency:
   group: update
@@ -35,14 +36,23 @@ jobs:
 
       # Reply text, per-reply vote labels and mirrored videos persist between runs here,
       # never in git (the replies are other people's posts; the videos are large).
+      # Small, fast-changing state (reply cache, vote labels, story.json) is saved every run.
       - uses: actions/cache@v6
         with:
           path: |
             .cache
-            site/media
             site/data
           key: state-${{ github.run_id }}
           restore-keys: state-
+
+      # Videos (~200 MB) only change when a new beat drops, so they get their own cache
+      # that's saved only when the set of files changes.
+      - name: Restore mirrored videos
+        uses: actions/cache/restore@v6
+        with:
+          path: site/media
+          key: media-none
+          restore-keys: media-
 
       # If the Actions cache was evicted, start from the published data so tallies
       # (and their history) carry over instead of being rebuilt from scratch.
@@ -75,6 +85,25 @@ jobs:
           git init -q && cp ../packet.json . && git add packet.json
           git -c user.name=amalgaverse-bot -c user.email=41898282+github-actions[bot]@users.noreply.github.com commit -qm "Work packet $(date -u +%FT%TZ)"
           git push -f -q "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:agent-packets
+
+      - name: Save mirrored videos (only if new ones arrived)
+        id: mediakey
+        run: echo "key=media-$(ls site/media 2>/dev/null | sort | sha1sum | cut -c1-16)" >> "$GITHUB_OUTPUT"
+      - uses: actions/cache/save@v6
+        continue-on-error: true   # "already exists" when nothing changed
+        with:
+          path: site/media
+          key: ${{ steps.mediakey.outputs.key }}
+
+      # Keep the repo under GitHub's 10 GB cache cap: drop superseded caches.
+      - name: Prune old caches
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          prune() { gh api "repos/$GITHUB_REPOSITORY/actions/caches?key=$1&sort=created_at&direction=desc&per_page=100" --jq '.actions_caches[].key' | tail -n +$(( $2 + 1 )) | while read -r k; do gh api -X DELETE "repos/$GITHUB_REPOSITORY/actions/caches?key=$k" >/dev/null && echo "pruned $k"; done; }
+          prune state- 2
+          prune media- 1
 
       # Only curation changes are committed (new beats catalogued, canon resolved).
       - name: Commit data changes
