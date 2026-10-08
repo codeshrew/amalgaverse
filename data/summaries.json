@@ -233,13 +233,13 @@
     "by": "claude-routine"
   },
   "2108226161465590106": {
-    "headline": "Fleet holds B=90 over A=38: back up Maia at the bridge.",
+    "headline": "Fleet backs sticking with Maia, 127 to 58 over bolting for the hangar.",
     "reasons": {
-      "A": "They want McKay booking it for the hangar now, radioing the team and starting evac prep rather than risking the clock on cargo they don't trust.",
-      "B": "They want McKay sticking with Maia out of loyalty and gratitude for her help, figuring the crew has the minutes to spare and McKay won't wander those corridors alone anyway."
+      "A": "Backers of A want McKay radioing the team and starting the evacuation now, trusting that Maia, built for this ship, can see to herself and the cargo without him.",
+      "B": "Backers of B don't trust McKay to cross the ship alone, want to repay Maia's help, and see the bridge as a chance to regroup with Rommie while the clock still allows it."
     },
-    "wildcards": "The deck lit up with relief that the repair spiders weren't replicators after all, running jokes about the suspiciously tidy 42-minute countdown, and a scattering of write-in orders having McKay do both at once: follow Maia while radioing the team on the way.",
-    "counted": 128,
+    "wildcards": "Recurring threads include relief that the 'repair spiders' turned out not to be replicators, jokes about the ship's 42-minute countdown, and a popular hybrid pitch: go with Maia but radio the rest of the team along the way.",
+    "counted": 185,
     "final": false,
     "leader": "B",
     "method": "jev",
