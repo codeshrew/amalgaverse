@@ -1,6 +1,6 @@
 {
   "_readme": "Hand-curated story structure. The updater fills in anything missing (marked \"auto\": true) and never overwrites entries you edit here unless they are still auto. 'canon' = the option the story actually followed (from the next post).",
-  "head": "2107863773310833084",
+  "head": "2108226161465590106",
   "beats": {
     "2101703241687863782": {
       "kind": "briefing",
@@ -1102,7 +1102,19 @@
         "McKay",
         "Maia"
       ],
-      "canon": null
+      "canon": "C"
+    },
+    "2108226161465590106": {
+      "auto": true,
+      "kind": "decision",
+      "mission": "The Ghost Ship (Part 4) - \"Countdown\"",
+      "missionNumber": 1,
+      "part": 4,
+      "title": "First Mission: The Ghost Ship (Part 4) - \"Countdown\"",
+      "question": "What does McKay do?",
+      "options": [],
+      "canon": null,
+      "heuristic": true
     }
   }
 }
