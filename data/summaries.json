@@ -219,14 +219,14 @@
     "by": "claude-routine"
   },
   "2107863773310833084": {
-    "headline": "Trust Maia holds a commanding lead, with warn-and-run well ahead of drawing down",
+    "headline": "The fleet favors trusting Maia, with retreat next and drawn weapons trailing.",
     "reasons": {
-      "A": "A minority bet that reflex wins out and McKay opens fire on the machines, though just as many raise this option only to joke that he'd miss and hit the core instead.",
-      "B": "Fans here see running as the most in-character McKay move, reasoning he's a poor shot who'd rather fall back, warn the team, and return with backup than risk the reactor.",
-      "C": "The leading argument is that the machines may be ship maintenance drones rather than hostile Replicators, so McKay should hold fire, watch Maia's reaction, and defer to her knowledge of the vessel before escalating."
+      "A": "A handful hold that McKay's Replicator reflex fires before his brain does, drawing and shooting on instinct no matter the risk to the core.",
+      "B": "Many expect McKay to distrust his own aim near the reactor and bolt to warn O'Neill and Daniel, betting backup beats a stray shot.",
+      "C": "Most doubt these spiders are Replicators at all, read them as the ship's own maintenance systems, and would rather let Maia, who knows the vessel, call it."
     },
-    "wildcards": "Several fans propose hybrid answers (fire while retreating, or trust Maia first and run if she falters), and a running joke imagines McKay fumbling the gun entirely, from ejecting his own magazine to hitting the ceiling instead of the target.",
-    "counted": 269,
+    "wildcards": "Several crews can't resist a joke about McKay's rotten marksmanship, and a few split the difference, having him watch Maia while keeping his weapon ready just in case.",
+    "counted": 294,
     "final": false,
     "leader": "C",
     "method": "jev",
