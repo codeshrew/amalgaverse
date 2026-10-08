@@ -231,5 +231,18 @@
     "leader": "C",
     "method": "jev",
     "by": "claude-routine"
+  },
+  "2108226161465590106": {
+    "headline": "Fleet holds B=90 over A=38: back up Maia at the bridge.",
+    "reasons": {
+      "A": "They want McKay booking it for the hangar now, radioing the team and starting evac prep rather than risking the clock on cargo they don't trust.",
+      "B": "They want McKay sticking with Maia out of loyalty and gratitude for her help, figuring the crew has the minutes to spare and McKay won't wander those corridors alone anyway."
+    },
+    "wildcards": "The deck lit up with relief that the repair spiders weren't replicators after all, running jokes about the suspiciously tidy 42-minute countdown, and a scattering of write-in orders having McKay do both at once: follow Maia while radioing the team on the way.",
+    "counted": 128,
+    "final": false,
+    "leader": "B",
+    "method": "jev",
+    "by": "claude-routine"
   }
 }
