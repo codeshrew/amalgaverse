@@ -219,15 +219,15 @@
     "by": "claude-routine"
   },
   "2107863773310833084": {
-    "headline": "The fleet favors trusting Maia, with retreat next and drawn weapons trailing.",
+    "headline": "Trusting Maia won decisively over running for backup and opening fire.",
     "reasons": {
-      "A": "A handful hold that McKay's Replicator reflex fires before his brain does, drawing and shooting on instinct no matter the risk to the core.",
-      "B": "Many expect McKay to distrust his own aim near the reactor and bolt to warn O'Neill and Daniel, betting backup beats a stray shot.",
-      "C": "Most doubt these spiders are Replicators at all, read them as the ship's own maintenance systems, and would rather let Maia, who knows the vessel, call it."
+      "A": "They were convinced the spiders were replicators on reflex and wanted McKay protecting the core by force.",
+      "B": "They judged warning O'Neill and the team more useful than standing his ground against an unknown threat.",
+      "C": "They trusted Maia's calm and her read on the ship's systems over McKay's trigger-happy instincts."
     },
-    "wildcards": "Several crews can't resist a joke about McKay's rotten marksmanship, and a few split the difference, having him watch Maia while keeping his weapon ready just in case.",
-    "counted": 294,
-    "final": false,
+    "wildcards": "Several fans wanted McKay to split the difference, firing while backing away or covering Maia before bolting, and more than one joked he'd only end up shooting himself or the core.",
+    "counted": 315,
+    "final": true,
     "leader": "C",
     "method": "jev",
     "by": "claude-routine"

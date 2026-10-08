@@ -1110,11 +1110,53 @@
       "mission": "The Ghost Ship (Part 4) - \"Countdown\"",
       "missionNumber": 1,
       "part": 4,
-      "title": "First Mission: The Ghost Ship (Part 4) - \"Countdown\"",
+      "title": "Abandon the Waldorf Astoria",
       "question": "What does McKay do?",
-      "options": [],
+      "options": [
+        {
+          "key": "A",
+          "label": "McKay — head straight for the hangar",
+          "summary": "He breaks for the hangar alone to regroup the team and start the evacuation without delay.",
+          "keywords": [
+            "hangar",
+            "run",
+            "regroup",
+            "evacuate",
+            "team",
+            "leave",
+            "go",
+            "retreat",
+            "bail",
+            "now"
+          ],
+          "letter": "A"
+        },
+        {
+          "key": "B",
+          "label": "McKay — back up Maia at the bridge",
+          "summary": "He sticks with Maia to the bridge, risking the extra minutes so they evacuate together once she's done.",
+          "keywords": [
+            "bridge",
+            "maia",
+            "stay",
+            "support",
+            "backup",
+            "together",
+            "help",
+            "stick",
+            "wait",
+            "loyal"
+          ],
+          "letter": "B"
+        }
+      ],
       "canon": null,
-      "heuristic": true
+      "heuristic": false,
+      "catalogedBy": "claude-routine",
+      "awayTeam": [
+        "McKay",
+        "Maia"
+      ]
     }
   }
 }
