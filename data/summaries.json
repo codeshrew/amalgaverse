@@ -246,16 +246,16 @@
     "by": "claude-routine"
   },
   "2108588549012644146": {
-    "headline": "Fleet is split evenly between beaming Rhea out and keeping her hidden, confrontation trails.",
+    "headline": "Keeping Rhea hidden leads, with beaming her to safety and confronting Maia close behind.",
     "reasons": {
-      "A": "Transport backers say Rhea's injuries need care now and that pulling her off a ship with a possibly hostile android is worth the risk.",
-      "B": "Confrontation voters trust neither account and want Rhea and Maia in the same room so the conflicting stories can be tested against each other.",
-      "C": "Equally many want Rhea's warning kept secret while the team regroups first, betting patience beats tipping their hand to Maia before they're ready."
+      "A": "Fans want Rhea beamed to sick bay fast, treating her injuries first and sorting out the android question once she's safely off the ship.",
+      "B": "Voters favor bringing Maia and Rhea face to face now, betting a direct confrontation will expose whichever one is lying before more time is lost.",
+      "C": "The largest bloc wants Rhea's warning kept quiet while the team regroups, calling a hidden ace the safer play until Maia's story can be checked."
     },
-    "wildcards": "A few floated hybrids like transporting Rhea while also regrouping, tossed out sci-fi villain comparisons (replicators, Cylons, HAL), and some openly admitted they just don't trust Maia at all.",
-    "counted": 60,
+    "wildcards": "Several fans keep clocking the actor's resemblance to Stargate's Dr. Lam, and more than a few suspect Rhea or Maia could turn out to be a replicator or the entity in disguise.",
+    "counted": 100,
     "final": false,
-    "leader": "A",
+    "leader": "C",
     "method": "jev",
     "by": "claude-routine"
   }
