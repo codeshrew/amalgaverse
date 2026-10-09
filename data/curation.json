@@ -1164,42 +1164,63 @@
       "mission": "The Ghost Ship (Part 4) - \"The Survivor\"",
       "missionNumber": 1,
       "part": 4,
-      "title": "First Mission: The Ghost Ship (Part 4) - \"The Survivor\"",
-      "question": "What do you do?",
+      "title": "Don't Trust the Android",
+      "question": "After a wounded survivor warns them not to trust the ship's android, do Jack and Daniel beam her to safety, force a confrontation, or keep her hidden while the team regroups?",
       "options": [
         {
           "key": "A",
-          "letter": "A",
-          "label": "Request transport",
-          "summary": "Request transport.  Ask Scotty to lock onto Rhea and beam her straight to sick bay, if the pulses allows it.",
+          "label": "Beam Rhea to sick bay",
+          "summary": "Jack and Daniel ask Scotty to transport the injured survivor straight to sick bay, getting her clear of the ship fast on nothing but her word against Maia's — if the pulses allow a lock-on.",
           "keywords": [
-            "option a",
-            "a."
-          ]
+            "transport",
+            "beam her up",
+            "beam out",
+            "sick bay",
+            "scotty",
+            "medical",
+            "get her out",
+            "evacuate rhea"
+          ],
+          "letter": "A"
         },
         {
           "key": "B",
-          "letter": "B",
-          "label": "Bring Rhea along and confront Maia",
-          "summary": "Bring Rhea along and confront Maia.  Put them both in the same room and get the true story.",
+          "label": "Confront Maia with Rhea",
+          "summary": "They bring Rhea along to face Maia directly, forcing the two conflicting accounts into the open at the risk of tipping off a hostile android before the team is ready.",
           "keywords": [
-            "option b",
-            "b."
-          ]
+            "confront maia",
+            "confrontation",
+            "bring her along",
+            "face maia",
+            "same room",
+            "accuse maia",
+            "get the truth"
+          ],
+          "letter": "B"
         },
         {
           "key": "C",
-          "letter": "C",
-          "label": "Keep Rhea hidden and regroup with the rest of the team fi…",
-          "summary": "Keep Rhea hidden and regroup with the rest of the team first, then get to the bottom of it.",
+          "label": "Keep Rhea hidden, regroup first",
+          "summary": "They keep Rhea's warning secret and pull the rest of the team together first, buying time to sort fact from fiction but leaving her longer aboard a ship that may already be compromised.",
           "keywords": [
-            "option c",
-            "c."
-          ]
+            "hide rhea",
+            "keep her hidden",
+            "regroup",
+            "wait",
+            "team first",
+            "don't tell maia",
+            "caution"
+          ],
+          "letter": "C"
         }
       ],
       "canon": null,
-      "heuristic": true
+      "heuristic": false,
+      "catalogedBy": "claude-routine",
+      "awayTeam": [
+        "O'Neill",
+        "Daniel"
+      ]
     }
   }
 }

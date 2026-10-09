@@ -233,15 +233,29 @@
     "by": "claude-routine"
   },
   "2108226161465590106": {
-    "headline": "Backing Maia at the bridge holds a commanding lead, 147 to 69.",
+    "headline": "Backing Maia polled 160-71, but the captain sent McKay to the hangar instead.",
     "reasons": {
-      "A": "Backers want McKay to alert the team right away and trust that Maia, and the ship itself, can handle her own business.",
-      "B": "Backers think McKay is too rattled to wander the ship alone and want the team to stick together and reunite with Rommie."
+      "A": "Backers said McKay's instincts would send him straight for the hangar to alert the team and start evacuating without wasting the countdown on an unproven android.",
+      "B": "Most reasoned McKay wouldn't wander the wreck alone and should stick with Maia to the bridge, where Rommie already was, trading a few minutes for safety and goodwill."
     },
-    "wildcards": "Several fans pitched a third option where McKay radios the team en route to the bridge, and the thread leaned hard on jokes about the number 42 and relief that the \"repair spiders\" weren't replicators.",
-    "counted": 216,
-    "final": false,
+    "wildcards": "Several crew riffed on the '42 minutes' countdown as a Hitchhiker's Guide nod and joked about relief that the threat wasn't replicators, while a few proposed a hybrid: head for the bridge but radio the rest of the team along the way.",
+    "counted": 231,
+    "final": true,
     "leader": "B",
+    "method": "jev",
+    "by": "claude-routine"
+  },
+  "2108588549012644146": {
+    "headline": "Fleet is split evenly between beaming Rhea out and keeping her hidden, confrontation trails.",
+    "reasons": {
+      "A": "Transport backers say Rhea's injuries need care now and that pulling her off a ship with a possibly hostile android is worth the risk.",
+      "B": "Confrontation voters trust neither account and want Rhea and Maia in the same room so the conflicting stories can be tested against each other.",
+      "C": "Equally many want Rhea's warning kept secret while the team regroups first, betting patience beats tipping their hand to Maia before they're ready."
+    },
+    "wildcards": "A few floated hybrids like transporting Rhea while also regrouping, tossed out sci-fi villain comparisons (replicators, Cylons, HAL), and some openly admitted they just don't trust Maia at all.",
+    "counted": 60,
+    "final": false,
+    "leader": "A",
     "method": "jev",
     "by": "claude-routine"
   }
