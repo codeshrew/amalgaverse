@@ -246,15 +246,15 @@
     "by": "claude-routine"
   },
   "2108588549012644146": {
-    "headline": "Keeping Rhea hidden leads, holding a narrow edge over medical extraction and confrontation.",
+    "headline": "Keep Rhea hidden won, ahead of beam her out, then confront Maia.",
     "reasons": {
-      "A": "Her injuries and the ticking clock override lingering suspicion, so fans want her beamed to sick bay fast, under guard, with the Maia question settled later.",
-      "B": "Fans want the two conflicting accounts forced together now, betting a direct confrontation will expose whichever of Maia or Rhea is lying before the ship runs out of time.",
-      "C": "Trusting neither Maia nor Rhea yet, fans favor regrouping with the rest of the team first to sort fact from fiction before committing to either story."
+      "A": "They argued Rhea was badly hurt and needed medical treatment right away, with a guard posted once she was aboard.",
+      "B": "They wanted the two conflicting stories brought face to face immediately, betting a confrontation would smoke out the liar fastest.",
+      "C": "They trusted neither party and wanted the team to regroup first, keeping Rhea as an ace in the hole before risking a confrontation."
     },
-    "wildcards": "Plenty of fans are cracking jokes about Rommie resembling Dr. Lam, and a few are floating hybrids like beaming Rhea out while still keeping her under guard, or holding off until the team can radio Rommie or McKay for more information; several also suspect Rhea herself, not Maia, could be the real threat.",
-    "counted": 189,
-    "final": false,
+    "wildcards": "Several crews traded jokes about Rommie resembling SG-1's Dr. Lam, swapped Cylon and Replicator theories about Rhea and Maia, and a few proposed an off-menu option to radio McKay or have Rommie dig up the ship's crew manifest instead.",
+    "counted": 212,
+    "final": true,
     "leader": "C",
     "method": "jev",
     "by": "claude-routine"

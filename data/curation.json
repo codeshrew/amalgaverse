@@ -1228,11 +1228,65 @@
       "mission": "The Ghost Ship (Part 4) - \"Unexpected Company\"",
       "missionNumber": 1,
       "part": 4,
-      "title": "First Mission: The Ghost Ship (Part 4) - \"Unexpected Company\"",
+      "heuristic": false,
+      "catalogedBy": "claude-routine",
+      "title": "The Scavenger's Shuttle",
       "question": "What does Kirk do?",
-      "options": [],
+      "options": [
+        {
+          "key": "A",
+          "label": "Kirk — warn scavengers, alert the team",
+          "summary": "Kirk hails the scavengers to warn them off and let them know a rescue is already underway, then alerts the away team to the incoming shuttle, betting a civil warning is enough to stop them.",
+          "keywords": [
+            "hail",
+            "warn them off",
+            "warn the scavengers",
+            "diplomacy",
+            "give warning",
+            "tell them",
+            "rendering aid",
+            "alert the team"
+          ],
+          "letter": "A"
+        },
+        {
+          "key": "B",
+          "label": "Kirk — ready weapons, order them off",
+          "summary": "Kirk hails the scavengers with an ultimatum to recall their shuttle and clear out while readying weapons, risking a fight if they refuse to back down.",
+          "keywords": [
+            "ready weapons",
+            "order them off",
+            "ultimatum",
+            "recall the shuttle",
+            "ready posture",
+            "threaten",
+            "stand down",
+            "weapons hot"
+          ],
+          "letter": "B"
+        },
+        {
+          "key": "C",
+          "label": "Kirk — stay silent, warn the team",
+          "summary": "Kirk keeps comms silent and brings the Enterprise to ready posture while rushing word to the away team, avoiding tipping off the scavengers but giving the team less warning time.",
+          "keywords": [
+            "silent",
+            "comms silent",
+            "ready posture",
+            "stay quiet",
+            "don't hail",
+            "radio silence",
+            "warn team only",
+            "stealth"
+          ],
+          "letter": "C"
+        }
+      ],
       "canon": null,
-      "heuristic": true
+      "awayTeam": [
+        "O'Neill",
+        "Daniel"
+      ]
     }
   }
 }
