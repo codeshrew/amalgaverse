@@ -258,5 +258,19 @@
     "leader": "C",
     "method": "jev",
     "by": "claude-routine"
+  },
+  "2108950936555049454": {
+    "headline": "Crew firmly backs A, with B and C trailing well behind.",
+    "reasons": {
+      "A": "Diplomacy-first readers see this as classic by-the-book Kirk: warn the scavengers and give the away team notice before anyone resorts to force.",
+      "B": "This bloc argues scavengers only respond to a show of force, so readiness and a hard line matter more than a courteous warning.",
+      "C": "Cautious voters want to preserve surprise and avoid tipping off the scavengers, while still getting word to the away team through other channels."
+    },
+    "wildcards": "Several officers want to blend the options, hailing first and escalating to weapons only if rebuffed, and a few flag scanning for cloaked vessels as an added precaution.",
+    "counted": 132,
+    "final": false,
+    "leader": "A",
+    "method": "jev",
+    "by": "claude-routine"
   }
 }
