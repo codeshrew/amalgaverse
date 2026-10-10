@@ -260,14 +260,14 @@
     "by": "claude-routine"
   },
   "2108950936555049454": {
-    "headline": "Crew firmly backs A, with B and C trailing well behind.",
+    "headline": "Diplomatic option A leads by a wide margin, with hard-line B a distant second.",
     "reasons": {
-      "A": "Diplomacy-first readers see this as classic by-the-book Kirk: warn the scavengers and give the away team notice before anyone resorts to force.",
-      "B": "This bloc argues scavengers only respond to a show of force, so readiness and a hard line matter more than a courteous warning.",
-      "C": "Cautious voters want to preserve surprise and avoid tipping off the scavengers, while still getting word to the away team through other channels."
+      "A": "Most crews read this as the by-the-book Kirk move: warn the scavengers fairly, alert the away team, and keep weapons ready only as a backup.",
+      "B": "A vocal minority wants Kirk to open from strength, pairing the warning with readied weapons so the scavengers take the threat seriously.",
+      "C": "A smaller group argues staying silent denies the scavengers useful information and preserves the away team's element of surprise."
     },
-    "wildcards": "Several officers want to blend the options, hailing first and escalating to weapons only if rebuffed, and a few flag scanning for cloaked vessels as an added precaution.",
-    "counted": 132,
+    "wildcards": "A running debate compares the scavenger ship to Firefly's Reavers and argues over whether the cautious choice is really Kirk or secretly Picard.",
+    "counted": 178,
     "final": false,
     "leader": "A",
     "method": "jev",
