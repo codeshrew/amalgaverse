@@ -260,16 +260,30 @@
     "by": "claude-routine"
   },
   "2108950936555049454": {
-    "headline": "Diplomacy leads as fans back Kirk's by-the-book warning to the scavengers.",
+    "headline": "Kirk warned the scavengers and alerted the away team by a wide margin.",
     "reasons": {
-      "A": "Fans see warning the scavengers while alerting the away team as the diplomatic, by-the-book Kirk move, especially since the scavengers can likely already see the Enterprise.",
-      "B": "Fans argue scavengers only respect strength, so Kirk should ready weapons and order them off before they can threaten the away team.",
-      "C": "Fans favor staying quiet to avoid tipping off the scavengers, preserving the away team's element of surprise while they're still briefed."
+      "A": "Most of the crew called this the most complete option, letting Kirk warn the scavengers off diplomatically while still giving the away team time to prepare.",
+      "B": "This camp argued scavengers only respect strength and pushed for an immediate show of force to protect the away team, even risking a fight.",
+      "C": "A smaller group preferred silence to avoid tipping off the scavengers, betting the element of surprise mattered more than a warning."
     },
-    "wildcards": "A few crew pitch doing A and B together, guess the scavengers are Reavers, Ravagers or Orions, and keep tipping their hats to that G'Kar line.",
-    "counted": 203,
-    "final": false,
+    "wildcards": "A few fans floated combining A and B outright, and plenty went off-script to praise the G'Kar dialogue and compare the scavenger ship to Firefly's Reavers.",
+    "counted": 235,
+    "final": true,
     "leader": "A",
+    "method": "jev",
+    "by": "claude-routine"
+  },
+  "2109313324588667208": {
+    "headline": "Fans favor talking to the scavengers, with letting them pass well behind.",
+    "reasons": {
+      "A": "The few backing a strike see no time to negotiate with the reactor core counting down and want the away team moving fast.",
+      "B": "Backers of letting them pass want to dodge a fight they can't win and regroup with the rest of the team instead.",
+      "C": "Most fans want Jack and Daniel to warn the scavengers about the core breach, betting a shared deadline buys a peaceful way through."
+    },
+    "wildcards": "A few fans picked purely on a joke (one went with C simply because \"C is for cookie\"), and several worried aloud that the pair left Rhea behind.",
+    "counted": 63,
+    "final": false,
+    "leader": "C",
     "method": "jev",
     "by": "claude-routine"
   }

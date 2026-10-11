@@ -1294,42 +1294,68 @@
       "mission": "The Ghost Ship (Part 4) - \"The Advance Team\"",
       "missionNumber": 1,
       "part": 4,
-      "title": "First Mission: The Ghost Ship (Part 4) - \"The Advance Team\"",
+      "title": "The Advance Team",
       "question": "What do Jack and Daniel do?",
       "options": [
         {
           "key": "A",
-          "letter": "A",
-          "label": "Hit them now while they have the cover advantage",
-          "summary": "Hit them now while they have the cover advantage.  But this puts the scavengers between you and the jumper.",
+          "label": "Jack & Daniel — strike first",
+          "summary": "Hit the scavenger team now while the cover advantage is theirs, but risk getting cut off from the jumper.",
           "keywords": [
-            "option a",
-            "a."
-          ]
+            "hit them now",
+            "ambush",
+            "attack first",
+            "strike first",
+            "cover advantage",
+            "shoot",
+            "fight",
+            "surprise attack"
+          ],
+          "letter": "A"
         },
         {
           "key": "B",
-          "letter": "B",
-          "label": "Let them pass",
-          "summary": "Let them pass.  But this puts the scavengers between you and the rest of the away team.",
+          "label": "Jack & Daniel — let them pass",
+          "summary": "Let the scavengers pass unnoticed, but risk being cut off from the rest of the away team.",
           "keywords": [
-            "option b",
-            "b."
-          ]
+            "let them pass",
+            "avoid them",
+            "sneak by",
+            "hide",
+            "stay hidden",
+            "let them go",
+            "stealth"
+          ],
+          "letter": "B"
         },
         {
           "key": "C",
-          "letter": "C",
-          "label": "Talk to them",
-          "summary": "Talk to them.  Warn them that the ship is about to go critical.  You lose the advantage of surprise but could defuse the situation without firing a shot.",
+          "label": "Jack & Daniel — talk them down",
+          "summary": "Warn the scavengers the ship is about to go critical, trading the element of surprise for a shot at avoiding a firefight.",
           "keywords": [
-            "option c",
-            "c."
-          ]
+            "talk to them",
+            "warn them",
+            "negotiate",
+            "diplomacy",
+            "defuse",
+            "talk first",
+            "warn critical",
+            "core breach"
+          ],
+          "letter": "C"
         }
       ],
       "canon": null,
-      "heuristic": true
+      "heuristic": false,
+      "catalogedBy": "claude-routine",
+      "awayTeam": [
+        "Jack",
+        "Daniel",
+        "Rommie",
+        "McKay",
+        "Maia",
+        "Rhea"
+      ]
     }
   }
 }
