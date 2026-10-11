@@ -274,14 +274,14 @@
     "by": "claude-routine"
   },
   "2109313324588667208": {
-    "headline": "Fans favor talking to the scavengers, with letting them pass well behind.",
+    "headline": "Talking them down leads decisively, with letting them pass a distant second.",
     "reasons": {
-      "A": "The few backing a strike see no time to negotiate with the reactor core counting down and want the away team moving fast.",
-      "B": "Backers of letting them pass want to dodge a fight they can't win and regroup with the rest of the team instead.",
-      "C": "Most fans want Jack and Daniel to warn the scavengers about the core breach, betting a shared deadline buys a peaceful way through."
+      "A": "Backers want to exploit the cover advantage and strike before the core's countdown costs them the opening.",
+      "B": "Supporters favor caution against a larger, armed group, letting the scavengers walk by unnoticed while the team radios a warning ahead.",
+      "C": "Most reason that warning the scavengers about the core breach avoids a losing firefight, fits how Jack and Daniel operate, and may win the scavengers over without a shot fired."
     },
-    "wildcards": "A few fans picked purely on a joke (one went with C simply because \"C is for cookie\"), and several worried aloud that the pair left Rhea behind.",
-    "counted": 63,
+    "wildcards": "A few fans float a hybrid of letting them pass and then ambushing from behind, and several worry less about the scavengers than about Rhea, left stowed in a supply closet.",
+    "counted": 105,
     "final": false,
     "leader": "C",
     "method": "jev",
