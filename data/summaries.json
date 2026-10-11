@@ -260,14 +260,14 @@
     "by": "claude-routine"
   },
   "2108950936555049454": {
-    "headline": "Diplomatic option A leads by a wide margin, with hard-line B a distant second.",
+    "headline": "Diplomacy leads as fans back Kirk's by-the-book warning to the scavengers.",
     "reasons": {
-      "A": "Most crews read this as the by-the-book Kirk move: warn the scavengers fairly, alert the away team, and keep weapons ready only as a backup.",
-      "B": "A vocal minority wants Kirk to open from strength, pairing the warning with readied weapons so the scavengers take the threat seriously.",
-      "C": "A smaller group argues staying silent denies the scavengers useful information and preserves the away team's element of surprise."
+      "A": "Fans see warning the scavengers while alerting the away team as the diplomatic, by-the-book Kirk move, especially since the scavengers can likely already see the Enterprise.",
+      "B": "Fans argue scavengers only respect strength, so Kirk should ready weapons and order them off before they can threaten the away team.",
+      "C": "Fans favor staying quiet to avoid tipping off the scavengers, preserving the away team's element of surprise while they're still briefed."
     },
-    "wildcards": "A running debate compares the scavenger ship to Firefly's Reavers and argues over whether the cautious choice is really Kirk or secretly Picard.",
-    "counted": 178,
+    "wildcards": "A few crew pitch doing A and B together, guess the scavengers are Reavers, Ravagers or Orions, and keep tipping their hats to that G'Kar line.",
+    "counted": 203,
     "final": false,
     "leader": "A",
     "method": "jev",
