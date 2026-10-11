@@ -274,14 +274,14 @@
     "by": "claude-routine"
   },
   "2109313324588667208": {
-    "headline": "Talking them down leads decisively, with letting them pass a distant second.",
+    "headline": "Talk-first option C holds a commanding lead, with B a distant second and A trailing.",
     "reasons": {
-      "A": "Backers want to exploit the cover advantage and strike before the core's countdown costs them the opening.",
-      "B": "Supporters favor caution against a larger, armed group, letting the scavengers walk by unnoticed while the team radios a warning ahead.",
-      "C": "Most reason that warning the scavengers about the core breach avoids a losing firefight, fits how Jack and Daniel operate, and may win the scavengers over without a shot fired."
+      "A": "Strikers argue the cover advantage and the ticking core clock favor hitting the scavengers now, before they can regroup or shoot first themselves.",
+      "B": "Advocates want to stay hidden while outnumbered, warning the rest of the away team by radio and keeping the option to flank the scavengers from behind.",
+      "C": "Most voters trust Daniel to talk the scavengers down, reasoning that a core breach gives everyone a shared reason to stand down without a fight, and that it fits how Jack and Daniel actually operate."
     },
-    "wildcards": "A few fans float a hybrid of letting them pass and then ambushing from behind, and several worry less about the scavengers than about Rhea, left stowed in a supply closet.",
-    "counted": 105,
+    "wildcards": "A few voters worry the plan leaves Rhea stranded in the utility room, and one write-in floated letting the scavengers pass only to shoot them in the back.",
+    "counted": 156,
     "final": false,
     "leader": "C",
     "method": "jev",
