@@ -1,6 +1,6 @@
 {
   "_readme": "Hand-curated story structure. The updater fills in anything missing (marked \"auto\": true) and never overwrites entries you edit here unless they are still auto. 'canon' = the option the story actually followed (from the next post).",
-  "head": "2108950936555049454",
+  "head": "2109313324588667208",
   "beats": {
     "2101703241687863782": {
       "kind": "briefing",
@@ -1287,6 +1287,49 @@
         "O'Neill",
         "Daniel"
       ]
+    },
+    "2109313324588667208": {
+      "auto": true,
+      "kind": "decision",
+      "mission": "The Ghost Ship (Part 4) - \"The Advance Team\"",
+      "missionNumber": 1,
+      "part": 4,
+      "title": "First Mission: The Ghost Ship (Part 4) - \"The Advance Team\"",
+      "question": "What do Jack and Daniel do?",
+      "options": [
+        {
+          "key": "A",
+          "letter": "A",
+          "label": "Hit them now while they have the cover advantage",
+          "summary": "Hit them now while they have the cover advantage.  But this puts the scavengers between you and the jumper.",
+          "keywords": [
+            "option a",
+            "a."
+          ]
+        },
+        {
+          "key": "B",
+          "letter": "B",
+          "label": "Let them pass",
+          "summary": "Let them pass.  But this puts the scavengers between you and the rest of the away team.",
+          "keywords": [
+            "option b",
+            "b."
+          ]
+        },
+        {
+          "key": "C",
+          "letter": "C",
+          "label": "Talk to them",
+          "summary": "Talk to them.  Warn them that the ship is about to go critical.  You lose the advantage of surprise but could defuse the situation without firing a shot.",
+          "keywords": [
+            "option c",
+            "c."
+          ]
+        }
+      ],
+      "canon": null,
+      "heuristic": true
     }
   }
 }
