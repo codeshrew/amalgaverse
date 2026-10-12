@@ -274,14 +274,14 @@
     "by": "claude-routine"
   },
   "2109313324588667208": {
-    "headline": "Talk-first option C holds a commanding lead, with B a distant second and A trailing.",
+    "headline": "C holds a commanding lead over B's caution, with A's strike-first trailing.",
     "reasons": {
-      "A": "Strikers argue the cover advantage and the ticking core clock favor hitting the scavengers now, before they can regroup or shoot first themselves.",
-      "B": "Advocates want to stay hidden while outnumbered, warning the rest of the away team by radio and keeping the option to flank the scavengers from behind.",
-      "C": "Most voters trust Daniel to talk the scavengers down, reasoning that a core breach gives everyone a shared reason to stand down without a fight, and that it fits how Jack and Daniel actually operate."
+      "A": "Backers want to exploit the cover advantage and the ticking clock before the scavengers can react.",
+      "B": "Backers see the team as outnumbered and favor stealth, planning to warn the rest of the away team and flank from behind.",
+      "C": "Most backers trust Daniel to talk the scavengers down, buying Rommie and McKay time without risking a firefight."
     },
-    "wildcards": "A few voters worry the plan leaves Rhea stranded in the utility room, and one write-in floated letting the scavengers pass only to shoot them in the back.",
-    "counted": 156,
+    "wildcards": "Several voters keep worrying aloud that Rhea was left behind in the utility closet, and one joker floats shooting the scavengers in the back after letting them pass, even though that isn't on the ballot.",
+    "counted": 181,
     "final": false,
     "leader": "C",
     "method": "jev",
