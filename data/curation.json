@@ -1363,11 +1363,52 @@
       "mission": "The Ghost Ship (Part 5) - \"Skitters\"",
       "missionNumber": 1,
       "part": 4,
-      "title": "First Mission: The Ghost Ship (Part 5) - \"Skitters\"",
-      "question": null,
-      "options": [],
+      "title": "Maia's Last Duty",
+      "question": "Do Jack and Daniel convince Maia to come with them, or take her offer and abandon ship without her?",
+      "options": [
+        {
+          "key": "A",
+          "label": "Jack & Daniel — bring Maia along",
+          "summary": "They argue Maia should escape with them since she's proven herself, spending time they may not have while the scavengers could still regroup.",
+          "keywords": [
+            "convince her",
+            "bring maia along",
+            "dont leave her",
+            "trust maia",
+            "save maia",
+            "take her with us",
+            "rescue maia",
+            "together"
+          ],
+          "letter": "A"
+        },
+        {
+          "key": "B",
+          "label": "Jack & Daniel — leave Maia, escape now",
+          "summary": "They take Maia's offer and run for the jumper, leaving her to hold the bay alone and gambling that abandoning her won't cost them later.",
+          "keywords": [
+            "leave her behind",
+            "take the offer",
+            "escape now",
+            "abandon maia",
+            "no time to waste",
+            "go without her",
+            "let her stay",
+            "get out"
+          ],
+          "letter": "B"
+        }
+      ],
       "canon": null,
-      "heuristic": true
+      "heuristic": false,
+      "catalogedBy": "claude-routine",
+      "awayTeam": [
+        "Jack",
+        "Daniel",
+        "Rommie",
+        "McKay",
+        "Maia"
+      ]
     }
   }
 }

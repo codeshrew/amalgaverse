@@ -274,15 +274,15 @@
     "by": "claude-routine"
   },
   "2109313324588667208": {
-    "headline": "Diplomacy holds a commanding lead: C out front of B, with A trailing.",
+    "headline": "Diplomacy won decisively: C held a wide lead over B, with A trailing.",
     "reasons": {
-      "A": "They'd rather strike now while they have the drop on the scavengers than gamble on talk, even knowing it could cut them off from the jumper.",
-      "B": "Staying hidden keeps the team's position secret and lets them warn the rest of the away team by radio, with some hoping to flank the scavengers from behind later.",
-      "C": "With the reactor on a countdown, picking a fight wastes time they don't have, and it fits how Jack and Daniel operate — try words first, keep weapons ready in case it goes wrong."
+      "A": "Supporters wanted to use the cover advantage and the ticking clock to end the threat fast, trusting Jack and Daniel to drop the mercs before anyone could regroup.",
+      "B": "Supporters judged the pair too outnumbered to fight or bluff, favoring a quiet retreat that let them warn the rest of the team and box the scavengers in from both sides.",
+      "C": "Supporters trusted Daniel's read that scavengers after loot, not a fight, would leave once told the core was minutes from going critical, buying time without a shot fired."
     },
-    "wildcards": "A running joke that C is the default pick whenever fans can't decide, plus a side debate about why Rhea was left behind in a utility closet and whether the scavengers will even believe the warning.",
-    "counted": 203,
-    "final": false,
+    "wildcards": "Several crews kept circling back to Rhea left behind in the utility room, and one suggested letting the scavengers pass just to shoot them in the back and steal their shuttle.",
+    "counted": 204,
+    "final": true,
     "leader": "C",
     "method": "jev",
     "by": "claude-routine"
