@@ -274,14 +274,14 @@
     "by": "claude-routine"
   },
   "2109313324588667208": {
-    "headline": "C holds a commanding lead over B's caution, with A's strike-first trailing.",
+    "headline": "Diplomacy holds a commanding lead: C out front of B, with A trailing.",
     "reasons": {
-      "A": "Backers want to exploit the cover advantage and the ticking clock before the scavengers can react.",
-      "B": "Backers see the team as outnumbered and favor stealth, planning to warn the rest of the away team and flank from behind.",
-      "C": "Most backers trust Daniel to talk the scavengers down, buying Rommie and McKay time without risking a firefight."
+      "A": "They'd rather strike now while they have the drop on the scavengers than gamble on talk, even knowing it could cut them off from the jumper.",
+      "B": "Staying hidden keeps the team's position secret and lets them warn the rest of the away team by radio, with some hoping to flank the scavengers from behind later.",
+      "C": "With the reactor on a countdown, picking a fight wastes time they don't have, and it fits how Jack and Daniel operate — try words first, keep weapons ready in case it goes wrong."
     },
-    "wildcards": "Several voters keep worrying aloud that Rhea was left behind in the utility closet, and one joker floats shooting the scavengers in the back after letting them pass, even though that isn't on the ballot.",
-    "counted": 181,
+    "wildcards": "A running joke that C is the default pick whenever fans can't decide, plus a side debate about why Rhea was left behind in a utility closet and whether the scavengers will even believe the warning.",
+    "counted": 203,
     "final": false,
     "leader": "C",
     "method": "jev",
