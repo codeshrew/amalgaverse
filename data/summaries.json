@@ -286,5 +286,18 @@
     "leader": "C",
     "method": "jev",
     "by": "claude-routine"
+  },
+  "2109675713590927614": {
+    "headline": "Crew favors bringing Maia aboard, A holding a wide lead over B.",
+    "reasons": {
+      "A": "They trust Maia has proven herself and want her help and intel against Rhea and the scavengers.",
+      "B": "They see Maia as untrustworthy corporate property and want a clean, fast escape without further risk."
+    },
+    "wildcards": "Several voices care less about Maia than about the still-missing Rhea, and one write-in proposes grabbing the girl and splitting off from Maia entirely.",
+    "counted": 90,
+    "final": false,
+    "leader": "A",
+    "method": "jev",
+    "by": "claude-routine"
   }
 }
