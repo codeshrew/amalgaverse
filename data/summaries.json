@@ -288,14 +288,14 @@
     "by": "claude-routine"
   },
   "2109675713590927614": {
-    "headline": "Crew favors bringing Maia aboard, A holding a wide lead over B.",
+    "headline": "Crew voted decisively to bring Maia along, trusting she'd earned it.",
     "reasons": {
-      "A": "They trust Maia has proven herself and want her help and intel against Rhea and the scavengers.",
-      "B": "They see Maia as untrustworthy corporate property and want a clean, fast escape without further risk."
+      "A": "Most argued Maia had proven herself and would be valuable aboard, both as an ally and as a source on the still-missing Rhea.",
+      "B": "Dissenters cited lingering distrust of a Traugott asset and too many open questions about Rhea to risk bringing her aboard."
     },
-    "wildcards": "Several voices care less about Maia than about the still-missing Rhea, and one write-in proposes grabbing the girl and splitting off from Maia entirely.",
-    "counted": 90,
-    "final": false,
+    "wildcards": "A handful of fans floated a third option to chase down Rhea instead, and the jokes ran toward building a loyal android of their own and comparing Maia's programming to a toaster that can't defy its wiring.",
+    "counted": 113,
+    "final": true,
     "leader": "A",
     "method": "jev",
     "by": "claude-routine"

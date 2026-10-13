@@ -1416,11 +1416,68 @@
       "mission": "The Ghost Ship (Part 5) - \"The Escape\"",
       "missionNumber": 1,
       "part": 4,
-      "title": "First Mission: The Ghost Ship (Part 5) - \"The Escape\"",
-      "question": "What does O’Neill do?",
-      "options": [],
       "canon": null,
-      "heuristic": true
+      "heuristic": false,
+      "catalogedBy": "claude-routine",
+      "title": "The Entity's Reach",
+      "question": "As the spatial anomaly reaches for the fleeing jumper, what does O'Neill do?",
+      "options": [
+        {
+          "key": "A",
+          "label": "O'Neill — fire the drones",
+          "summary": "He opens up with the jumper's drone weapons, betting raw firepower can stop the entity before it closes the distance, though no one knows if it fights like a normal threat.",
+          "keywords": [
+            "fire",
+            "drones",
+            "shoot",
+            "attack",
+            "weapons",
+            "blast",
+            "defend",
+            "fight"
+          ],
+          "letter": "A"
+        },
+        {
+          "key": "B",
+          "label": "O'Neill — cloak and evade",
+          "summary": "He engages the cloak and tries to slip past unnoticed, trading a fight for stealth and hoping the entity can't sense what it can't see.",
+          "keywords": [
+            "cloak",
+            "evade",
+            "stealth",
+            "hide",
+            "sneak",
+            "invisible",
+            "dodge",
+            "run"
+          ],
+          "letter": "B"
+        },
+        {
+          "key": "C",
+          "label": "O'Neill — punch straight through it",
+          "summary": "He guns the jumper straight at the entity, gambling that speed and nerve get them clear before it can close its hand around them.",
+          "keywords": [
+            "punch",
+            "through",
+            "ram",
+            "ramming",
+            "force",
+            "charge",
+            "breakthrough",
+            "speed"
+          ],
+          "letter": "C"
+        }
+      ],
+      "awayTeam": [
+        "Jack",
+        "Daniel",
+        "Rommie",
+        "Rodney",
+        "Maia"
+      ]
     }
   }
 }
