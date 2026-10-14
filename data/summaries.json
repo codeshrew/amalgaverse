@@ -315,14 +315,14 @@
     "by": "claude-routine"
   },
   "2110400488437112839": {
-    "headline": "Return fire leads, with breaking off to warp a distant second.",
+    "headline": "Return fire leads 60 to 44, with break off to warp a close second and hailing them trailing at 15.",
     "reasons": {
-      "A": "Most of the fleet says the scavengers already fired first and showed no interest in talking, so returning fire is simple justice and a chance to set the Enterprise's reputation in this new universe.",
-      "B": "A small group still wants to try hailing, reasoning both ships are endangered by the entity and a shared threat is grounds for one more attempt at peace.",
-      "C": "Others argue the mission here is already done, the freighter is gone, and lingering near an unknown entity to trade fire with scavengers risks a fight on two fronts the crew doesn't need."
+      "A": "Talking already failed and the scavengers fired first, so the fleet wants to hit back hard and put the raiders on notice.",
+      "B": "A smaller contingent still wants to open a channel first, reasoning the scavengers may listen once blame for the freighter is cleared up.",
+      "C": "With the away team already recovered, many argue there is nothing left to gain by fighting and staying risks drawing the entity's attention."
     },
-    "wildcards": "A few crews split the difference, proposing to disable weapons first and talk after, or fire and then warp away once the scavengers are dealt with, and one reply can't resist riffing on the entity's own interrupted line about being \"fuuuu-scinating.\"",
-    "counted": 57,
+    "wildcards": "Several fans propose hybrid sequences rather than a single pick, such as hailing first and only firing if ignored, or disabling weapons before retreating, and more than one voter jokes that Kirk would never choose the diplomatic option Picard would.",
+    "counted": 119,
     "final": false,
     "leader": "A",
     "method": "jev",
