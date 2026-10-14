@@ -301,14 +301,14 @@
     "by": "claude-routine"
   },
   "2110038100374409553": {
-    "headline": "Cloak and evade leads by a landslide, 157 to 17 to 7.",
+    "headline": "Cloak and evade is running away with it, drones and a dead-ahead charge trail far behind.",
     "reasons": {
-      "A": "A minority wants O'Neill to hit back with drones now rather than gamble on stealth or a risky ram against an unknown threat.",
-      "B": "The fleet overwhelmingly favors caution, arguing no one knows if weapons or a straight run will work on the entity, so cloaking and slipping away preserves the jumper and its drones until they're safely back at the Enterprise.",
-      "C": "A handful back punching straight through, betting on the jumper's speed and nerve to clear the entity before it can close in."
+      "A": "A smaller contingent says the fleet already watched this thing disable a ship and would rather Jack hit first than find out what it can do up close.",
+      "B": "Most of the fleet has no idea what the entity even is, so they'd rather vanish than test weapons or hulls against an unknown that already stopped one ship cold.",
+      "C": "A few note the anomaly caught the freighter without destroying it and bet speed gets the jumper clear faster than hiding would."
     },
-    "wildcards": "Several fans float combination plays, like firing a drone before cloaking, or cloaking then ramming if that fails, and more than one suspect the entity may be Rhea herself.",
-    "counted": 181,
+    "wildcards": "Side chatter ranges from Star Trek and Doctor Strange comparisons to theories tying the entity back to Rhea, plus running jokes about a nonexistent option D to just stare at the pretty colors.",
+    "counted": 197,
     "final": false,
     "leader": "B",
     "method": "jev",
