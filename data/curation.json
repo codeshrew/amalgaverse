@@ -1485,42 +1485,61 @@
       "mission": "The Ghost Ship (Part 5) - \"The Last of the Waldorf Astoria\"",
       "missionNumber": 1,
       "part": 4,
-      "title": "First Mission: The Ghost Ship (Part 5) - \"The Last of the Waldorf Astoria\"",
-      "question": "Kirk grips the arm of his chair and leans forward.  What does he do?",
+      "canon": null,
+      "heuristic": false,
+      "catalogedBy": "claude-routine",
+      "title": "The Second Volley",
+      "question": "As the scavenger cruiser lines up another volley, what does Kirk order?",
       "options": [
         {
           "key": "A",
-          "letter": "A",
-          "label": "Return fire",
-          "summary": "Return fire.  Ready phasers and photon torpedoes and show them what a Galaxy-class can do.",
+          "label": "Kirk — return fire with everything",
+          "summary": "Readies phasers and photon torpedoes to fight back, risking a drawn-out battle against an opponent already proven hostile.",
           "keywords": [
-            "option a",
-            "a."
-          ]
+            "return fire",
+            "phasers",
+            "torpedoes",
+            "fight back",
+            "attack",
+            "shoot them",
+            "galaxy class",
+            "weapons hot"
+          ],
+          "letter": "A"
         },
         {
           "key": "B",
-          "letter": "B",
-          "label": "Hail them",
-          "summary": "Hail them. Explain you didn’t destroy the freighter, and this fight helps no one.",
+          "label": "Kirk — hail and explain",
+          "summary": "Opens a channel to deny blame for the freighter's loss, betting the scavengers will listen instead of firing again.",
           "keywords": [
-            "option b",
-            "b."
-          ]
+            "hail them",
+            "talk",
+            "negotiate",
+            "explain",
+            "de-escalate",
+            "diplomacy",
+            "ceasefire",
+            "communicate"
+          ],
+          "letter": "B"
         },
         {
           "key": "C",
-          "letter": "C",
-          "label": "Go to warp",
-          "summary": "Go to warp.  Break off and leave the scavengers, the entity, and the dying freighter behind.",
+          "label": "Kirk — break off to warp",
+          "summary": "Jumps to warp and abandons the scavengers, the entity, and the dying freighter, trading a fight for distance.",
           "keywords": [
-            "option c",
-            "c."
-          ]
+            "go to warp",
+            "flee",
+            "retreat",
+            "leave",
+            "break off",
+            "escape",
+            "warp away",
+            "disengage"
+          ],
+          "letter": "C"
         }
-      ],
-      "canon": null,
-      "heuristic": true
+      ]
     }
   }
 }

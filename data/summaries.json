@@ -301,16 +301,30 @@
     "by": "claude-routine"
   },
   "2110038100374409553": {
-    "headline": "Cloak and evade is running away with it, drones and a dead-ahead charge trail far behind.",
+    "headline": "Cloak and evade won decisively, drones and ramming far behind.",
     "reasons": {
-      "A": "A smaller contingent says the fleet already watched this thing disable a ship and would rather Jack hit first than find out what it can do up close.",
-      "B": "Most of the fleet has no idea what the entity even is, so they'd rather vanish than test weapons or hulls against an unknown that already stopped one ship cold.",
-      "C": "A few note the anomaly caught the freighter without destroying it and bet speed gets the jumper clear faster than hiding would."
+      "A": "A minority wanted the drones fired, reasoning the jumper had no better way to test or stop an unknown entity before it closed the distance.",
+      "B": "The fleet overwhelmingly favored stealth, arguing nothing was known about the entity's nature or capabilities and that weapons could prove useless or provoke it, so slipping away quietly was the safer bet while Ancient cloaking tech went untested.",
+      "C": "A handful pushed to punch through, betting on speed over stealth or hoping the entity's link to the freighter and the Amalgaverse itself was worth the risk of a closer look."
     },
-    "wildcards": "Side chatter ranges from Star Trek and Doctor Strange comparisons to theories tying the entity back to Rhea, plus running jokes about a nonexistent option D to just stare at the pretty colors.",
-    "counted": 197,
-    "final": false,
+    "wildcards": "Several crews proposed a fallback chain rather than a single choice, cloaking first and only firing drones or ramming through if that failed, and more than one aside wondered aloud whether Rhea and the entity were one and the same.",
+    "counted": 232,
+    "final": true,
     "leader": "B",
+    "method": "jev",
+    "by": "claude-routine"
+  },
+  "2110400488437112839": {
+    "headline": "Return fire leads, with breaking off to warp a distant second.",
+    "reasons": {
+      "A": "Most of the fleet says the scavengers already fired first and showed no interest in talking, so returning fire is simple justice and a chance to set the Enterprise's reputation in this new universe.",
+      "B": "A small group still wants to try hailing, reasoning both ships are endangered by the entity and a shared threat is grounds for one more attempt at peace.",
+      "C": "Others argue the mission here is already done, the freighter is gone, and lingering near an unknown entity to trade fire with scavengers risks a fight on two fronts the crew doesn't need."
+    },
+    "wildcards": "A few crews split the difference, proposing to disable weapons first and talk after, or fire and then warp away once the scavengers are dealt with, and one reply can't resist riffing on the entity's own interrupted line about being \"fuuuu-scinating.\"",
+    "counted": 57,
+    "final": false,
+    "leader": "A",
     "method": "jev",
     "by": "claude-routine"
   }
