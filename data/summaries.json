@@ -329,13 +329,13 @@
     "by": "claude-routine"
   },
   "2110762876583420263": {
-    "headline": "Fleet overwhelmingly backs A: welcome Maia aboard, 114 to 8",
+    "headline": "Crew holds a commanding lead to invite Maia aboard, 159 to 10.",
     "reasons": {
-      "A": "Teal'c's read on her carries weight, she's passed Rommie's scans and proven useful on the away mission, and with Traugott disowning her, leaving her behind feels like a death sentence.",
-      "B": "Her ties to Traugott are too murky to risk, and the corporation could use her as a plant or come looking for her later."
+      "A": "Most crew trust Teal'c's read on her and point out she's done nothing to betray them, though many still want her watched and her system access restricted at first.",
+      "B": "The holdouts argue too much about Maia and her ties to Traugott remains unknown to risk bringing her aboard."
     },
-    "wildcards": "Plenty of yes-but votes: bring her on but on probation, with limited system access and Odo keeping watch, and several fans are already planning android-bonding episodes between Maia, Data, and Rommie.",
-    "counted": 122,
+    "wildcards": "Recurring jokes about forming an android club with Data and Rommie, feeding her spare batteries, and nervously eyeing a future AI uprising.",
+    "counted": 169,
     "final": false,
     "leader": "A",
     "method": "jev",
