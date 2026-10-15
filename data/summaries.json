@@ -329,13 +329,13 @@
     "by": "claude-routine"
   },
   "2110762876583420263": {
-    "headline": "Crew runs heavily toward welcoming Maia aboard, leaving the drop-off option far behind.",
+    "headline": "Fleet overwhelmingly backs A: welcome Maia aboard, 114 to 8",
     "reasons": {
-      "A": "Most voters are leaning on Teal'c's endorsement and his own history as an outsider, arguing Maia has nowhere else to go and deserves a chance, so long as Odo and Rommie keep a watchful eye on her.",
-      "B": "A smaller group still distrusts Maia, worried she could be tied to the entity or simply more trouble than she's worth, and would rather hand that risk to someone else at the next station."
+      "A": "Teal'c's read on her carries weight, she's passed Rommie's scans and proven useful on the away mission, and with Traugott disowning her, leaving her behind feels like a death sentence.",
+      "B": "Her ties to Traugott are too murky to risk, and the corporation could use her as a plant or come looking for her later."
     },
-    "wildcards": "Several replies turned into jokes — welcoming her with \"fresh batteries,\" asking if she can cook or paint, and nicknaming her \"Blue\" — while others want her kept aboard but with restricted system access until her loyalties are proven.",
-    "counted": 58,
+    "wildcards": "Plenty of yes-but votes: bring her on but on probation, with limited system access and Odo keeping watch, and several fans are already planning android-bonding episodes between Maia, Data, and Rommie.",
+    "counted": 122,
     "final": false,
     "leader": "A",
     "method": "jev",
