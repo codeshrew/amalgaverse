@@ -1,6 +1,6 @@
 {
   "_readme": "Hand-curated story structure. The updater fills in anything missing (marked \"auto\": true) and never overwrites entries you edit here unless they are still auto. 'canon' = the option the story actually followed (from the next post).",
-  "head": "2110400488437112839",
+  "head": "2110762876583420263",
   "beats": {
     "2101703241687863782": {
       "kind": "briefing",
@@ -1485,7 +1485,7 @@
       "mission": "The Ghost Ship (Part 5) - \"The Last of the Waldorf Astoria\"",
       "missionNumber": 1,
       "part": 4,
-      "canon": null,
+      "canon": "A",
       "heuristic": false,
       "catalogedBy": "claude-routine",
       "title": "The Second Volley",
@@ -1540,6 +1540,39 @@
           "letter": "C"
         }
       ]
+    },
+    "2110762876583420263": {
+      "auto": true,
+      "kind": "decision",
+      "mission": "The Ghost Ship (Part 5) - \"Homecoming\"",
+      "missionNumber": 1,
+      "part": 4,
+      "title": "First Mission: The Ghost Ship (Part 5) - \"Homecoming\"",
+      "question": "What do you do?",
+      "options": [
+        {
+          "key": "A",
+          "letter": "A",
+          "label": "Ask Maia to join the crew",
+          "summary": "Ask Maia to join the crew.",
+          "keywords": [
+            "option a",
+            "a."
+          ]
+        },
+        {
+          "key": "B",
+          "letter": "B",
+          "label": "Drop her off at the next space station",
+          "summary": "Drop her off at the next space station.",
+          "keywords": [
+            "option b",
+            "b."
+          ]
+        }
+      ],
+      "canon": null,
+      "heuristic": true
     }
   }
 }
