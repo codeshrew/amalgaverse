@@ -315,14 +315,27 @@
     "by": "claude-routine"
   },
   "2110400488437112839": {
-    "headline": "Return fire holds a solid lead, warp-away a distant second, hailing trails",
+    "headline": "Return fire won decisively, breaking off to warp placed second, hailing them barely registered.",
     "reasons": {
-      "A": "They fired first and already ignored attempts at contact, so fans see no diplomacy left to try and want the scavengers disabled before anything else is discussed.",
-      "B": "A vocal minority insists Kirk tries words before weapons, hailing to clear the Enterprise of blame and see if reason still has a chance.",
-      "C": "Fans worried about the still-unexplained entity argue the freighter is already lost and there is nothing left here worth a fight on two fronts."
+      "A": "Fans argued the scavengers fired first and had already ignored diplomacy, so Kirk returning fire — often with a call to target weapons rather than kill — was the only move in character and the safest way to end the threat now.",
+      "B": "A smaller group held that this is the true, less-impulsive Kirk of the original series, so he would hail and offer one last chance before any shot was fired, with weapons ready only as backup.",
+      "C": "Others felt the freighter and the away team were already safe, so there was nothing left to fight for and warping out kept the Enterprise clear of an unpredictable entity instead of risking a drawn-out battle."
     },
-    "wildcards": "Plenty of fans refuse to pick just one order, chaining B then A then C or pairing A with C as a 'Picard Maneuver,' and the replies keep drifting into jokes about other franchises' captains and a very confused Niagara Falls reference.",
-    "counted": 197,
+    "wildcards": "Several fans proposed sequencing the options rather than picking one — hail first and only fire if ignored, or fire to disable weapons and then offer terms — alongside jokes about rationing photon torpedoes Voyager-style and one enthusiastic shout of \"Twiki: Eat lead, sucker!\"",
+    "counted": 217,
+    "final": true,
+    "leader": "A",
+    "method": "jev",
+    "by": "claude-routine"
+  },
+  "2110762876583420263": {
+    "headline": "Crew runs heavily toward welcoming Maia aboard, leaving the drop-off option far behind.",
+    "reasons": {
+      "A": "Most voters are leaning on Teal'c's endorsement and his own history as an outsider, arguing Maia has nowhere else to go and deserves a chance, so long as Odo and Rommie keep a watchful eye on her.",
+      "B": "A smaller group still distrusts Maia, worried she could be tied to the entity or simply more trouble than she's worth, and would rather hand that risk to someone else at the next station."
+    },
+    "wildcards": "Several replies turned into jokes — welcoming her with \"fresh batteries,\" asking if she can cook or paint, and nicknaming her \"Blue\" — while others want her kept aboard but with restricted system access until her loyalties are proven.",
+    "counted": 58,
     "final": false,
     "leader": "A",
     "method": "jev",

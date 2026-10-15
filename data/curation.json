@@ -1547,32 +1547,47 @@
       "mission": "The Ghost Ship (Part 5) - \"Homecoming\"",
       "missionNumber": 1,
       "part": 4,
-      "title": "First Mission: The Ghost Ship (Part 5) - \"Homecoming\"",
-      "question": "What do you do?",
+      "heuristic": false,
+      "catalogedBy": "claude-routine",
+      "title": "Maia's Invitation",
+      "question": "Does the crew ask Maia to join them, or leave her at the next space station?",
       "options": [
         {
           "key": "A",
-          "letter": "A",
-          "label": "Ask Maia to join the crew",
-          "summary": "Ask Maia to join the crew.",
+          "label": "Crew — invite Maia aboard",
+          "summary": "Takes Teal'c's side and welcomes Maia as crew, trusting her over Odo's doubts even though Traugott has disowned her and her true loyalties are unproven.",
           "keywords": [
-            "option a",
-            "a."
-          ]
+            "join",
+            "crew",
+            "keep her",
+            "welcome aboard",
+            "trust her",
+            "stay",
+            "recruit",
+            "yes",
+            "android",
+            "give her a chance"
+          ],
+          "letter": "A"
         },
         {
           "key": "B",
-          "letter": "B",
-          "label": "Drop her off at the next space station",
-          "summary": "Drop her off at the next space station.",
+          "label": "Crew — drop her at the next station",
+          "summary": "Sides with Odo's suspicion and leaves Maia at the next space station, avoiding the risk she poses but abandoning her with Traugott wanting nothing to do with her.",
           "keywords": [
-            "option b",
-            "b."
-          ]
+            "drop her off",
+            "leave her",
+            "station",
+            "no",
+            "don't trust her",
+            "abandon",
+            "space station",
+            "let her go"
+          ],
+          "letter": "B"
         }
       ],
-      "canon": null,
-      "heuristic": true
+      "canon": null
     }
   }
 }
