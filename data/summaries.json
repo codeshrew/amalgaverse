@@ -315,14 +315,14 @@
     "by": "claude-routine"
   },
   "2110400488437112839": {
-    "headline": "Return fire holds a solid lead, warp-out trails, hailing them stays a distant third.",
+    "headline": "Return fire holds a solid lead, warp-away a distant second, hailing trails",
     "reasons": {
-      "A": "Crew reasoning holds that the scavengers already fired first and ignored earlier contact, so talk is pointless and Kirk's character would answer force with force.",
-      "B": "Supporters want one more hail to put the blame where it belongs and test whether the scavengers will listen, with a return-fire order standing ready if they don't.",
-      "C": "Backers note the away team is already safe aboard, so there's nothing left to gain by fighting and good reason to avoid drawing the entity's attention."
+      "A": "They fired first and already ignored attempts at contact, so fans see no diplomacy left to try and want the scavengers disabled before anything else is discussed.",
+      "B": "A vocal minority insists Kirk tries words before weapons, hailing to clear the Enterprise of blame and see if reason still has a chance.",
+      "C": "Fans worried about the still-unexplained entity argue the freighter is already lost and there is nothing left here worth a fight on two fronts."
     },
-    "wildcards": "Several crew keep framing it as Kirk versus Picard's instincts, and a few float a hybrid order of disabling weapons before jumping to warp, with some wondering if the entity is connected to the android Rhea.",
-    "counted": 174,
+    "wildcards": "Plenty of fans refuse to pick just one order, chaining B then A then C or pairing A with C as a 'Picard Maneuver,' and the replies keep drifting into jokes about other franchises' captains and a very confused Niagara Falls reference.",
+    "counted": 197,
     "final": false,
     "leader": "A",
     "method": "jev",
