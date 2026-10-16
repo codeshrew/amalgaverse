@@ -1,6 +1,6 @@
 {
   "_readme": "Hand-curated story structure. The updater fills in anything missing (marked \"auto\": true) and never overwrites entries you edit here unless they are still auto. 'canon' = the option the story actually followed (from the next post).",
-  "head": "2110762876583420263",
+  "head": "2111125263874695499",
   "beats": {
     "2101703241687863782": {
       "kind": "briefing",
@@ -1587,7 +1587,60 @@
           "letter": "B"
         }
       ],
-      "canon": null
+      "canon": "A"
+    },
+    "2111125263874695499": {
+      "auto": true,
+      "kind": "decision",
+      "mission": "The Ghost Ship (Part 5) - \"Homecoming\"",
+      "missionNumber": 1,
+      "part": 4,
+      "title": "First Mission: The Ghost Ship (Part 5) - \"Homecoming\"",
+      "question": "With your first mission under your belt, it’s time to unwind.  What would you like to do?",
+      "options": [
+        {
+          "key": "A",
+          "letter": "A",
+          "label": "Visit a 1920s Parisian cafe on the holodeck with Garak, D…",
+          "summary": "Visit a 1920s Parisian cafe on the holodeck with Garak, Daniel, and Dr. Fraiser.",
+          "keywords": [
+            "option a",
+            "a."
+          ]
+        },
+        {
+          "key": "B",
+          "letter": "B",
+          "label": "Have a few drinks and take in the view at Ten Forward wit…",
+          "summary": "Have a few drinks and take in the view at Ten Forward with Kirk, Dr. McCoy, Scotty, and Maybourne.",
+          "keywords": [
+            "option b",
+            "b."
+          ]
+        },
+        {
+          "key": "C",
+          "letter": "C",
+          "label": "Relax in the arboretum with a pot of tea and Teal’c, Aery…",
+          "summary": "Relax in the arboretum with a pot of tea and Teal’c, Aeryn Sun, and G’Kar.",
+          "keywords": [
+            "option c",
+            "c."
+          ]
+        },
+        {
+          "key": "D",
+          "letter": "D",
+          "label": "Play poker with O’Neill, Odo, Data, and Sheppard",
+          "summary": "Play poker with O’Neill, Odo, Data, and Sheppard.",
+          "keywords": [
+            "option d",
+            "d."
+          ]
+        }
+      ],
+      "canon": null,
+      "heuristic": true
     }
   }
 }
