@@ -329,13 +329,28 @@
     "by": "claude-routine"
   },
   "2110762876583420263": {
-    "headline": "Crew votes decisively to welcome Maia aboard, 178 to 11.",
+    "headline": "The crew voted overwhelmingly to welcome Maia aboard, leaving suspicion in the minority.",
     "reasons": {
-      "A": "Fans trust Teal'c's read on outsiders and note Maia has done nothing to prove disloyal, so most favor letting her stay, often on a probationary basis with Odo keeping watch.",
-      "B": "A smaller group argues Maia's ties to Traugott and the entity remain too uncertain, and would rather see her dropped at the station than risk it."
+      "A": "Most trusted Teal'c's read on her and saw a stray who had already proven useful, worth welcoming despite Odo's unease.",
+      "B": "A wary minority felt her unproven loyalties and lingering ties to Traugott made her too great a risk to keep aboard."
     },
-    "wildcards": "Several wish for a middle option, like a guest status short of full crew, and more than one joke about how many androids this ship can hold.",
-    "counted": 189,
+    "wildcards": "Many \"A\" votes came with conditions — probation, monitoring, restricted system access — plus recurring jokes about feeding her electricity instead of rations.",
+    "counted": 214,
+    "final": true,
+    "leader": "A",
+    "method": "jev",
+    "by": "claude-routine"
+  },
+  "2111125263874695499": {
+    "headline": "The Parisian cafe leads, poker trails second, drinks and tea tied last.",
+    "reasons": {
+      "A": "Drawn to Garak's intrigue and good conversation with Daniel and Fraiser, fans favor the cafe as a charming, low-stakes way to unwind.",
+      "B": "Fans fancy Ten Forward's view and the prospect of Maybourne rubbing the rest of the group the wrong way over drinks.",
+      "C": "The quieter crowd wants calm company and Teal'c and G'Kar's wisdom over tea in the arboretum.",
+      "D": "Fans are curious how O'Neill, Odo, Data, and Sheppard would play off each other at the card table."
+    },
+    "wildcards": "Happy-birthday wishes to the showrunner ran through many replies, alongside jokes about picking \"all of the above\" and speculation about whether Rhea escaped the Waldorf Astoria.",
+    "counted": 65,
     "final": false,
     "leader": "A",
     "method": "jev",

@@ -1595,52 +1595,78 @@
       "mission": "The Ghost Ship (Part 5) - \"Homecoming\"",
       "missionNumber": 1,
       "part": 4,
-      "title": "First Mission: The Ghost Ship (Part 5) - \"Homecoming\"",
-      "question": "With your first mission under your belt, it’s time to unwind.  What would you like to do?",
+      "heuristic": false,
+      "catalogedBy": "claude-routine",
+      "title": "Shore Leave",
+      "question": "After their first mission, how should the crew spend their downtime?",
       "options": [
         {
           "key": "A",
           "letter": "A",
-          "label": "Visit a 1920s Parisian cafe on the holodeck with Garak, D…",
-          "summary": "Visit a 1920s Parisian cafe on the holodeck with Garak, Daniel, and Dr. Fraiser.",
+          "label": "Parisian cafe with Garak, Daniel, Fraiser",
+          "summary": "A relaxed evening in a 1920s Parisian holodeck cafe with Garak, Daniel, and Dr. Fraiser — low-key, though Garak's company rarely stays simple.",
           "keywords": [
-            "option a",
-            "a."
+            "holodeck",
+            "cafe",
+            "paris",
+            "parisian",
+            "1920s",
+            "garak",
+            "daniel",
+            "fraiser",
+            "coffee"
           ]
         },
         {
           "key": "B",
           "letter": "B",
-          "label": "Have a few drinks and take in the view at Ten Forward wit…",
-          "summary": "Have a few drinks and take in the view at Ten Forward with Kirk, Dr. McCoy, Scotty, and Maybourne.",
+          "label": "Drinks at Ten Forward with Kirk's crew",
+          "summary": "Drinks and conversation at Ten Forward with Kirk, McCoy, Scotty, and Maybourne — convivial, though Maybourne's presence could stir trouble.",
           "keywords": [
-            "option b",
-            "b."
+            "ten forward",
+            "drinks",
+            "kirk",
+            "mccoy",
+            "scotty",
+            "maybourne",
+            "bar",
+            "view"
           ]
         },
         {
           "key": "C",
           "letter": "C",
-          "label": "Relax in the arboretum with a pot of tea and Teal’c, Aery…",
-          "summary": "Relax in the arboretum with a pot of tea and Teal’c, Aeryn Sun, and G’Kar.",
+          "label": "Tea in the arboretum with Teal'c, Aeryn",
+          "summary": "Quiet tea in the arboretum with Teal'c, Aeryn Sun, and G'Kar — the calmest option, with little dramatic upside.",
           "keywords": [
-            "option c",
-            "c."
+            "arboretum",
+            "tea",
+            "teal'c",
+            "aeryn",
+            "g'kar",
+            "garden",
+            "relax",
+            "quiet"
           ]
         },
         {
           "key": "D",
           "letter": "D",
-          "label": "Play poker with O’Neill, Odo, Data, and Sheppard",
-          "summary": "Play poker with O’Neill, Odo, Data, and Sheppard.",
+          "label": "Poker night with O'Neill, Odo, Data, Sheppard",
+          "summary": "A poker game with O'Neill, Odo, Data, and Sheppard — good for banter and bluffing, with Data's unreadable tells as the wildcard.",
           "keywords": [
-            "option d",
-            "d."
+            "poker",
+            "cards",
+            "o'neill",
+            "odo",
+            "data",
+            "sheppard",
+            "gamble",
+            "bluff"
           ]
         }
       ],
-      "canon": null,
-      "heuristic": true
+      "canon": null
     }
   }
 }
