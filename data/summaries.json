@@ -342,15 +342,15 @@
     "by": "claude-routine"
   },
   "2111125263874695499": {
-    "headline": "The Parisian cafe leads, poker trails second, drinks and tea tied last.",
+    "headline": "A leads with 40, D trails at 33, B and C tied at 17.",
     "reasons": {
-      "A": "Drawn to Garak's intrigue and good conversation with Daniel and Fraiser, fans favor the cafe as a charming, low-stakes way to unwind.",
-      "B": "Fans fancy Ten Forward's view and the prospect of Maybourne rubbing the rest of the group the wrong way over drinks.",
-      "C": "The quieter crowd wants calm company and Teal'c and G'Kar's wisdom over tea in the arboretum.",
-      "D": "Fans are curious how O'Neill, Odo, Data, and Sheppard would play off each other at the card table."
+      "A": "Fans mostly want to watch Garak work his angles on Daniel, with the Parisian setting and Frasier's company as a bonus.",
+      "B": "Voters are drawn to the view and the drinking company, several admitting Maybourne's presence is the real entertainment.",
+      "C": "Crew favor the arboretum for its calm and for the chance to hear Teal'c and G'Kar's perspectives over tea.",
+      "D": "Poker wins votes for the banter, with O'Neill's sarcasm and Data's unreadable tells cited as the draw."
     },
-    "wildcards": "Happy-birthday wishes to the showrunner ran through many replies, alongside jokes about picking \"all of the above\" and speculation about whether Rhea escaped the Waldorf Astoria.",
-    "counted": 65,
+    "wildcards": "A few fans wrote in their own fifth option, a lab session with Carter, and the thread doubled as a birthday card for Joseph Mallozzi.",
+    "counted": 107,
     "final": false,
     "leader": "A",
     "method": "jev",
