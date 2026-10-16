@@ -329,13 +329,13 @@
     "by": "claude-routine"
   },
   "2110762876583420263": {
-    "headline": "Crew holds a commanding lead to invite Maia aboard, 159 to 10.",
+    "headline": "Crew votes decisively to welcome Maia aboard, 178 to 11.",
     "reasons": {
-      "A": "Most crew trust Teal'c's read on her and point out she's done nothing to betray them, though many still want her watched and her system access restricted at first.",
-      "B": "The holdouts argue too much about Maia and her ties to Traugott remains unknown to risk bringing her aboard."
+      "A": "Fans trust Teal'c's read on outsiders and note Maia has done nothing to prove disloyal, so most favor letting her stay, often on a probationary basis with Odo keeping watch.",
+      "B": "A smaller group argues Maia's ties to Traugott and the entity remain too uncertain, and would rather see her dropped at the station than risk it."
     },
-    "wildcards": "Recurring jokes about forming an android club with Data and Rommie, feeding her spare batteries, and nervously eyeing a future AI uprising.",
-    "counted": 169,
+    "wildcards": "Several wish for a middle option, like a guest status short of full crew, and more than one joke about how many androids this ship can hold.",
+    "counted": 189,
     "final": false,
     "leader": "A",
     "method": "jev",
