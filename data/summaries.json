@@ -342,17 +342,17 @@
     "by": "claude-routine"
   },
   "2111125263874695499": {
-    "headline": "A leads with 40, D trails at 33, B and C tied at 17.",
+    "headline": "Poker night edges ahead, Parisian cafe close behind; drinks and tea trail.",
     "reasons": {
-      "A": "Fans mostly want to watch Garak work his angles on Daniel, with the Parisian setting and Frasier's company as a bonus.",
-      "B": "Voters are drawn to the view and the drinking company, several admitting Maybourne's presence is the real entertainment.",
-      "C": "Crew favor the arboretum for its calm and for the chance to hear Teal'c and G'Kar's perspectives over tea.",
-      "D": "Poker wins votes for the banter, with O'Neill's sarcasm and Data's unreadable tells cited as the draw."
+      "A": "The pull is Garak and Daniel's dynamic, with Dr. Fraiser and the 1920s Paris setting as a relaxing bonus.",
+      "B": "Crews are drawn to the Ten Forward camaraderie, many curious or amused at how Maybourne fits in with Kirk's team.",
+      "C": "Fans want the quiet, philosophical conversation among Teal'c, Aeryn, and G'Kar as the calm counterpoint to the mission.",
+      "D": "The draw is the banter and bluffing, especially anticipation of Data's unreadable poker face against the others' trash talk."
     },
-    "wildcards": "A few fans wrote in their own fifth option, a lab session with Carter, and the thread doubled as a birthday card for Joseph Mallozzi.",
-    "counted": 107,
+    "wildcards": "Several fans wished they could combine all four options, a few proposed write-in crews like Carter and McKay, and many used the thread to wish the showrunner a happy birthday.",
+    "counted": 163,
     "final": false,
-    "leader": "A",
+    "leader": "D",
     "method": "jev",
     "by": "claude-routine"
   }
