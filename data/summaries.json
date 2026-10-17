@@ -342,17 +342,17 @@
     "by": "claude-routine"
   },
   "2111125263874695499": {
-    "headline": "Poker night narrowly edged the Parisian café, with drinks and tea trailing behind.",
+    "headline": "The cafe and the poker table tied at the top, drinks at Ten Forward trailed, and tea in the arboretum came in last.",
     "reasons": {
-      "A": "Fans wanted to watch Garak needle Daniel over 1920s café drinks, drawn to the calmest post-mission wind-down of the four.",
-      "B": "Drawn to Scotty's company and the view at Ten Forward, with several admitting Maybourne's presence was half the appeal.",
-      "C": "Preferred the low-key company of Teal'c, Aeryn, and G'Kar for a quiet cup of tea with little drama expected.",
-      "D": "Picked for the banter among O'Neill, Odo, Data, and Sheppard, with Data's unreadable poker face the main draw."
+      "A": "Fans wanted to watch Garak needle Daniel and see a 1920s holodeck Paris come to life, with Dr. Fraiser's company as a bonus.",
+      "B": "Fans were drawn to the view from Ten Forward and drinks with Kirk, McCoy, and Scotty, with several curious how much trouble Maybourne would stir up at the table.",
+      "C": "Fans looking for the calmest option picked quiet tea with Teal'c, Aeryn, and G'Kar for the conversation.",
+      "D": "Fans picked poker for the bluffing and banter, betting Data's unreadable tells against O'Neill and Sheppard's trash talk."
     },
-    "wildcards": "A few crews pitched a fifth option entirely — the lab with Carter and McKay — and it happened to be the showrunner's birthday, which drew a steady stream of well-wishes alongside the votes.",
-    "counted": 207,
+    "wildcards": "Wishes for Joseph Mallozzi's birthday flooded the replies, and several fans floated a fifth option, a lab session with Carter and McKay, or simply wished they could do all four.",
+    "counted": 208,
     "final": true,
-    "leader": "D",
+    "leader": "A",
     "method": "jev",
     "by": "claude-routine"
   }
