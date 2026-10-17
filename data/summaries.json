@@ -342,16 +342,16 @@
     "by": "claude-routine"
   },
   "2111125263874695499": {
-    "headline": "D holds a narrow lead over A, with poker edging the café crowd.",
+    "headline": "Poker night narrowly edged the Parisian café, with drinks and tea trailing behind.",
     "reasons": {
-      "A": "Fans want to watch Garak work his sly, evasive charm on Daniel in a relaxing 1920s Parisian setting.",
-      "B": "Fans are drawn to the easy camaraderie of Kirk's crew, with a few betting Maybourne's presence sparks friction.",
-      "C": "Fans favor the quiet, reflective company of Teal'c, Aeryn, and G'Kar as the calmest way to decompress.",
-      "D": "Fans can't resist the bluffing and banter among O'Neill, Odo, Data, and Sheppard, with Data's poker face as the main draw."
+      "A": "Fans wanted to watch Garak needle Daniel over 1920s café drinks, drawn to the calmest post-mission wind-down of the four.",
+      "B": "Drawn to Scotty's company and the view at Ten Forward, with several admitting Maybourne's presence was half the appeal.",
+      "C": "Preferred the low-key company of Teal'c, Aeryn, and G'Kar for a quiet cup of tea with little drama expected.",
+      "D": "Picked for the banter among O'Neill, Odo, Data, and Sheppard, with Data's unreadable poker face the main draw."
     },
-    "wildcards": "Several crew floated combining all four stops into one long night or proposed an off-menu option entirely, like a lab session with Carter, and many used the vote to wish the showrunner a happy birthday.",
-    "counted": 187,
-    "final": false,
+    "wildcards": "A few crews pitched a fifth option entirely — the lab with Carter and McKay — and it happened to be the showrunner's birthday, which drew a steady stream of well-wishes alongside the votes.",
+    "counted": 207,
+    "final": true,
     "leader": "D",
     "method": "jev",
     "by": "claude-routine"
