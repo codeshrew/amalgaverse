@@ -1669,16 +1669,15 @@
       "canon": null
     },
     "2111487652910211200": {
-      "auto": true,
-      "kind": "decision",
+      "auto": false,
+      "kind": "briefing",
       "mission": "The Ghost Ship (Part 5) - \"Homecoming\"",
       "missionNumber": 1,
       "part": 4,
       "title": "The Ghost Ship - Mission Debrief",
       "question": null,
       "options": [],
-      "canon": null,
-      "heuristic": true
+      "canon": null
     }
   }
 }

@@ -342,17 +342,17 @@
     "by": "claude-routine"
   },
   "2111125263874695499": {
-    "headline": "The cafe and the poker table tied at the top, drinks at Ten Forward trailed, and tea in the arboretum came in last.",
+    "headline": "Poker night won the vote, with the Parisian café a close second.",
     "reasons": {
-      "A": "Fans wanted to watch Garak needle Daniel and see a 1920s holodeck Paris come to life, with Dr. Fraiser's company as a bonus.",
-      "B": "Fans were drawn to the view from Ten Forward and drinks with Kirk, McCoy, and Scotty, with several curious how much trouble Maybourne would stir up at the table.",
-      "C": "Fans looking for the calmest option picked quiet tea with Teal'c, Aeryn, and G'Kar for the conversation.",
-      "D": "Fans picked poker for the bluffing and banter, betting Data's unreadable tells against O'Neill and Sheppard's trash talk."
+      "A": "Fans wanted to watch Garak and Daniel spar, with the relaxed 1920s holodeck mood as a bonus.",
+      "B": "Crew favored Ten Forward for the view and old-school company, intrigued by how chaos-magnet Maybourne would fit in.",
+      "C": "The arboretum drew those craving a calm, philosophical wind-down with Teal'c, Aeryn, and G'Kar.",
+      "D": "Poker took it for the promised banter and bluffing, especially anticipation of Data's unreadable tells against O'Neill, Odo, and Sheppard."
     },
-    "wildcards": "Wishes for Joseph Mallozzi's birthday flooded the replies, and several fans floated a fifth option, a lab session with Carter and McKay, or simply wished they could do all four.",
-    "counted": 208,
+    "wildcards": "Birthday well-wishes to the showrunner ran through the thread, alongside half-serious proposals to run all four hangouts at once.",
+    "counted": 210,
     "final": true,
-    "leader": "A",
+    "leader": "D",
     "method": "jev",
     "by": "claude-routine"
   }
